@@ -1,7 +1,28 @@
-.header {
-    color: geen;
+.section_test {
+    color: yellow !important; 
+    /* jeśli uzyjemy !important to wlasnie stad bedzie w pierwszej kolejnosci brany styl */
 }
 
-.section_test {
+/* jeśli stylujemy tagi to wystarczy zapisac to bez zadnego selektora */
+body { 
+    background-color: brown;
+    color: white;
+} 
+
+/* SELEKTORY */
+
+/* musi spelniac wszystkie warunki - formułowanie styli tylko do określonych miejsc*/
+body header h2 {
+    background-color: blue;
+    color: green;
+}
+
+/* stylowanie klas */
+.subtytul {
+    color: grey;
+}
+
+/* stylowanie id (ofc id musi byc unikalne na stronie) */
+#stylowanie_id {
     color: yellow;
 }
