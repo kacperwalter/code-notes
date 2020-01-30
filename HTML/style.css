@@ -37,4 +37,5 @@ h1 {
 
 /* HEX: 000000 => kazde dwie cefry odpowiadaja odpowiednio RGB w systemie szestnastokowym */
 
-
+/* RGB: color: rgb(0, 0, 0) <= RGB, wiadomo, wartosci 0-255 */
+/* RGBa: color: rgba(x,y,z,c) c = przezroczystosc, wartosci 0-1 (float) */
