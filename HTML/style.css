@@ -27,10 +27,23 @@ body header h2 {
     color: yellow;
 }
 
+
 /* STYLOWANIE FONTOW */
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 900;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+}
+
+.paragraf1 { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: italic;
 }
 
 /* KOLOROWANIE */
@@ -39,3 +52,25 @@ h1 {
 
 /* RGB: color: rgb(0, 0, 0) <= RGB, wiadomo, wartosci 0-255 */
 /* RGBa: color: rgba(x,y,z,c) c = przezroczystosc, wartosci 0-1 (float) */
+
+.paragraf2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    /* color: rgb(124,123,4) */  /* RGB */
+    color: #d3a015 ;  /* hex */ 
+}
+
+
+/* BOX MODEL */
+/* notatki w zeszycie */
+
+.text1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 5px red;
+    border-style: dashed;
+    padding: 30px 50px 50px 50px; /* odpycha od wewnątrz */ 
+    /* argumenty w padding: 1 argument odpowiada góra i dół, 2 argument odpowiada za lewwo i prawo */
+    /* padding - jesli uzyjemy 4 argumentow, to kazdy odpowiada za jedną stronę (zaczynając od góry, zgodnie z ruchami wskazówek zegara */
+
+    margin 15px; /* odpycha od zewnątrz - przyjmuje takie same wartości jak padding */
+}
