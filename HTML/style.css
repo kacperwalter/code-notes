@@ -5,7 +5,7 @@
 
 /* jeśli stylujemy tagi to wystarczy zapisac to bez zadnego selektora */
 body { 
-    background-color: brown;
+    background-color:grey;
     color: white;
 } 
 
@@ -19,7 +19,7 @@ body header h2 {
 
 /* stylowanie klas */
 .subtytul {
-    color: grey;
+    color: black;
 }
 
 /* stylowanie id (ofc id musi byc unikalne na stronie) */
