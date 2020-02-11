@@ -66,11 +66,38 @@ h2 {
 
 .text1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: 5px red;
-    border-style: dashed;
-    padding: 30px 50px 50px 50px; /* odpycha od wewnątrz */ 
+    border: 10px red;
+    border-style: double;
+    padding: 50px 50px 50px 50px; /* odpycha od wewnątrz */ 
     /* argumenty w padding: 1 argument odpowiada góra i dół, 2 argument odpowiada za lewwo i prawo */
     /* padding - jesli uzyjemy 4 argumentow, to kazdy odpowiada za jedną stronę (zaczynając od góry, zgodnie z ruchami wskazówek zegara */
 
-    margin 15px; /* odpycha od zewnątrz - przyjmuje takie same wartości jak padding */
+    margin: 15px;  /* odpycha od zewnątrz - przyjmuje takie same wartości jak padding */
+}
+
+
+/* TŁO */
+
+.background_image {
+    margin: 10px;
+    padding: 10px;
+    color: black;
+    font-size: 38px;
+    background-image: url(obrazek1.jpg);
+    background-size: 300px 200px;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 300px;
+}
+
+
+
+/* ROZMIAR I POZYCJA */
+
+.text2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 10px red;
+    border-style: double;
+    padding: 50px 50px 50px 50px;
+    margin: 15px;
 }
