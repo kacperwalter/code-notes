@@ -111,3 +111,12 @@ h2 {
 
 
 /* OVERFLOW */
+
+.text1 {
+    height: 10px;
+    /* np. hidden - jak coś nie mieści się już w boxie to jest chowanes */
+    overflow: hidden;
+    /* overflow: scroll; */
+    /* overflow x/y - można dopasować co na jakiej osi ma działać */
+    overflow-y: scroll;
+}
