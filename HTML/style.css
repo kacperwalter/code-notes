@@ -18,7 +18,7 @@ body header h2 {
 }
 
 /* stylowanie klas */
-.subtytul {
+.subtytul { 
     color: black;
 }
 
@@ -107,3 +107,7 @@ h2 {
     /* position: fixed; fixed sprawia, ze element jest na stałe przytwierdzony do jakiegoś miejsca */
     top: 50px; /* za pomocą np. top możemy odepchnąć element od innego, tzn. będzie on cały czas w tym samym miejscu, ale bedzie sie wyswietlac w innym */
 }
+
+
+
+/* OVERFLOW */
