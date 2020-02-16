@@ -96,8 +96,14 @@ h2 {
 
 .text2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: 10px red;
-    border-style: double;
+    border: 10px green;
+    border-style: ridge;
     padding: 50px 50px 50px 50px;
-    margin: 15px;
+    width: 250px;
+
+    /* relatywnie od tego miejsca w ktorym bylby normalnie umieszczony, odpychamy go x px */
+    position: relative;
+    /* position: absolute; sprawia, ze element odnosi się do sekcji, w której się znajduje */
+    /* position: fixed; fixed sprawia, ze element jest na stałe przytwierdzony do jakiegoś miejsca */
+    top: 50px; /* za pomocą np. top możemy odepchnąć element od innego, tzn. będzie on cały czas w tym samym miejscu, ale bedzie sie wyswietlac w innym */
 }
