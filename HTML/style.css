@@ -135,3 +135,28 @@ h2 {
     color: black;
     border-color: blueviolet;
 }
+
+/* zmienianie kolorów anchor */
+a {
+    color: black;
+}
+
+a:visited {
+    color: green;
+}
+
+/* jeśli np strona w menu, na któej jesteśmy ma być podświetlona możemy wtedy użyć pseudo klasy active */
+ 
+a:active {
+    color: red;
+}
+
+/* pseudo elementy */
+
+a:hover {
+    color: wheat;
+}
+
+.text2 p {
+    color: white;
+}
