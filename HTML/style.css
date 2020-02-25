@@ -151,8 +151,6 @@ a:active {
     color: red;
 }
 
-/* pseudo elementy */
-
 a:hover {
     color: wheat;
 }
@@ -160,3 +158,12 @@ a:hover {
 .text2 p {
     color: white;
 }
+
+/* pseudo elementy */
+
+.text2 p::first-letter {
+    color: red;
+    font-size: 36px;
+}
+
+
