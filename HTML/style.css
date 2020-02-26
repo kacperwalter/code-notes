@@ -170,3 +170,21 @@ a:hover {
 
 
 /* css specificity - SPECYFICZNOŚĆ */
+/* inline, id, class, elements <= hierarchia ważności*/
+/* inline=100, id=100, class=10, elements=1 <= w ten sposób możemy obliczać, która klasa wygra */
+
+/* ten styl wygra bo jest ściślej określony */
+body header .paragraf3 {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.paragraf3 {
+    color: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+ 
+ 
