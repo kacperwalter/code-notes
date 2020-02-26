@@ -158,7 +158,7 @@ a:hover {
 .text2 p {
     color: white;
 }
-
+    
 /* pseudo elementy */
 
 .text2 p::first-letter {
@@ -167,3 +167,6 @@ a:hover {
 }
 
 
+
+
+/* css specificity - SPECYFICZNOŚĆ */
