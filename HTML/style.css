@@ -191,4 +191,9 @@ body header .paragraf3 {
 
 /* JEDNOSTKI */
 /* jednostki absolutne (lepiej nie uzywac na ekranach): px, cm, mm, pt */
- /* jednostki relatywne: % */
+ /* jednostki relatywne: %, em, viewport 0-100(vw, vh) */ 
+
+
+
+
+/* GRADIENTY */
