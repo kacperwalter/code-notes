@@ -197,3 +197,30 @@ body header .paragraf3 {
 
 
 /* GRADIENTY */
+
+.gradient1 {
+    padding: 50px;
+    margin: 20px;
+    font-size: 200%;
+    color: black;
+    background-image: linear-gradient(red, green);
+}
+
+/* ustawienie gradientu wg stron itp */
+.gradient2 {
+    padding: 50px;
+    margin: 20px;
+    font-size: 200%;
+    color: black;
+    background-image: linear-gradient(to right, red, green);
+}
+
+/* ustawienie gradientu wg stopni */
+
+.gradient3 {
+    padding: 50px;
+    margin: 20px;
+    font-size: 200%;
+    color: black;
+    background-image: linear-gradient(50deg, yellow 70%, blue 30%);
+}
