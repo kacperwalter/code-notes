@@ -243,6 +243,7 @@ body header .paragraf3 {
     color: white;
     box-shadow: 10px 10px 20px white;
     text-align: center;
+    float: left;
 }
 
 
@@ -251,4 +252,27 @@ body header .paragraf3 {
 
 .cieniowanie1 {
     border-radius: 10px;
+}
+
+
+
+/* FLOAT */
+
+.float_left {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    box-shadow: 10px 10px 20px white;
+    text-align: center;
+    float: left;
+}
+
+/* nastepny element w kodzie */
+.jednostki1 {
+    clear: both;
+    margin: 20px;
+    padding: 20px;
 }
