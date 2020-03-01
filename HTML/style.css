@@ -244,3 +244,11 @@ body header .paragraf3 {
     box-shadow: 10px 10px 20px white;
     text-align: center;
 }
+
+
+
+/* ZAOKRĄGLONE ROGI */
+
+.cieniowanie1 {
+    border-radius: 10px;
+}
