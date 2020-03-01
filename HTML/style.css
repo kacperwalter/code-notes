@@ -206,6 +206,7 @@ body header .paragraf3 {
     color: black;
     background-image: linear-gradient(red, green);
     color: white;
+    clear: both;
 }
 
 /* ustawienie gradientu wg stron itp */
@@ -275,4 +276,11 @@ body header .paragraf3 {
     clear: both;
     margin: 20px;
     padding: 20px;
+}
+
+.numery {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-bottom: 50px;
 }
