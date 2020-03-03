@@ -289,3 +289,28 @@ body header .paragraf3 {
 
 
 /* FLEX */
+
+#naszheader {
+    display: flex;
+    /* mozna ulozyc w kolumnie */
+    flex-direction: column;
+
+     /* mozna ulozyc w szeregu */
+     /* flex-direction: row; */
+
+     /* mozna zrobic odwrocone */
+     /* flex-direction: row-reverse; */
+}
+
+.menu {
+    width: 10%;
+    background-color: white;
+    color: black;
+    height: 50px;
+    text-align: center;
+}
+
+.menu:hover {
+    background-color: black;
+    color: white;
+}
