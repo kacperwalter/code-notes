@@ -401,3 +401,29 @@ body header .paragraf3 {
 
 
 /* ANIMACJE */
+
+@keyframes probna {
+    /* from {background-color: red; width: 100px;}
+    to {background-color: green; width: 200px;} */
+
+    0% {background-color: red; width: 100px;}
+    50% {background-color: yellow; width: 100px;}
+    100% {background-color: green; width: 200px;}
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+    
+
+.animation:hover { 
+    background-color: red;
+    animation: probna;
+    animation-duration: 4s;
+}
+
+
+
+/* ZMIENNE CSS */
