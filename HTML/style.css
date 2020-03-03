@@ -337,7 +337,7 @@ body header .paragraf3 {
 .menu:hover {
     background-color: black;
     color: white;
-    flex-grow: 3;
+    /* flex-grow: 3; */
 }
 
 
@@ -346,10 +346,27 @@ body header .paragraf3 {
 #naszheader_grid {
     height: 300px;
     border: 1px solid red;
+
+    display: grid;
+
+    /* mozna sprecyzowac o przestrzeni miedzy elementami */
+    grid-gap: 5px;
+
+    /* precyzowanie kolumn (tyle ile argumentow podamy, tyle bedzie kolumn */
+    grid-template-columns: auto 100px auto auto;
+
+    /* precyzowanie row */
+    /* grid-template-rows: auto 100px; */
 }
 
 .menu_grid {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
     color: black;
+    border: 1px solid green;
+}
+
+.menu_grid:hover {
+    background-color: black;
+    color: white;
 }
