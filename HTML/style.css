@@ -339,3 +339,17 @@ body header .paragraf3 {
     color: white;
     flex-grow: 3;
 }
+
+
+
+/* GRID */
+#naszheader_grid {
+    height: 300px;
+    border: 1px solid red;
+}
+
+.menu_grid {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    color: black;
+}
