@@ -293,17 +293,25 @@ body header .paragraf3 {
 #naszheader {
     display: flex;
     /* mozna ulozyc w kolumnie */
-    flex-direction: column;
+    /* flex-direction: column; */
 
-     /* mozna ulozyc w szeregu */
-     /* flex-direction: row; */
+     /* mozna ulozyc w szeregu (domyslnie) */
+     flex-direction: row;
 
      /* mozna zrobic odwrocone */
      /* flex-direction: row-reverse; */
+
+    /* wrap - przeskakuje do nastepnej lini po pomniejszeniu okna */
+    flex-wrap: wrap;
+
+    /* justify - left, center, right, space-around (w tej samej odleglosci), space-between (zachowuje miejsce miedzy nimi, ale skrajne elementy przylegaja do prawej i lewej), space-evenly(rownomiernie rozstawione po całej stronie) */
+    justify-content: center;
+    /* justify-content: space-between; */
+
 }
 
 .menu {
-    width: 10%;
+    width: 200px;
     background-color: white;
     color: black;
     height: 50px;
