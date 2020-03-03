@@ -305,20 +305,37 @@ body header .paragraf3 {
     flex-wrap: wrap;
 
     /* justify - left, center, right, space-around (w tej samej odleglosci), space-between (zachowuje miejsce miedzy nimi, ale skrajne elementy przylegaja do prawej i lewej), space-evenly(rownomiernie rozstawione po całej stronie) */
-    justify-content: center;
+    /* justify-content: center; */
     /* justify-content: space-between; */
+
+    /* ramka do sprawdzenia co mozna zrobic w calym header */
+    height: 300px;
+    border: 1px solid red;
+
+    /* wyrównuje elementy div w header */
+    align-items: center;
+    /* jesli nie okreslimy wielkosci divów w header to dopasowuja się do flex */
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+
+    
 
 }
 
 .menu {
-    width: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* width: 200px; */
     background-color: white;
     color: black;
-    height: 50px;
+    height: 150px;
     text-align: center;
+
+    /* szerokosc divow */
+    flex-grow: 1;
 }
 
 .menu:hover {
     background-color: black;
     color: white;
+    flex-grow: 3;
 }
