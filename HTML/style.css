@@ -426,4 +426,15 @@ body header .paragraf3 {
 
 
 
+
 /* ZMIENNE CSS */
+
+/* zmienne musimy zadeklarować w jakimś elemencie */
+body {
+    --main-color: rgb(163, 88, 88);
+}
+
+/* zadeklarowana zmienna uzywamy w ten sposob */
+.animation {
+    background-color: var(--main-color);
+}
