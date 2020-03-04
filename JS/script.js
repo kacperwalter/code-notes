@@ -42,3 +42,19 @@ let array2 = new Array(1,2,3,4,5,6); // tak tez mozna zapisywac
 
 // console.log(array1[0]); // standardowo
 
+// podstawowe metody wykonywane na arrays
+// array1.toString(); //tablica do stringa
+// array2.join('+'); // laczenie ze soba wszystkich elementow za pomoca znaku podanego w argumencie
+array1.pop(); // usuwanie ostatniego elementu (zwraca element)
+array1.shift(); // usuwanie pierwszego elementu (zwraca element)
+array1.unshift('1'); // dodaje element na poczatku
+array1.push(2); // dodaje element na koncu
+array1.splice(1, 2); // usuwanie x=od ktorego elementu y=ile elemenetow z=mozna dodac nowe elementy (sprawdzic w dokumentacji jak bedzie potrzebne)
+array1.slice(1,2); // zwracanie elementow, ale bez ich usuwania z oryginalu
+let dlugosc = array1.length; //liczba elementow w tablicy
+
+
+
+
+// OBIEKTY
+
