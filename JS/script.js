@@ -58,3 +58,42 @@ let dlugosc = array1.length; //liczba elementow w tablicy
 
 // OBIEKTY
 
+// tworzenie nowego obiektu
+let osoba = {
+    imie: 'kacper', 
+    nazwisko: 'walter',
+    wiek: 22,
+    szkoly: { //obiekt w obiekcie 
+        podstawowa: 'nr 3',
+        liceum: 'nr 2'
+    }
+};
+
+// odwoływanie sie do zmiennej w obiekcie
+osoba.wiek = 23;
+let imieObiekt = osoba.wiek;
+let szkolyObiekt = osoba.szkoly.liceum; // odwolywanie sie do obiektu w obiekcie
+
+
+
+// LOOPS syntax
+
+for (let i = 0; i < 5; i++) {
+    // console.log(i);
+}
+
+//iteracja prze keys
+for (x in osoba) {
+    // console.log(x);
+}
+
+// iteracja przez values
+for (x in osoba) {
+    // console.log(osoba[x]);
+}
+
+let z = 0;
+while (z < 5) {
+    console.log(z);
+    z++;
+}
