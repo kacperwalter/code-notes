@@ -18,10 +18,27 @@ a--; // dekrementacja tez
 
 
 
+
 //  CONDITIONALS syntax
 
 if (a == b) {
     console.log('true');
+} else if (a == 2) {
+    console.log('true');
 } else {
     console.log('false');
 }
+
+// operatory
+// !== nie jest rowne
+// === porownanie wartosci i typu
+
+
+
+// ARRAYS
+
+let array1 = [1,2,3,4,5,6];
+let array2 = new Array(1,2,3,4,5,6); // tak tez mozna zapisywac
+
+// console.log(array1[0]); // standardowo
+
