@@ -179,8 +179,29 @@ const isArray1 = Array.isArray(class1);
 const isArray2 = Array.from(class1);
 // console.log(isArray2);
 
-
 const linki = document.getElementsByTagName('a');
 // console.log(Array.isArray(linki)); //false
 const linkiArray = Array.from(linki);
 // console.log(Array.isArray(linkiArray)); // true
+
+
+
+
+//  QUERY SELECTOR - działa jak w CSS (mozna ściślej zaznaczac elementy)
+
+const header = document.querySelectorAll('#naszHeader div.number');
+const header2 = document.querySelectorAll("#naszHeader"); // do zaznacznia wszystkich query querySelectorAll
+
+// console.log(header);
+
+
+const headerArray = Array.from(header);
+// console.log(headerArray);
+
+for (let i = 0; i < headerArray.length; i++) {
+    // console.log(i, headerArray[i]);
+}
+
+
+
+// ZAWARTOŚĆ ELEMENTÓW
