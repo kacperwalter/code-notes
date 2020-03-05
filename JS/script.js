@@ -116,3 +116,23 @@ function dodawanie(a, b) {
 let dodaj = function(x, y) {
     return x + y;
 }
+
+
+
+
+// PĘTLE NA TABLICACH
+
+let osoby = [
+    {imie:'Johnny', nazwisko:'Deep',  wiek:55},
+    {imie:'Brad', nazwisko:'Pitt',  wiek:55},
+    {imie:'Tom', nazwisko:'Hanks',  wiek:62},
+]
+
+for (let i = 0; i < osoby.length; i++) {
+    // console.log(i, osoby[i].imie);
+}
+
+osoby.forEach(function(osoba){
+    // console.log(osoba.imie);
+})
+
