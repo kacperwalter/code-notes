@@ -163,5 +163,24 @@ try {
         return total + osoba.wiek; 
     }, 0);
 } catch (err){
-    console.log(err);
+    // console.log(err);
 }
+
+
+// DOM
+const div1 = document.getElementById('przykladoweID');
+// console.log(div1);
+const class1 = document.getElementsByClassName('przykladoweClass');
+// console.log(class1);
+
+// sprawdzanie czy zmienna jest tablica
+const isArray1 = Array.isArray(class1);
+// tworzenie tablicy z klas
+const isArray2 = Array.from(class1);
+// console.log(isArray2);
+
+
+const linki = document.getElementsByTagName('a');
+// console.log(Array.isArray(linki)); //false
+const linkiArray = Array.from(linki);
+// console.log(Array.isArray(linkiArray)); // true
