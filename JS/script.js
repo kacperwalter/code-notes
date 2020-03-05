@@ -136,3 +136,21 @@ osoby.forEach(function(osoba){
     // console.log(osoba.imie);
 })
 
+
+// MAP, FILTER, REDUCE
+
+let wynik1 = osoby.filter(function(osoba){
+    return osoba.wiek > 50; // zwroci tylko jesli (true) osoba mawiecej niz 50 lat
+})
+
+let wynik2 = osoby.map(function(osoba){
+    return osoba.wiek < 50; // filtrowanie tego co chcemy przekazac, a nie to co chcemy przekazac
+})
+
+
+// przydatne do obliczania wszystkich wartosci
+let wynik3 = osoby.reduce(function(total, osoba){
+    return total + osoba.wiek; 
+}, 0);
+
+console.log(wynik3);
