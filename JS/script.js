@@ -153,4 +153,15 @@ let wynik3 = osoby.reduce(function(total, osoba){
     return total + osoba.wiek; 
 }, 0);
 
-console.log(wynik3);
+
+
+// OBSŁUGA BŁĘDÓW
+
+try {
+    // wywali is not a function
+    let error1 = osoby.reduced(function(total, osoba){
+        return total + osoba.wiek; 
+    }, 0);
+} catch (err){
+    console.log(err);
+}
