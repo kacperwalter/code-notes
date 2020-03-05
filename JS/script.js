@@ -94,6 +94,25 @@ for (x in osoba) {
 
 let z = 0;
 while (z < 5) {
-    console.log(z);
+    // console.log(z);
     z++;
+}
+
+
+
+
+
+// FUNKCJE
+
+function nazwaFunkcji() {
+    console.log("wywolanie funkcji");
+}
+
+function dodawanie(a, b) {
+    return a + b;
+}
+
+// funkcja anonimowa
+let dodaj = function(x, y) {
+    return x + y;
 }
