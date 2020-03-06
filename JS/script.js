@@ -188,7 +188,7 @@ const linkiArray = Array.from(linki);
 
 
 //  QUERY SELECTOR - działa jak w CSS (mozna ściślej zaznaczac elementy)
-
+const header1 = document.querySelector("#naszHeader");
 const header = document.querySelectorAll('#naszHeader div.number');
 const header2 = document.querySelectorAll("#naszHeader"); // do zaznacznia wszystkich query querySelectorAll
 
