@@ -112,6 +112,10 @@ function dodawanie(a, b) {
     return a + b;
 }
 
+function odejmowanie(a, b) {
+	return a-b;
+}
+
 // funkcja anonimowa
 let dodaj = function(x, y) {
     return x + y;
