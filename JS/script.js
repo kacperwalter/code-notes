@@ -113,7 +113,7 @@ function dodawanie(a, b) {
 }
 
 function odejmowanie(a, b) {
-	return a-b;
+	return a - b;
 }
 
 // funkcja anonimowa
