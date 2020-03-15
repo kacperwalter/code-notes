@@ -209,5 +209,13 @@ for (let i = 0; i < headerArray.length; i++) {
 
 
 // ZAWARTOŚĆ ELEMENTÓW
-// 
-// 
+
+function end () {
+    return 0;
+}
+
+console.log(end());
+
+function start () {
+    return 1;
+}
