@@ -14,9 +14,13 @@ let c = a+b;
 a++; // inkrementacja dziala normalnie
 a--; // dekrementacja tez
 
- a += 1; // dziala jak w python
+a += 1; // dziala jak w python
 
-
+if (true) {
+    console.log('true');
+} else {
+    console.log('hehe');
+}
 
 
 //  CONDITIONALS syntax
