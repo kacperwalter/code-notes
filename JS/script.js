@@ -22,6 +22,13 @@ if (true) {
     console.log('hehe');
 }
 
+const a = 12;
+
+const = () => {
+
+	return a;
+}
+
 
 //  CONDITIONALS syntax
 
