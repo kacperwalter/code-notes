@@ -10,6 +10,7 @@ const mojaStala = 1;
 let a = 3;
 let b = "2";
 let c = a+b;
+let d = b+c;
 
 a++; // inkrementacja dziala normalnie
 a--; // dekrementacja tez
