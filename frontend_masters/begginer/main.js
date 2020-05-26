@@ -4,4 +4,4 @@ const andrzej = (number) => {
     return number;
 }
 
-alert(andrzej(andrzej(21)))
+console.log(andrzej(10));
