@@ -2,3 +2,35 @@ h2 {
     color: orange;
     margin-top: 12em;
 }
+
+.hover-class {
+    height: 150px;
+    width: 150px;
+    background-color: aqua;
+    text-align: center;
+}
+
+.hover-class:hover {
+    background-color: black;
+    color: white;
+}
+
+.active-class {
+    margin-top: 30px;
+    height: 150px;
+    width: 150px;
+    background-color: aqua;
+    text-align: center;
+}
+
+.active-class:active {
+    background-color: black;
+    color: white;
+}
+
+.first-child-example {
+    color: crimson;
+  }
+  .first-child-example:first-child {
+    color: limegreen;
+  }
