@@ -4,4 +4,10 @@ const andrzej = (number) => {
     return number;
 }
 
-console.log(andrzej(10));
+console.log(andrzej(i));
+
+const mariusz = () => {
+    for(let i=1; i=i+1; i++){
+        console.log(i);
+    }
+}

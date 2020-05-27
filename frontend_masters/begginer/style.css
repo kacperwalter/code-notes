@@ -39,3 +39,43 @@ h2 {
   .first-child-example:first-child {
     color: limegreen;
   }
+
+.box-1 {
+    border: 1px solid black;
+    color: white;
+    background-color: blue;
+    height: 150px;
+    width: 300px;
+}
+
+.box-2 {
+    border: 1px solid black;
+    color: white;
+    background-color: red;
+    height: 100px;
+    width: 300px;
+}
+
+.box-3 {
+    border: 1px solid black;
+    color: white;
+    background-color: green;
+    height: 200px;
+    width: 100px;
+}
+
+.floated .box {
+    float: left;
+}
+
+.box-1:hover {
+    background-color: black ;
+}
+
+.box-2:hover {
+    background-color: blue;
+}
+
+.box-3:active {
+    background-color: azure;
+}
