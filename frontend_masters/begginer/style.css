@@ -79,3 +79,9 @@ h2 {
 .box-3:active {
     background-color: azure;
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
