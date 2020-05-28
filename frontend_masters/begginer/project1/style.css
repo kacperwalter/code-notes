@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper-container {
+    display: flex;
+
+    border-top: solid 2px black;
+}
+
+.item {
+    border: solid 1px black;
+}
+
+.item h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
