@@ -11,3 +11,15 @@ const mariusz = () => {
         console.log(i);
     }
 }
+
+
+let iterating = 0;
+
+const iterateLoop = () => {
+    for(let i = 0; i <= 10; i++){
+        iterating++;
+        console.log(iterating);
+    }
+}
+iterateLoop();
+console.log('fuck')
