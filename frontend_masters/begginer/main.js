@@ -26,5 +26,7 @@ const iterateLoop = () => {
 const firstName = 'Kacper';
 const lastName = 'Walter';
 
+// using backticks its a "template string"
 const sentenceWithTemplate = `Hello ${firstName} ${lastName}! How are you!?`;
 console.log(sentenceWithTemplate);
+ 
