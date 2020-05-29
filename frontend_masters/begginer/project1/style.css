@@ -40,8 +40,12 @@ img {
 
 .lower-container {
     display: flex;
-    color: red;
+}
 
-    border-top: solid 2px black;
-    border-bottom: solid 2px black;
+.item-left {
+    flex-grow: 3;
+}
+
+.item-right {
+    flex-grow: 1;
 }
