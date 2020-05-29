@@ -21,5 +21,10 @@ const iterateLoop = () => {
         console.log(iterating);
     }
 }
-iterateLoop();
-console.log('fuck')
+
+// .format in python but in JS
+const firstName = 'Kacper';
+const lastName = 'Walter';
+
+const sentenceWithTemplate = `Hello ${firstName} ${lastName}! How are you!?`;
+console.log(sentenceWithTemplate);
