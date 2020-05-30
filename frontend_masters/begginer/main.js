@@ -30,3 +30,5 @@ const lastName = 'Walter';
 const sentenceWithTemplate = `Hello ${firstName} ${lastName}! How are you!?`;
 console.log(sentenceWithTemplate);
  
+// booleans are lowercase
+const lightIsOn = true;
