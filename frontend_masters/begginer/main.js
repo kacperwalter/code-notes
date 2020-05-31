@@ -55,3 +55,5 @@ const typesEquality = () => {
         console.log("Uh, panic?");
       }
 }
+
+typesEquality();
