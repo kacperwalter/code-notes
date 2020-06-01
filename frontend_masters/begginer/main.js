@@ -163,7 +163,7 @@ const addElementAtEnd = (array, elementToAdd) => {
 addElementAtEnd(arrayToAppend, 6);
 console.log(arrayToAppend);
 
-// foreach - do smth on every loop for every for example item on a list
+// foreach - do smth on every loop for every for example item on a list   
 
 const cities = [
     'Warsaw',
@@ -176,3 +176,23 @@ const cities = [
 cities.forEach(function(city) {
     console.log(city);
 });
+
+
+
+// DOM - document object model
+// https://btholt.github.io/intro-to-web-dev-v2/dom
+
+// query selector
+const elementsToChange = document.querySelectorAll('.js-target');
+  
+for (let i = 0; i < elementsToChange.length; i++) {
+    const currentElement = elementsToChange[i];
+    currentElement.innerText = "Modified by JavaScript!";
+};
+
+// eventlisteners
+const buttonToListen = document.querySelector('.event-button');
+buttonToListen.addEventListener('click', function(){
+    alert("You clicked this button")
+});
+
