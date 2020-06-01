@@ -132,4 +132,33 @@ const me = {
     }
 };
 
-console.log(me.getAdress());
+// console.log(me.getAdress());
+
+
+// ARRAYS
+
+const twoDays = [
+    'Monday',
+    'Tuesday'
+];
+
+const getThingFromArray = (array, index) => {
+    return array[index];
+}
+
+console.log(getThingFromArray(twoDays, 1));
+
+// BUILTINS
+// length
+// console.log(twoDays.length);
+// join
+// console.log(twoDays.join(' | '));
+
+const arrayToAppend = [1, 2, 3, 4, 5]
+// adding elements at the end (append in python)
+const addElementAtEnd = (array, elementToAdd) => {
+    return array.push(elementToAdd);
+}
+
+addElementAtEnd(arrayToAppend, 6);
+console.log(arrayToAppend);
