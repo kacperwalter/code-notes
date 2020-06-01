@@ -162,3 +162,17 @@ const addElementAtEnd = (array, elementToAdd) => {
 
 addElementAtEnd(arrayToAppend, 6);
 console.log(arrayToAppend);
+
+// foreach - do smth on every loop for every for example item on a list
+
+const cities = [
+    'Warsaw',
+    'Seattle',
+    'Poznan',
+    'New York',
+    'Amsterdam'
+];
+
+cities.forEach(function(city) {
+    console.log(city);
+});
