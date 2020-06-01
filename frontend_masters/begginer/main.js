@@ -56,4 +56,27 @@ const typesEquality = () => {
       }
 }
 
-typesEquality();
+// functions syntax
+function templateStringFunc(name, secondName, age) {
+    return `Hello ${name} ${secondName}, you are ${age} years old.`;
+}
+
+function addTwo(number) {
+    return number + 2;
+}
+
+// "builtins" https://btholt.github.io/intro-to-web-dev-v2/functions-and-scope#builtins
+const sentence = 'AndRzEJ LuBI JeSc PieRogi';
+
+const toLower = (sentenceToLower) => {
+    return sentence.toLowerCase();
+}
+
+// console.log(toLower(sentence));
+
+const roundNumber = (number) => {
+    rounded = Math.round(number);
+    return rounded;
+}
+
+// console.log(roundNumber(5.1));
