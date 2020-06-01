@@ -99,8 +99,9 @@ const person = {
     },
 };
 
-console.log(person.name);
-console.log(person.anotherObjectInObject.someValue)
+// console.log(person.name);
+// console.log(person.anotherObjectInObject.someValue)
+
 
 // object methods
 
@@ -111,4 +112,24 @@ const dog = {
     }
 };
 
-console.log(dog.warcz());
+// console.log(dog.warcz());
+
+
+// context
+
+const me = {
+    name: {
+        first: 'Kacper',
+        second: 'Walter',
+    },
+    location: {
+        street: 'fake',
+        city: 'Koscian',
+        state: 'Greater Poland'
+    },
+    getAdress() {
+        return `${this.name.first} ${this.name.second} lives in ${this.location.city} on ${this.location.street} street`
+    }
+};
+
+console.log(me.getAdress());
