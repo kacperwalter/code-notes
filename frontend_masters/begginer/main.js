@@ -66,6 +66,9 @@ function addTwo(number) {
 }
 
 // "builtins" https://btholt.github.io/intro-to-web-dev-v2/functions-and-scope#builtins
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+
 const sentence = 'AndRzEJ LuBI JeSc PieRogi';
 
 const toLower = (sentenceToLower) => {
@@ -80,3 +83,32 @@ const roundNumber = (number) => {
 }
 
 // console.log(roundNumber(5.1));
+
+
+// OBJECTS
+
+const person = {
+    name: 'Kacper Walter',
+    city: 'Poznan',
+    state: 'Greater Poland',
+    wantPizza: true,
+    numbersOfPizzaWanted: 256,
+    anotherObjectInObject: {
+        someValue: 'andrzejek',
+        someOtherValue: '123'
+    },
+};
+
+console.log(person.name);
+console.log(person.anotherObjectInObject.someValue)
+
+// object methods
+
+const dog = {
+    name: 'Bajtek',
+    warcz() {
+        return ('grrrr');
+    }
+};
+
+console.log(dog.warcz());
