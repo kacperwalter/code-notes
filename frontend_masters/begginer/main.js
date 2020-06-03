@@ -218,4 +218,6 @@ inputChange.addEventListener('change', function() {
 
 document.querySelector('.button-container').addEventListener('click', function(event) {
     alert(`You clicked on button ${event.target.innerText}`);
+    console.log(event);
+    console.log(event.target);
 });
