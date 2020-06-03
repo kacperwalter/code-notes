@@ -85,3 +85,9 @@ h2 {
     flex-direction: column-reverse;
     width: 100%;
   }
+
+.color-box {
+    background-color: limegreen;
+    width: 100px;
+    height: 100px;
+}

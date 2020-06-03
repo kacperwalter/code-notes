@@ -196,3 +196,18 @@ buttonToListen.addEventListener('click', function(){
     alert("You clicked this button")
 });
 
+// live input display
+const input = document.querySelector('.input-to-copy');
+const paragraph = document.querySelector('.p-to-copy-to');
+
+input.addEventListener("keyup", function() {
+    paragraph.innerText = input.value;
+}); 
+
+// change
+const inputChange = document.querySelector('.color-input');
+const paragraphChange = document.querySelector('.color-box');
+
+inputChange.addEventListener('change', function() {
+    paragraphChange.style.backgroundColor = inputChange.value;
+});
