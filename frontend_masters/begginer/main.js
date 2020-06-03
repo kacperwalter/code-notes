@@ -211,3 +211,11 @@ const paragraphChange = document.querySelector('.color-box');
 inputChange.addEventListener('change', function() {
     paragraphChange.style.backgroundColor = inputChange.value;
 });
+
+
+//  EVENT DELEGATION
+// one event listener for few elements
+
+document.querySelector('.button-container').addEventListener('click', function(event) {
+    alert(`You clicked on button ${event.target.innerText}`);
+});
