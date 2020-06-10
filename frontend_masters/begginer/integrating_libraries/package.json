@@ -2,9 +2,10 @@
   "name": "integrating_libraries",
   "version": "1.0.0",
   "description": "",
-  "main": "animation.js",
+  "main": "index.js",
   "dependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "popmotion": "^8.7.3"
   },
   "devDependencies": {},
   "scripts": {

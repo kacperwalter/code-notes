@@ -1,4 +1,5 @@
 const popmotion = require('popmotion');
+require('./uselessFile');
 
 const { styler, spring, listen, pointer, value } = popmotion;
 
