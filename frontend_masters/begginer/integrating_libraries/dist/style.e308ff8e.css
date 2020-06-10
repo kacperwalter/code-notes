@@ -1,0 +1,17 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #0074d9;
+    border-radius: 50%;
+  }
+  
+  body {
+      /* centering everything with flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 400px;
+  }
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

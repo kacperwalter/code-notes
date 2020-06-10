@@ -1,0 +1,2 @@
+https://parceljs.org/getting_started.html
+https://classic.yarnpkg.com/en/docs/install/#mac-stable
