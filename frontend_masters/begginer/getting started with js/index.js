@@ -39,5 +39,9 @@ let text = 'some kind of text';
 const textDivide = text / 2;
 console.log(textDivide); // gives NaN
 
+# EQUALITY - == vs ===
+== - checking value
+=== - checking value and type
+
 
 */
