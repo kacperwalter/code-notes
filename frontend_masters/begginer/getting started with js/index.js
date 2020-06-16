@@ -18,8 +18,9 @@ const iterator2 = (arr) => {
   for (let person of arr) {
     console.log(person);
   }
-}
-
+ }
+typeof people;
+console.log(typeof people.length)
 
 // NOTES
 /*
@@ -34,14 +35,29 @@ const iterator2 = (arr) => {
 - function /
 - array /
 
-# NaN - not a number
+# NaN - indicates that we have invalid numeric operation
 let text = 'some kind of text';
 const textDivide = text / 2;
 console.log(textDivide); // gives NaN
 
-# EQUALITY - == vs ===
-== - checking value
-=== - checking value and type
+# Converting types
+let convert = "21";
+Number(convert); // makes number from string
 
+
+# anonymous and named functions
+
+/ anonymous function expression
+var name = function() {
+  //
+}
+
+/ named function expression
+var name = function name () {
+  // 
+}
+
+
+# this & prototypes
 
 */
