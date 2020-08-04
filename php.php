@@ -27,8 +27,8 @@ function test2(){
 }
 
 //OPERACJE NA ZMIENNYCH
-$text1 = 'Hello ';
-$text2 = 'World';
+$text1 = 'Hello';
+$text2 = ' World';
 
 // echo $text.$text2; //konkatenacja
 // echo $text1." ".$text2;
