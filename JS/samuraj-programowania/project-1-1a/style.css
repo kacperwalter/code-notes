@@ -1,0 +1,97 @@
+body {
+  background-color: #171717;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Fira Code', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  height: 40vh;
+  width: 30vh;
+  border: 2px solid #FFFFFF;
+}
+
+.box p {
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.box button {
+  border: none;
+  background-color: #FFFFFF;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.numbers {
+  height: 40%;
+  width: 90%;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  color: #FFFFFF;
+}
+
+.square {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px dashed #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.round {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px dashed #FFFFFF;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
