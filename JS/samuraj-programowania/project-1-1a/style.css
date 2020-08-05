@@ -37,6 +37,7 @@ body {
 .box p {
   font-size: 30px;
   color: #FFFFFF;
+  text-align: center;
 }
 
 .box button {
