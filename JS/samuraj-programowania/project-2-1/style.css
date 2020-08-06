@@ -1,0 +1,13 @@
+body {
+  background-color: #FFFFFF;
+  height: 10000vh;
+}
+
+div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */

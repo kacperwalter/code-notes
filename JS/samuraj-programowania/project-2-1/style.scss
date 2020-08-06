@@ -1,0 +1,15 @@
+$dark: #171717;
+$light: #FFFFFF;
+$gray: gray;
+
+body {
+    background-color: $light;
+    height: 10000vh;
+}
+div {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
