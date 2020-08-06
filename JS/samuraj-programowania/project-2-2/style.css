@@ -1,0 +1,12 @@
+body {
+  height: 10000vh;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  position: fixed;
+  background-color: black;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
