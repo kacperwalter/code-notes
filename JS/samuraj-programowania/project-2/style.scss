@@ -1,0 +1,75 @@
+$dark: #171717;
+$light: #FFFFFF;
+$gray: gray;
+
+body { 
+    background-color: $dark;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Code', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px;
+    height: 40vh;
+    width: 30vh;
+    border: 2px solid $light;
+    border-bottom: none;
+}
+.box p {
+    font-size: 30px;
+    color: $light;
+    text-align: center;
+}
+.box button {
+    border: none;
+    background-color: $light;
+    padding: 15px;
+    font-weight: bold;
+}
+.numbers {
+    height: 40%;
+    width: 90%;
+    padding-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    color: $light;
+}
+.square {
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px dashed $light;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.round {
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px dashed $light;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dotted-list {
+    color: $light;
+}
+.three-multiple {
+    font-size: 30px;
+    font-weight: bold;
+}
