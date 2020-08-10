@@ -34,6 +34,14 @@ firstLi.setAttribute('class', 'sizeX');
 // zamiana na tablicę, dzięki temu mamy dostęp do wielu metod, m.in. forEach
 const liItems = [...document.getElementsByTagName("li")];
 
+const liElement = document.createElement('div');
+liElement.textContent = "jajeczko";
+liElement.style.fontSize = '50px';
+
+const ulList = document.getElementsByClassName('ul');
+
+document.ulList.appendChild(liElement);
+
 // liItems.style.fontSize = "40px"; // nie zadziała, bo nie przypisujemy wszystkim elementom a próbujemy tak naprawdę przypisać tablicy. Musimy odwołać się do każdego elementu osobno.
 
 // Dodanie klasy (pętla i forEach)
