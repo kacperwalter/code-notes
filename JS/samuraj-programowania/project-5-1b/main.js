@@ -2,7 +2,7 @@ const input = document.getElementById('pass');
 
 const div = document.querySelector('.message');
 
-const passwords = ['user', 'wiosna', 'ania'];
+const passwords = ['user1', 'wiosna', 'ania'];
 const messages = ['wiadomość', 'jeszcze jedna wiadomość', 'ania do prania'];
 
 input.addEventListener('input', (e) => {
