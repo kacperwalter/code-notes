@@ -7,7 +7,17 @@
 // jako drugi argument podajemy funkcję (callback), która ma być wywołana w moemencie wystapienie zdarzenia (za każdym razem gdy wystąpi) 
 window.addEventListener("dblclick", function() {
  console.log("podwójne kliknięcie");
-});
+})
+
+window.addEventListener('scroll', function() {
+    console.log('też scroll');
+})
+
+const h1Variable = document.getElementById('h1');
+
+h1Variable.addEventListener('click', () => {
+    console.log('kliknąłeś h1');
+})
 
 // PRZYKŁAD - możemy podać funkcję strzałkową
 // document.body.addEventListener("click", () => console.log("kliknięcie"))
@@ -22,7 +32,7 @@ function showScroll() {
  console.log("skrol");
 }
 
-window.addEventListener("scroll", showScroll);
+// window.addEventListener("scroll", showScroll);
 
 
 
