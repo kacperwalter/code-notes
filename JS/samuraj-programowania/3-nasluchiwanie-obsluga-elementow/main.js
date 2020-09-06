@@ -72,8 +72,10 @@ items.forEach((item) => item.addEventListener("click", addClassRed))
 // TWORZENIE I DODAWANIE ELEMENTÓW DO STRONY
 
 const divElement = document.createElement('div');
-divElement.textContent = "Ostatni DIV";
+divElement.textContent = "Ostatni DIV"; 
 divElement.style.backgroundColor = "red";
 document.body.appendChild(divElement);
 
-
+// window.addEventListener('mousemove', (e) => {
+//     console.log(e.screenY);
+// })
