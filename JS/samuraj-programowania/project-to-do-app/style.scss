@@ -1,0 +1,42 @@
+$dark: #171717;
+$light: #FFFFFF;
+$gray: gray;
+
+body { 
+    background-color: $dark;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Code', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    height: 40vh;
+    width: 30vh;
+    border: 2px solid $light;
+}
+.box p {
+    font-size: 30px;
+    color: $light;
+    text-align: center;
+}
+.box input {
+    padding: 10px;
+}
+.box button {
+    border: none;
+    background-color: $light;
+    margin-top: 10%;
+    padding: 10px;
+    font-weight: bold;
+}
+.todos ul {
+    color: $light;
+}
