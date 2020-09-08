@@ -15,5 +15,5 @@ taskAddButton.addEventListener('click', (e) => {
         todoContent = '';
     }  else {
         alert('Put value in input area');
-    }
+    } 
 })
