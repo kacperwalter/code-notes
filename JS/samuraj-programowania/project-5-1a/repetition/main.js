@@ -1,18 +1,20 @@
 const input = document.getElementById('pass');
 
-const password = "user";
-const message = "wyjechałam na zawsze";
+const passwords = ["user", "wiosna", "ania"];
+const messages = ["wyjechałam na zawsze", "piękna pora roku", "piękny styl masz"];
 
 const div = document.querySelector('.message');
 
 input.addEventListener('input', (e) => {
-    // console.log(e.target.value);
-    if (password === e.target.value) {
-        div.textContent = message;
-        e.target.value = '';
-    } else {
-        div.textContent = '';
-    }
+    const text = e.target.value;
+    div.textContent = '';
+    
+    passwords.forEach((password, index) => {
+        if (password === text) {
+            console.log(password, index);
+            div.textContent = messages[index];
+        }
+    })
 })
 
 input.addEventListener('focus', (e) => {
@@ -24,3 +26,12 @@ input.addEventListener('focus', (e) => {
 input.addEventListener('blur', (e) => {
     e.target.classList.toggle('active');
 })
+
+
+  // console.log(e.target.value);
+    // if (password === e.target.value) {
+    //     div.textContent = message;
+    //     e.target.value = '';
+    // } else {
+    //     div.textContent = '';
+    // }
