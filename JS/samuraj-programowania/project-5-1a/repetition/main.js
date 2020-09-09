@@ -8,7 +8,7 @@ const div = document.querySelector('.message');
 input.addEventListener('input', (e) => {
     const text = e.target.value;
     div.textContent = '';
-    
+
     passwords.forEach((password, index) => {
         if (password === text) {
             console.log(password, index);
@@ -26,12 +26,3 @@ input.addEventListener('focus', (e) => {
 input.addEventListener('blur', (e) => {
     e.target.classList.toggle('active');
 })
-
-
-  // console.log(e.target.value);
-    // if (password === e.target.value) {
-    //     div.textContent = message;
-    //     e.target.value = '';
-    // } else {
-    //     div.textContent = '';
-    // }
