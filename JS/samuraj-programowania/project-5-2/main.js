@@ -3,9 +3,8 @@
 //wielkość liter nie ma znaczenia (wykorzystaj metodę .toUpperCase lub .toLowerCase - pamiętaj, że metody te działają na pojedyńczym elemencie typu string)
 
 const input = document.querySelector("input");
-const passwords = ['jedEN', 'DwA'];
-let lowerCasePasswords = [];
-const messages = ["super", "działa!"]
+const passwords = ['jedEN', 'DwA', 'tRzy'];
+const messages = ["super", "działa!",'kuTaS'];
 const div = document.getElementById('div');
 
 const arrayCaseLowering = (arr) => {
@@ -16,23 +15,14 @@ const arrayCaseLowering = (arr) => {
     return lowerCasedArr;
 }
 
-arrayCaseLowering(passwords);
-
 const showMessage = (e) => {
     const text = e.target.value;
-
-    // tutaj teraz napisac kodzik ktory zamieni wpisywana wartosc na lowerCase i forEach ktory sprawdzi i porowna wartosci z tablicy o tym samym indeksie 
+    div.textContent = '';
+    arrayCaseLowering(passwords).forEach((item, index) => {
+       if (item === text.toLowerCase()) {
+           div.textContent = messages[index];
+       }
+    })
 }
 
-input.addEventListener("input", showMessage)
-
-
-// const passwordsLowering = () => {
-//     passwords.forEach((item, index) => {
-//         lowerCasePasswords.push(item.toLowerCase());
-//     })
-// }
-
-
-// works fine :)
-// passwordsLowering();
+input.addEventListener("input", showMessage);
