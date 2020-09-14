@@ -18,4 +18,4 @@ const nameGenerator = () => {
     div.textContent = `${prefixs[randomTtext]}, że najlepsze imię to ${names[index]}`;
 }
 
-btn.addEventListener('click', nameGenerator)
+btn.addEventListener('click', nameGenerator);
