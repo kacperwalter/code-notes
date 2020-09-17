@@ -15,6 +15,11 @@ const whoWinTextArea = document.querySelector('.winner')
 
 const weaponChoice = ['paper', 'rock', 'scissors'];
 
+const numberOfGamesArea = document.querySelector('.number-of-games');
+const winGamesArea = document.querySelector('.win-games');
+const lostGamesArea = document.querySelector('.lost-games');
+const drawGamesArea = document.querySelector('.draw-games');
+
 document.querySelector('.paper').addEventListener('click', (e) => {
     document.querySelector('.paper').classList.add('selected-img');
     playerChoice = weaponChoice[0];
@@ -88,7 +93,11 @@ const battle = (playerWeapon, computerWeapon) => {
 document.querySelector('.start').addEventListener('click', (e) => {
     if (playerChecked) {
         const computerChoice = weaponChoice[Math.floor(Math.random() * weaponChoice.length)];
-        console.log(computerChoice);
+        battle(playerChoice, computerChoice);
+        numberOfGamesArea.textContent = numberOfGamesPlayed;
+        winGamesArea.textContent = winGames;
+        lostGamesArea.textContent = lostGames;
+        drawGamesArea.textContent = drawGames;
     } else {
         alert('Wybierz swoją broń :)')
     }
