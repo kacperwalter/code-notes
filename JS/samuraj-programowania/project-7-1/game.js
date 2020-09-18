@@ -38,7 +38,6 @@ document.querySelector('.scissors').addEventListener('click', (e) => {
     playerChecked = true;
 });
 
-// const weaponChoice = ['paper', 'rock', 'scissors'];
 const battle = (playerWeapon, computerWeapon) => {
     switch (playerWeapon) {
         case weaponChoice[0]:
@@ -86,7 +85,6 @@ const battle = (playerWeapon, computerWeapon) => {
                     whoWinTextArea.textContent = whoIsWinner[2];
                 }
             break;
-
     }
 }
 
