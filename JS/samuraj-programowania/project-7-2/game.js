@@ -28,10 +28,22 @@ function aiChoice() {
     return hands[Math.floor(Math.random() * 3)].dataset.option;
 }
 
+function checkResult(player, ai) {
+    if(player === ai) {
+        return 'draw';
+    } else if ((player === 'papier' && ai === 'kamień') || (player === 'kamień' && ai === "nożyczki") || (player === 'nożyczki' && ai === 'papier')) {
+        return 'win';
+    } else {
+        return 'loss';
+    }
+}
+
 function startGame() {
     // without return function will run continiously
     if(!game.playerHand) return alert('Choose weapon!');
     game.aiHand = aiChoice();
+    const gameResult = checkResult(game.playerHand, game.aiHand);
+    console.log(gameResult);
 }
 
 hands.forEach((item, index) => {
