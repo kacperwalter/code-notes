@@ -38,12 +38,43 @@ function checkResult(player, ai) {
     }
 }
 
+function publishResult(player, ai, result) {
+    document.querySelector('[data-summary="your-choice"]').textContent = player;
+    document.querySelector('[data-summary="ai-choice"]').textContent = ai;
+
+    gameSummary.numbers++;
+    document.querySelector('p.numbers span').textContent = gameSummary.numbers;
+    
+    if (result == 'win') {
+        gameSummary.wins++;
+        document.querySelector('p.wins span').textContent = gameSummary.wins;
+        document.querySelector('[data-summary="who-win"]').textContent = "Ty wygrałeś"
+        document.querySelector('[data-summary="who-win"]').style.color = 'green';
+    } else if (result = 'loss') {
+        gameSummary.losses++;
+        document.querySelector('p.losses span').textContent = gameSummary.losses;
+        document.querySelector('[data-summary="who-win"]').textContent = "Komputer wygrał"
+        document.querySelector('[data-summary="who-win"]').style.color = 'red';
+    } else {
+        gameSummary.draws++;
+        document.querySelector('p.draws span').textContent = gameSummary.draws;
+        document.querySelector('[data-summary="who-win"]').textContent = "Remis"
+        document.querySelector('[data-summary="who-win"]').style.color = 'yellow';
+    }
+}
+
+function endGame() {
+    document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = '';
+    game.playerHand = '';
+}
+
 function startGame() {
     // without return function will run continiously
     if(!game.playerHand) return alert('Choose weapon!');
     game.aiHand = aiChoice();
     const gameResult = checkResult(game.playerHand, game.aiHand);
-    console.log(gameResult);
+    publishResult(game.playerHand, game.aiHand, gameResult);
+    endGame();
 }
 
 hands.forEach((item, index) => {
