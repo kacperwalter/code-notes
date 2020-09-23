@@ -17,12 +17,20 @@
    font-size: 20px;
    letter-spacing: 1px;
   }
+  .cursor {
+      opacity: 0;
+      transition: .2s;
+  }
+  .cursor.active {
+      opacity: 1;
+  }
+
  </style>
 </head>
 
 <body>
  <div>
-  <span class="text"></span>
+  <span class="text"></span><span class="cursor">|</span>
  </div>
 
  <script src="main.js">
