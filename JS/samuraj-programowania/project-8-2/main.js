@@ -8,19 +8,19 @@ const spnText = document.querySelector('.text');
 const spnCursor = document.querySelector('.cursor');
 const txt = ['tekst1', 'tekst2', 'tekst3']
 
+let activeLetter = 0;
+let activeText = 0; 
+
 // Implementacja
 const addLetter = () => {
- // Użyj w środku setTimeout
- setTimeout(() => {
-     for (let i=0; i<=txt.length; i++) {
-         let counter = 0;
-         setTimeout(() => {
-             for ( letter of txt[i] ) {
-                 
-             }
-         })
-     }
- }, 50)
+    spnCursor.textContent += txt[activeText][activeLetter];
+    activeLetter++;
+    if(activeLetter == txt[activeText].length) {
+        activeText++;
+        if (activeLetter == txt.length) return;
+        activeLetter = 0;
+    }
+    setTimeout(addLetter, 100);
 }
 
 
