@@ -50,4 +50,4 @@ const setIntervalTimer = () => {
     }
 }
 
-setIntervalTimer();
+// setIntervalTimer();
