@@ -27,7 +27,6 @@ const addLetter = () => {
     const timeout = setTimeout(addLetter, 100);
 }
 
-
 addLetter(); //pierwsze wywołanie
 
 

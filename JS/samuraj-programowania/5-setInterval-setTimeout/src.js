@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=kOcFZV3c75I&ab_channel=freeCodeCamp.org
+
 // setTimeout
 
 // in setTimeout we specify function to execute and number of miliseconds and the program awaits specified number of miliseconds and then executes the function
