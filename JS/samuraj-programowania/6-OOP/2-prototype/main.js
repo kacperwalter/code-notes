@@ -45,4 +45,5 @@ Citizen.prototype.changeCitizenship = function(citizenship) {
     console.log(`Zmiana za pomocą metody w instancji na obywatelstwo ${this.citizenship}`);
 } 
 
-const zenek = new Citizen('polsza', 'polskie'); 
+const zenek = new Citizen('polsza', 'polskie');
+zenek.changeCitizenship("Włoskie");
