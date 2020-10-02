@@ -47,3 +47,32 @@ Citizen.prototype.changeCitizenship = function(citizenship) {
 
 const zenek = new Citizen('polsza', 'polskie');
 zenek.changeCitizenship("Włoskie");
+
+// Rozszerzanie prototypu także wbudowanych konstruktorów
+const arr = [5, 6, 7, 8];
+Array.prototype.delete = function(index) {
+    return this.splice(index, 1);
+}
+
+// PROTOTYPE CHAIN
+
+arr.__proto__; //prototyp konstruktora
+
+arr.__proto__.__proto__; // prototyp Object
+
+arr.__proto__.__proto__.__proto__ // null
+
+Object.prototype.age = 20;
+
+// czy dany element jest egemptlarzem konstruktora - instanceof
+console.log(arr instanceof Array); // true
+console.log(arr instanceof Object); // true
+console.log(arr instanceof Citizen); // false
+console.log(zenek instanceof Citizen); // true
+console.log(zenek instanceof Function); // false
+
+// Object.getPrototypeOf  - zwraca prototyp konstuktora na podstawie któego została utworzona instancja
+console.log(Object.getPrototypeOf(arr));
+
+console.log(arr.__proto__.constructor);
+console.log(arr.__proto__.delete);
