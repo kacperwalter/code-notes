@@ -18,10 +18,10 @@ This repo contains log of my development skills and resources that I use when I 
 |**Static Website Building**       | ![done][done]     | ![done][done]          |                  |
 |**JavaScript**                    | ![done][done]     | ![done][done]          | ![done][done]    |
 |**ES6**                           | ![done][done]     | ![done][done]          |                  |
-|**NPM**                           | ![done][done]     | ![done][done]          |                  |
+|**NPM**                           | ![done][done]     |                        |                  |
 |**Mobile First**                  | ![done][done]     | ![done][done]          |                  |
 |**Python**                        | ![done][done]     | ![done][done]          | ![done][done]    |
-|**Django**                        | ![done][done]     | ![done][done]          | !                |
+|**Django**                        | ![done][done]     | ![done][done]          |                  |
 |**Git**                           | ![done][done]     | ![done][done]          | ![done][done]    |
 |**GitHub**                        | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Contributing To Open Source**   | ![done][done]     |                        |                  |
