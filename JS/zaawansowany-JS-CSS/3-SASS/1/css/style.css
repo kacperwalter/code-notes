@@ -27,4 +27,27 @@ header h1 strong {
 header h2 {
   font-size: 32px;
 }
+
+.section {
+  width: 100%;
+  height: 200px;
+  background-color: #7FFFD4;
+}
+
+.section .section__h3 {
+  color: white;
+}
+
+.section .section__button {
+  font-size: 30px;
+  padding: 15px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.section .section__button:hover {
+  background-color: black;
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */
