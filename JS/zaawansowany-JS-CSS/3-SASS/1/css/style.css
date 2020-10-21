@@ -1,3 +1,11 @@
+.article {
+  background-color: red;
+}
+
+.article__text {
+  color: green;
+}
+
 * {
   margin: 0;
   padding: 0;

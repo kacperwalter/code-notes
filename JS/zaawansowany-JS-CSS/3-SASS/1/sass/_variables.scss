@@ -1,2 +1,18 @@
+// GLOBAL
 $bg-main-color: #333; 
 $section_color: #7FFFD4;
+
+// lOCAL - if using BEM convencion strongly (independent components)
+.article {
+    $article-bg-color: red;
+    $article-text-color: green;
+    background-color: $article-bg-color;
+    &__text {
+        color: $article-text-color;
+    }
+}
+
+// GLOBAL variable declared in local
+.article-2 {
+    $article-bg-color: green !global;
+}
