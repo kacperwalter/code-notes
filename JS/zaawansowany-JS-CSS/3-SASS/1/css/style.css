@@ -44,6 +44,8 @@ header h2 {
   background-color: white;
   border: none;
   cursor: pointer;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
 }
 
 .section .section__button:hover {
