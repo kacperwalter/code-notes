@@ -34,11 +34,11 @@ header h2 {
   background-color: #7FFFD4;
 }
 
-.section .section__h3 {
+.section__h3 {
   color: white;
 }
 
-.section .section__button {
+.section__button {
   font-size: 30px;
   padding: 15px;
   background-color: white;
@@ -48,8 +48,13 @@ header h2 {
   transition: .1s linear;
 }
 
-.section .section__button:hover {
+.section__button:hover {
   background-color: black;
   color: white;
+}
+
+.section__smth-else {
+  margin-top: 20px;
+  font-size: 30px;
 }
 /*# sourceMappingURL=style.css.map */
