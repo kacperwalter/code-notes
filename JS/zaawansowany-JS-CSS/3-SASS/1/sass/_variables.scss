@@ -16,3 +16,33 @@ $section_color: #7FFFD4;
 .article-2 {
     $article-bg-color: green !global;
 }
+
+// DATA TYPES
+// string
+
+$font-1: "open sans";
+$font-2: open sans;
+
+// number
+$example1: 20 + px; // tworzy string i nie mozna potem wykonywac działań matematycznych
+$example2: 20 * 1px; // tworzy number
+
+// colors - standard css values
+$red: red;
+
+// LIST - sequence of values
+$sizes: 1200px, 800px, 400px;
+$shadow: 2px 3px 2px 2px #ccc;
+$box-margins: 20px 10px 1em, 400px 200px 5em, 5rem 2rem 100px; // nested lists które można przetwarząc w pętli saas za pomocą wbudowanych funkcji - mozna odniesc się za pomocą indeksu (indeksy liczone od 1)!!
+
+// MAP - struktura typu obiekt - key-value
+$fonts: (
+    main: 'roboto',
+    second: 'arial',
+    theme-old: 'verdana'
+);
+
+// funkcja pobierająca wartość z mapy
+.example {
+    font-family: map-get($map: $fonts, $key: second);
+}
