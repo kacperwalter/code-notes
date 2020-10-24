@@ -1,6 +1,6 @@
-@import "variables";
-@import "reset";
-@import "base";
-@import "header";
-@import "section";
+@import "utlils/variables";
+@import "base/reset";
+@import "base/_base.sass";
+@import "components/header";
+@import "components/section";
 
