@@ -69,4 +69,26 @@ header h2 {
   margin-top: 20px;
   font-size: 30px;
 }
+
+.smth-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: green;
+  font-size: 2em;
+  line-height: 1.5;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+.smth-text:hover {
+  color: red;
+}
+
+.modal {
+  background-color: rosybrown;
+  position: absolute;
+  top: auto;
+  right: 200px;
+  bottom: 5em;
+  left: auto;
+}
 /*# sourceMappingURL=main.css.map */

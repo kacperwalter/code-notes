@@ -1,0 +1,18 @@
+@mixin text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: green;
+    font-size: 2em;
+    line-height: 1.5;
+    transition: .1s linear; 
+    &:hover {
+        color: red;
+    }
+}
+// parameters are avalible locally in mixin
+@mixin position($type, $top, $right, $bottom, $left) {
+    position: $type;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

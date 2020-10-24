@@ -23,3 +23,11 @@
         font-size: 30px;
     }
 }
+// including mixins
+.smth-text {
+    @include text;
+}
+.modal {
+    background-color: rosybrown;
+    @include position(absolute, auto, 200px, 5em, auto);
+}
