@@ -16,3 +16,11 @@
     bottom: $bottom;
     left: $left;
 }
+// default values in mixins
+@mixin box-margin($vertical: 20px, $horizontal: 40px) {
+    margin: $vertical $horizontal;
+}
+// default null value
+@mixin box-margin($vertical: null, $horizontal: $vertical) {
+    margin: $vertical $horizontal;
+}

@@ -31,3 +31,6 @@
     background-color: rosybrown;
     @include position(absolute, auto, 200px, 5em, auto);
 }
+.smth-else {
+    @include box-margin(10px, 20px);
+}
