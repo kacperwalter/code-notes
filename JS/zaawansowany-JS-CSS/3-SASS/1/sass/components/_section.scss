@@ -28,7 +28,7 @@
     @include text;
 }
 .modal {
-    background-color: rosybrown;
+    background-color: red;
     @include position(absolute, auto, 200px, 5em, auto);
 }
 .smth-else {
