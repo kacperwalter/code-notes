@@ -10,6 +10,12 @@
   font-family: "arial";
 }
 
+h1 {
+  font-size: 2.2rem;
+  line-height: 150%;
+  color: blue;
+}
+
 * {
   margin: 0;
   padding: 0;
