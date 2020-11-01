@@ -35,3 +35,11 @@ h1 {
         color: blue
     }
 }
+// @extend - inheritance
+.text {
+    font: large;
+    color: red;
+}
+.article__text {
+    @extend .text;
+}

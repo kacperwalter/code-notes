@@ -16,6 +16,11 @@ h1 {
   color: blue;
 }
 
+.text, .article__text {
+  font: large;
+  color: red;
+}
+
 * {
   margin: 0;
   padding: 0;
