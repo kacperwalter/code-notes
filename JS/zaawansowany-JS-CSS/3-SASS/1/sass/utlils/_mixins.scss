@@ -43,3 +43,9 @@ h1 {
 .article__text {
     @extend .text;
 }
+// interpolation
+$smth-class: 'class-selector';
+
+p.#{$smth-class} {
+    font-size: 12px;
+}

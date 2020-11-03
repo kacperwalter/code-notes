@@ -1,0 +1,30 @@
+// wbudowanymi funkcjami są funkcje do pracy z kolorami
+
+$smth-color1: rgb(12,122,222);
+
+// darken & lighten
+.box {
+    color: $smth-color1;
+    h1 {
+        color: lighten($smth-color1, 25%);
+        border-bottom: 2px solid darken($smth-color1, 10%);
+    }
+}
+
+$mix-color: #ee44ee;
+
+// mix - miksuje kolory (2 argumenty - kolory)
+.box--active {
+    color: mix($smth-color1, red);
+    h1 {
+        color: mix($smth-color1, $mix-color);
+    }
+}
+
+// funkcja w funkcji
+.box--funkcjawfunkcji {
+    color: $smth-color1;
+    h1 {
+        color: darken(lighten($smth-color1, 25%), 25%);
+    }
+}

@@ -21,6 +21,35 @@ h1 {
   color: red;
 }
 
+p.class-selector {
+  font-size: 12px;
+}
+
+.box {
+  color: #0c7ade;
+}
+
+.box h1 {
+  color: #72b8f7;
+  border-bottom: 2px solid #095fae;
+}
+
+.box--active {
+  color: #863d6f;
+}
+
+.box--active h1 {
+  color: #7d5fe6;
+}
+
+.box--funkcjawfunkcji {
+  color: #0c7ade;
+}
+
+.box--funkcjawfunkcji h1 {
+  color: #0c7ade;
+}
+
 * {
   margin: 0;
   padding: 0;
