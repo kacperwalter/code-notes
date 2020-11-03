@@ -50,6 +50,10 @@ p.class-selector {
   color: #0c7ade;
 }
 
+.smth-div1 {
+  border-color: red;
+}
+
 * {
   margin: 0;
   padding: 0;

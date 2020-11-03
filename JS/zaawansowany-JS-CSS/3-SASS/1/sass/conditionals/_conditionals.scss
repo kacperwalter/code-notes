@@ -1,1 +1,11 @@
-// if - generowanie kodu tylko po spełnieniu warunku
+// if - generowanie kodu tylko po spełnieniu warunku 
+$box-width: 180px;
+
+.smth-div1 {
+    @if ($box-width < 200) {
+        border-color: red;
+    }
+    @else {
+        border-color: yellowgreen;
+    }
+} 
