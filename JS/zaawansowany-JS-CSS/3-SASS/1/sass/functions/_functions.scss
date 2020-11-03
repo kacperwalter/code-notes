@@ -28,3 +28,10 @@ $mix-color: #ee44ee;
         color: darken(lighten($smth-color1, 25%), 25%);
     }
 }
+
+// własne funkcje
+@function nazwa-funkcji($param1, $param2) {
+    // ciało funkcji
+    $return-value: $param1 + $param2;
+    @return $return-value;
+}

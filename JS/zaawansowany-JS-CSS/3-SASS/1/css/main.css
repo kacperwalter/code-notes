@@ -50,6 +50,21 @@ p.class-selector {
   color: #0c7ade;
 }
 
+.menu__element {
+  padding: 20px;
+  font-size: 1.6rem;
+}
+
+.menu__element--active {
+  background-color: red;
+}
+
+@media (min-width: 640px) {
+  .menu__element--active {
+    background-color: green;
+  }
+}
+
 .smth-div1 {
   border-color: red;
 }

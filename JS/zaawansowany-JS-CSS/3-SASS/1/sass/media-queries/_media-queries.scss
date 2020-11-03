@@ -1,0 +1,55 @@
+// zagnieżdżanie media queries
+
+// zasada działania
+.menu__element {
+    padding: 20px;
+    font-size: 1.6rem;
+    &:hover {
+        padding: 30px;
+    }
+    &--active {
+        background-color: red;
+        @media (min-width: 640px) {
+            background-color: green;
+        }
+    }
+    @media (min-width: 640px) {
+        font-size: 1.rem;
+    }
+}
+
+// breakpoints - tworzymy mape (typ map) w której przechowujemy wartosci
+
+// 1. zdefiniowanie wartości kluczowych
+$breakpoints: (
+    xsmall: (min-width: 460px),
+    small: (min-width: 640px),
+    medium: (min-width: 800px), 
+    large: (min-width: 1024px),
+    xlarge: (min-width: 1200px),
+    xxlarge: (min-width: 1440px)
+);
+
+// breakpoints - użycie z domieszką
+// 2. definicja domieszki do zapytań o media
+@mixin mq($breakpoints) {
+    $size: map-get($map: $breakpoints, $key: $breakpoint);
+    @if($size) {
+        @media #{$size} {
+            @content;
+        }
+    }
+    @else {
+        @error '"#{$breakpoint}" - error';
+    }
+}
+
+// użycie domieszki
+.div__element {
+    .title {
+        font-size: 20px;
+        @include mq(xsmall) {
+            font-size: 14px;
+        }
+    }
+}
