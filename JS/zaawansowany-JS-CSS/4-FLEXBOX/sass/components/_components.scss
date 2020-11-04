@@ -1,0 +1,63 @@
+// oczywiście to wszystko lepiej byłoby rozdzielić na komponenty i połączyć tutaj xd
+.logo {
+    flex-basis: 200px; // alternatywa dla width
+    &__image {
+        display: block;
+        width: 100%;
+    }
+}
+.search {
+    // search jest elementem elastycznym
+    flex-grow: 1; // flex-grow domyslnie jest 0
+    // kontener flexbox
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__input {
+        flex-basis: 60%;
+        height: 50%;
+        margin-right: 2vh;
+        padding: 0 10px;
+        font-size: 1.4rem;
+        &:focus { // to co będzie po kliknięciu
+            box-shadow: 0 0 2px 1px $main-color;
+        }
+    }
+    &__btn {
+        font-size: 1.4rem;
+        height: 50%;
+        padding: 0 10px;
+        border: 2px solid black;
+        background-color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.4s;
+        &:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+    }
+}
+.settings {
+    background-color: crimson;
+    padding: 0 50px;
+}
+.menu {
+    flex-basis: 100%;
+    background-color: dodgerblue;
+}
+.main-articles {
+    flex-basis: 100%;
+    // min-height: 50vh
+    background-color: forestgreen;
+}
+.article-list {
+    flex-basis: 100%;
+    background-color: goldenrod;
+}
+.footer {
+    flex-basis: 100%;
+    background-color: indianred;
+}
