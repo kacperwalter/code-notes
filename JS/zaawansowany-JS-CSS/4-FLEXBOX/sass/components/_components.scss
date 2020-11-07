@@ -44,8 +44,16 @@
 }
 .settings {
     display: flex;
-    padding: 0 50px;
+    padding: 0 30px 0 50px;
     align-items: center;
+    &__icon-link {
+        margin: 0 5px;
+        font-size: 3rem;
+        color: #666;
+        &:hover {
+            color: black;
+        }
+    }
 }
 .menu {
     flex-basis: 100%;
