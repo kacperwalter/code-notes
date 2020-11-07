@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     &__input {
+        max-height: 60px;
         flex-basis: 60%;
         height: 50%;
         margin-right: 2vh;
@@ -27,6 +28,7 @@
         font-size: 1.4rem;
         height: 50%;
         padding: 0 10px;
+        max-height: 60px;
         border: 2px solid black;
         background-color: white;
         text-transform: uppercase;
@@ -41,8 +43,9 @@
     }
 }
 .settings {
-    background-color: crimson;
+    display: flex;
     padding: 0 50px;
+    align-items: center;
 }
 .menu {
     flex-basis: 100%;
