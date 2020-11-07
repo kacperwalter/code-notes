@@ -114,7 +114,47 @@ html {
 .menu {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  background-color: dodgerblue;
+  height: 70px;
+  margin-top: 10px;
+  background-color: #192129;
+  font-family: "PT sans", "roboto";
+  padding: 15px 50px 15px 80px;
+}
+
+.menu__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__item {
+  margin: 0 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 4rem;
+}
+
+.menu__item:hover {
+  border-bottom: 2px yellow solid;
+}
+
+.menu__item:nth-last-child(1) {
+  margin-left: auto;
+  border: 2px solid gray;
+  padding: 0 22px;
+  cursor: pointer;
+}
+
+.menu__item:nth-last-child(1):hover {
+  border-color: yellow;
+}
+
+.menu__link {
+  padding: 0 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
 }
 
 .main-articles {

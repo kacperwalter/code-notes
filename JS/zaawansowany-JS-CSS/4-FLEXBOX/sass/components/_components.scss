@@ -57,7 +57,39 @@
 }
 .menu {
     flex-basis: 100%;
-    background-color: dodgerblue;
+    height: 70px;
+    margin-top: 10px;
+    background-color: rgb(25, 33, 41);
+    font-family: $special-font;
+    padding: 15px 50px 15px 80px;
+    &__list {
+        list-style: none; // usunięcie kropek
+        display: flex;
+    }
+    &__item {
+        margin: 0 20px;
+        font-size: 2rem;
+        text-transform: uppercase;
+        line-height: 4rem;
+        &:hover {
+            border-bottom: 2px yellow solid;
+        }
+        &:nth-last-child(1) { // przesunięcie przycisku GO!
+            margin-left: auto;
+            border: 2px solid gray;
+            padding: 0 22px;
+            cursor: pointer;
+            &:hover {
+                border-color: yellow;
+            }
+        }
+    }
+    &__link {
+        padding: 0 10px;
+        display: block; // sprawia, ze wiekszy element jest linkiem
+        color: white;
+        text-decoration: none;
+    }
 }
 .main-articles {
     flex-basis: 100%;
