@@ -23,7 +23,7 @@ const nowakowie = new FamilyTest();
     }
 }
   
-  const kowalscy = new Family(3, "Jan", "Ewa", "Adam");
+  const kowalscy = new Family(3, "Jan", "Ewa", "Adam", "Andrzej");
   
 //   console.log(kowalscy);
   
