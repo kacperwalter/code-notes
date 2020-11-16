@@ -14,6 +14,7 @@
 document.title;
 document.domain;
 document.body;
+document.title;
 
 // Przykładowe właściwości i metody window
 
