@@ -92,10 +92,30 @@
         color: white;
     }
 }
+.article {
+    padding: 30px 50px;
+    &__image {
+        display: block;
+        width: 100%; // dzięki temu nie rozpierdala wszystkiego tylko zajmuje 100% komponentu 
+    }
+}
 .main-articles {
     flex-basis: 100%;
-    // min-height: 50vh
-    background-color: forestgreen;
+    background-color: $main-color;
+    display: flex;
+    flex-wrap: wrap;
+    &__intro {
+        flex-basis: 100%;
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin: 30px 0 30px;
+        text-align: center;
+        font-size: 4.4rem;
+        letter-spacing: 2px;
+    }
+    .article {
+        flex-basis: 50%;
+    }
 }
 .article-list {
     flex-basis: 100%;
