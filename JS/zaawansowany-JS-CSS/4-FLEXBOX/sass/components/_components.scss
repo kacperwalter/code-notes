@@ -94,9 +94,37 @@
 }
 .article {
     padding: 30px 50px;
+    color: #333;
+    text-align: center;
     &__image {
         display: block;
         width: 100%; // dzięki temu nie rozpierdala wszystkiego tylko zajmuje 100% komponentu 
+    }
+    &__title {
+        font-family: $special-font;
+        text-transform: uppercase;
+        font-size: 3rem;
+        padding: 35px 0 15px;
+    }
+    &__introduction {
+        line-height: 1.6;
+        font-size: 1.6rem;
+    }
+    &__btn {
+        display: block; // sprawia, że <a> nie jest elementem liniowym
+        margin: 10px auto; // wyśrodkowanie
+        font-size: 1.8rem;
+        border: 2px solid black;
+        padding: 6px 12px;
+        width: 50%;
+        min-width: 200px;
+        background-color: $main-color;
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            background-color: #fff;
+            transition: .3s;
+        }
     }
 }
 .main-articles {
