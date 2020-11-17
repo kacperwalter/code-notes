@@ -75,7 +75,7 @@
             border-bottom: 2px yellow solid;
         }
         &:nth-last-child(1) { // przesunięcie przycisku GO!
-            margin-left: auto;
+            margin-left: auto; 
             border: 2px solid gray;
             padding: 0 22px;
             cursor: pointer;
@@ -89,6 +89,7 @@
         display: block; // sprawia, ze wiekszy element jest linkiem
         color: wite;
         text-decoration: none;
+        color: white;
     }
 }
 .main-articles {
