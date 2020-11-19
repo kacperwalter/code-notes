@@ -1,4 +1,4 @@
- <?php
+https://allegro.pl/oferta/the-sims-3-wszystkie-dodatki-steam-100-gier-7110187444 <?php
     
 //RODZAJE ZMIENNYCH
 $text = "Hello World";
