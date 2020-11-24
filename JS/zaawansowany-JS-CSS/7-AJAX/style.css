@@ -1,0 +1,32 @@
+body {
+  font-family: arial;
+  font-size: 22px;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+input, select {
+  font-size: 22px;
+}
+
+.user-list {
+  background-color: #eee;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.user {
+  flex-basis: 30%;
+  display: flex;
+}
+
+.user__image {
+  order: -1;
+  padding: 20px;
+}
+
+.user__name {
+  align-self: center;
+}
