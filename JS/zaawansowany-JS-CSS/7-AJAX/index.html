@@ -10,7 +10,19 @@
 </head>
 
 <body>
-  <button>Pobierz użytkowników</button>
+  <form class="generator">
+    <label class="generator__input-name">Wybierz płeć
+      <select class="generator__select" name="gender">
+        <option value="both" selected >Wszyscy</option>
+        <option value="female">Kobiety</option>
+        <option value="male">Mężczyźni</option>
+      </select>
+    </label>
+    <label class="generator__input-name">Liczba osób:
+      <input class="generator__input" type="number" name="users-number" value="10">
+      <input type="submit" class="button" value="Pobierz użytkowników">
+    </label>
+  </form>
   <script src="main.js"></script>
 </body>
 

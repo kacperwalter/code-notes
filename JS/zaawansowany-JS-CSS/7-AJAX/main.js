@@ -1,4 +1,5 @@
-const getUsers = () => {
+const testFetch = (e) => {
+  e.preventDefault(); // ciągle o tym zapominam - jest to potrzebne ponieważ po każdym submit odświeża się strona 
   const url = 'https://randomuser.me/api/?results=10';
   fetch(url) // obietnica - oczekujący (pending)
   // kiedy obietnica zostanie rozstrzygnięta (spełnione lub odrzucone)
@@ -14,5 +15,15 @@ const getUsers = () => {
     .then(json => console.log(json))
     .catch((err) => console.log(err))
 }
+
+const getUsers = (e) => {
+  e.preventDefault();
+
+  const usersNumber = document.querySelector('[name="users-number"]').value;
+  const usersGender = document.querySelector('[name="gender"]').value;
+  
+  const url = `https://randomuser.me/api/?results=${usersNumber}&gender=${usersGender === "both" ? "male,female" : usersGender}`;
+  console.log(url);
+}
  
-document.querySelector("button").addEventListener('click', getUsers);
+document.querySelector(".generator").addEventListener('submit', getUsers);
