@@ -30,7 +30,7 @@ const getUsers = (e) => {
     if (response.status !== 200) {
       throw Error("Not 200");
     } else {
-      return response.json(); // tutaj tworzy się obiekt do którego właściwości możemy się odwłowywać
+      return response.json(); // tworzy się obiekt do którego właściwości możemy się odwłowywać
     }
   })
   .then(json => showUsers(json.results))
