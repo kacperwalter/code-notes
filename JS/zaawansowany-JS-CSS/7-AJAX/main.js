@@ -5,7 +5,7 @@ const testFetch = (e) => {
   // kiedy obietnica zostanie rozstrzygnięta (spełnione lub odrzucone)
   // pozytywnie - wykonuje się then, negatywnie - wykonuje się catch
     .then((response) => { // kolejna obietnica (promise)
-      // console.log(response)
+      console.log(response)
       if (response.status !== 200) {
         throw Error("to nie jest odpowiedź 200");
       } else {
