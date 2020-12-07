@@ -1,8 +1,11 @@
 class Scroller {
     constructor(rootSelector) {
         const rootElement = document.querySelector(rootSelector);
-        this.sections = document.querySelectorAll('section');
-        this.currentSectionIndex = 0;
+        this.sections = [...document.querySelectorAll('section')];
+        this.currentSectionIndex = this.sections.findIndex((element) => {
+            return this.isScrolledIntoView(element);
+        });
+        
         this.isThrottled = false;
         this.isScrolledIntoView(this.sections[0]);
     }
@@ -10,8 +13,9 @@ class Scroller {
     isScrolledIntoView(el) {
         const rect = el.getBoundingClientRect();
         const elemTop = rect.top;
-        const elemBottom = rect.bottom;
+        const elemBottom = Math.floor(rect.bottom);
         const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+        return isVisible;
     }
 
     // jesli uzyjemy arrow function to this będzie odwoływać się do instancji klasy
