@@ -31,7 +31,7 @@ const Human = function(name, legs, hands, eyeColor) {
     }
 
     this.screamXTimes = function(times) {
-        for (let i=0; i<=times; i++) {
+        for (let i = 0; i <= times; i++) {
             console.log(`${i} ${this.name}`);
         }
     }
