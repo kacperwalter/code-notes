@@ -38,5 +38,3 @@ const Human = function(name, legs, hands, eyeColor) {
 }
 
 const zosiaczul = new Human('Zosia', 2, 2, 'brązowy');
-
-

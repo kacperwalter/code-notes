@@ -85,3 +85,6 @@ class Human extends Mammal {
 }
 
 const czlowiek = new Human(34, "Jarek", 'brazowe', 'polszowy');
+
+
+
