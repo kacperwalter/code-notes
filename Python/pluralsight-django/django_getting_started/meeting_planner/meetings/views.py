@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Meeting
+from .models import Meeting, MeetingRoom
 
 
 def detail(request, id):
@@ -12,3 +12,13 @@ def detail(request, id):
     }
 
     return render(request, "meetings/details.html", context)
+
+
+def rooms(request):
+    rooms = MeetingRoom.objects.all()
+
+    context = {
+        "rooms": rooms,
+    }
+
+    return render(request, "meetings/rooms.html", context)

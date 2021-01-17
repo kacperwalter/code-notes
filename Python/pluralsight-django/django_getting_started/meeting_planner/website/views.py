@@ -9,7 +9,7 @@ from meetings.models import Meeting
 def welcome(request):
     context = {
         "message": "This data was sent from the view to template",
-        "num_meetings": Meeting.objects.count(),
+        "meetings": Meeting.objects.all(),
     }
     return render(request, "website/welcome.html", context)
 
