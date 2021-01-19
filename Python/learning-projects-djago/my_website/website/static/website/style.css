@@ -4,3 +4,17 @@
 h1 {
     color: cornflowerblue;
 }
+
+a {
+    color: white;
+    background-color: cornflowerblue;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: cornflowerblue;
+    background-color: transparent;
+    border: 2px solid cornflowerblue;
+}
