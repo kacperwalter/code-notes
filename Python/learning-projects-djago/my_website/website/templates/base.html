@@ -7,11 +7,14 @@
     <title>{% block title %} {% endblock %}</title>
 
     <link rel="stylesheet" href="{% static 'website/style.css' %}">
+    
+    <link rel="shortcut icon" href="{% static 'website/favicon.ico' %}" type="image/x-icon">
 
 </head>
 <body>
     <a href="{% url 'index' %}">Home</a>
     <a href="{% url 'entry_list' %}">Blog</a>
+    <a href="{% url 'about' %}">About</a>
     {% block content %} {% endblock %}
 </body>
 </html>

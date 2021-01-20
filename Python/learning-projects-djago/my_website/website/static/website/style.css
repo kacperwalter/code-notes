@@ -18,3 +18,7 @@ a:hover {
     background-color: transparent;
     border: 2px solid cornflowerblue;
 }
+
+li {
+    margin-top: 40px;
+}

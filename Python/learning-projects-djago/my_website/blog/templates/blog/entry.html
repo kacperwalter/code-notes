@@ -4,6 +4,19 @@
 
 {% block content %} 
 <h1>{{ entry.title }}</h1>
+
+<p>
+    Author: {{ entry.author }}
+</p>
+
+<p>
+    Publication date: {{ entry.publication_date }}
+</p>
+
+<p>
+    Category: {{ entry.category }}
+</p>
+
 <p>
     {{ entry.entry_content }}
 </p>
