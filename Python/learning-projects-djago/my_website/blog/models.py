@@ -27,6 +27,7 @@ class Entry(models.Model):
         Category,
         on_delete=models.CASCADE,
     )
+    entry_content = models.TextField()
     publication_date = models.DateField(
         auto_now=False,
     )
