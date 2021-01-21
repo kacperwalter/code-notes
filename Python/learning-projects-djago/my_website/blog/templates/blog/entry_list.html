@@ -12,4 +12,32 @@
     </li>
     {% endfor %}
 </ul>
+
+<!-- it displays only if paginator has more elements to display -->
+
+{% if entries.has_other_pages %}
+<table>
+    <tr class="pagination">
+        {% if entries.has_previous %}
+        <td><a href="?page={{ entries.previous_page_number}}">&laquo;</a></td>
+        {% else %}
+        <td class="disabled"><span>&laquo;</span></td>
+        {% endif %}
+        {% for i in entries.paginator.page_range %}
+            {% if entries.number == i %}
+            <td class="active"><span>{{ i }}</span></td>
+            {% else %}
+            <td><a href="?page={{ i }}"{{ i }}></a></td>
+            {% endif %}
+        {% endfor %}
+        {% if entries.has_next %}
+        <td><a href="?page={{ entries.next_page_number }}">&raquo;</a></td>
+        {% else %}
+        <td class="disabled"><span>&raquo;</span></td>
+        {% endif %}
+    </tr>
+{% endif %}    
+</table>
+
+
 {% endblock %}
