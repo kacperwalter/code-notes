@@ -5,15 +5,11 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Author(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-
-
 class Category(models.Model):
     name = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name_plural = 'Categories'
 
     def __str__(self):
         return self.name
@@ -36,6 +32,9 @@ class Entry(models.Model):
     last_edit = models.DateField(
         auto_now_add=True,
     )
+
+    class Meta:
+        verbose_name_plural = "Entries"
 
     def __str__(self):
         return f'{self.title} | published {self.publication_date}'
