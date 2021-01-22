@@ -2,6 +2,8 @@ from datetime import time
 
 from django.db import models
 
+from django.contrib.auth.models import User
+
 
 class Author(models.Model):
     name = models.CharField(max_length=50)
@@ -20,7 +22,7 @@ class Category(models.Model):
 class Entry(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey(
-        Author,
+        User,
         on_delete=models.CASCADE,
     )
     category = models.ForeignKey(
