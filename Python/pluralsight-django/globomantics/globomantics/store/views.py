@@ -22,27 +22,12 @@ def detail(request):
 
 # FUNCTION BASED VIEW
 # decorators and paginators
-# @csrf_exempt
-# @cache_page(900)
-# @require_http_methods(["GET"])
-# def electronics(request):
-#     items = ("Windows PC", "Apple Mac", "Apple iPhone", "Lenovo", "Samsung", "Google")
-#     if request.method == 'GET':
-#         paginator = Paginator(items, 2)
-#         pages = request.GET.get('page', 1)
-#         try:
-#             items = paginator.page(pages)
-#         except PageNotAnInteger:
-#             items = paginator.page(1)
-#         return render(request, 'store/list.html', {'items': items})
-#     elif request.method == 'POST':
-#         return HttpResponseNotFound("POST is not allowed")
-
-
-# CLASS BASED VIEW - classic way (like a function based)
-class ElectronicsView(View):
-    def get(self, request):
-        items = ("Windows PC", "Apple Mac", "Apple iPhone", "Lenovo", "Samsung", "Google")
+@csrf_exempt
+@cache_page(900)
+@require_http_methods(["GET"])
+def electronics(request):
+    items = ("Windows PC", "Apple Mac", "Apple iPhone", "Lenovo", "Samsung", "Google")
+    if request.method == 'GET':
         paginator = Paginator(items, 2)
         pages = request.GET.get('page', 1)
         try:
@@ -50,6 +35,41 @@ class ElectronicsView(View):
         except PageNotAnInteger:
             items = paginator.page(1)
         return render(request, 'store/list.html', {'items': items})
+    elif request.method == 'POST':
+        return HttpResponseNotFound("POST is not allowed")
+
+
+# CLASS BASED VIEW - classic way (like a function based)
+# MIXINS
+class ElectronicsView(View):
+    def get(self, request):
+        items = ("Windows PC", "Apple Mac", "Apple iPhone", "Lenovo", "Samsung", "Google")
+        paginator = Paginator(items, 2)
+        pages = request.GET.get('page', 1)
+        self.process()
+        try:
+            items = paginator.page(pages)
+        except PageNotAnInteger:
+            items = paginator.page(1)
+        return render(request, 'store/list.html', {'items': items})
+
+    def process(self):
+        print("We are processing Electronics")
+
+
+class ComputersView(ElectronicsView):
+    def process(self):
+        print("We are processing Computers")
+
+
+class MobileView():
+    def process(self):
+        print("We are Processing Mobile Phones")
+
+
+# looks for first inherited class (from the left in arguments)
+class EquipmentView(MobileView, ComputersView):
+    pass
 
 
 # CLASS BASED VIEW - "better way" (more simple)
