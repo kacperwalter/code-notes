@@ -5,6 +5,9 @@ from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.cache import cache_page
+from django.views.generic.base import TemplateView
+from django.views.generic.list import ListView
+
 
 from django.core.paginator import Paginator
 
@@ -36,7 +39,7 @@ def detail(request):
 #         return HttpResponseNotFound("POST is not allowed")
 
 
-# CLASS BASED VIEW
+# CLASS BASED VIEW - classic way (like a function based)
 class ElectronicsView(View):
     def get(self, request):
         items = ("Windows PC", "Apple Mac", "Apple iPhone", "Lenovo", "Samsung", "Google")
@@ -47,6 +50,24 @@ class ElectronicsView(View):
         except PageNotAnInteger:
             items = paginator.page(1)
         return render(request, 'store/list.html', {'items': items})
+
+
+# CLASS BASED VIEW - "better way" (more simple)
+# TemplateView
+class ElectronicsView2(TemplateView):
+    template_name = 'store/list.html'
+    def get_context_data(self, **kwargs):
+        items = ("Windows PC", "Apple Mac", "Apple iPhone", "Lenovo", "Samsung", "Google")
+        context = {'items': items}
+        return context
+
+
+# ListView
+class ElectronicsView3(ListView):
+    template_name = 'store/list-listview.html'
+    queryset = ("Windows PC", "Apple Mac", "Apple iPhone", "Lenovo", "Samsung", "Google")
+    context_object_name = 'items'
+    paginate_by = 2
 
 
 def additional_pagination(request):
