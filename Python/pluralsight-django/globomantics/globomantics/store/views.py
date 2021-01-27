@@ -34,7 +34,16 @@ def electronics(request):
             items = paginator.page(pages)
         except PageNotAnInteger:
             items = paginator.page(1)
-        return render(request, 'store/list.html', {'items': items})
+        response = render(request, 'store/list.html', {'items': items})
+        if request.COOKIES.get('visits'):
+            value = int(request.COOKIES.get('visits'))
+            print("Getting cookie.")
+            response.set_cookie('visits', value + 1)
+        else:
+            value = 1
+            print("Setting Cookie.")
+            response.set_cookie('visits', value)
+        return response
     elif request.method == 'POST':
         return HttpResponseNotFound("POST is not allowed")
 
