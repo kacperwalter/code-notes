@@ -14,7 +14,7 @@ This repo contains log of my development skills and resources that I use when I 
 |**CSS Flex**                      | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Sass**                          | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Responsive Web**                | ![done][done]     | ![done][done]          | ![done][done]    |
-|**BEM**                           | ![done][done]     | ![done][done]          |                  |
+|**BEM**                           | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Bootstrap**                     | ![done][done]     |                        |                  |
 |**Static Website Building**       | ![done][done]     | ![done][done]          |                  |
 |**JavaScript**                    | ![done][done]     | ![done][done]          | ![done][done]    |
