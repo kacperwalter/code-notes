@@ -49,7 +49,7 @@ def electronics(request):
 
 
 # CLASS BASED VIEW - classic way (like a function based)
-# MIXINS
+# MIXINS - 
 class ElectronicsView(View):
     def get(self, request):
         items = ("Windows PC", "Apple Mac", "Apple iPhone", "Lenovo", "Samsung", "Google")
