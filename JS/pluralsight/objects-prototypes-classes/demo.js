@@ -1,7 +1,7 @@
 'use strict'; 
 (function() {
 
-  // display('Hello World!!');
+  // display('Hell World!!');
 
   // object literal - the simplest way to create an object
   let person = {
