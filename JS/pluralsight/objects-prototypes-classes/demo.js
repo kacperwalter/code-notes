@@ -17,7 +17,6 @@
   person.isAdult = function() { return this.age >= 18 }
 
   // display(person.isAdult());
-z
 
   // object literal poroperty shorthand
   function registerUser(fName, lName) {
@@ -31,7 +30,30 @@ z
   let person3 = {
     firstName: 'Jim',
     lastName:'Cooper',
+    age: 19,
     isNotAdult() { return this.age <= 18 },
   };
+
+  // to discover all properties and methods in object
+  // Object.keys()
+
+  function forThroughOject(object) {
+    // loop over every property and method in object
+    for (let propertyName in object) {
+      display(propertyName);
+    }
+  }
+
+  forThroughOject(person3);
+
+  // Object.is(arg1, arg2) - returns bool depending on the result - commonly used for comparing non primitive types
+
+
+  // copy or merge the properties from one object to another object
+  // Object.assign();
+
+  // copy the properties from person1 to person2
+  Object.assign(person3, person);
+
 
 })();
