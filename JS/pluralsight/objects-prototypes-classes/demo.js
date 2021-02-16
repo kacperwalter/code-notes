@@ -55,5 +55,40 @@
   // copy the properties from person1 to person2
   Object.assign(person3, person);
 
+  let assignTest1 = {
+    testName: 'Kacper',
+  }
+
+  let assignTest2 = {
+    testVar: 123,
+    isTested() {
+      if (this.testVar < 20) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+
+  Object.assign(assignTest1, assignTest2);
+  display(assignTest1.isTested());
+
+  let healthStats = {
+    height: 20,
+    weight: 120,
+  }
+
+  let animal1 = {
+    type: 'cat',
+  }
+
+  // practical example of merge => making new object from existing object (does not mutate objects that we are operating)
+  function mergeHealthStats(person, healthStats) {
+    return Object.assign({}, person, healthStats);
+  }
+
+  let mergedStats = mergeHealthStats(animal1, healthStats);
+
+
 
 })();
