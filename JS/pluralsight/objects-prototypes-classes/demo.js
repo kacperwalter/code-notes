@@ -90,5 +90,29 @@
   let mergedStats = mergeHealthStats(animal1, healthStats);
 
 
+  // CONSTRUCTOR
+
+  // the simpliest way to make object
+  function Person4() {
+    this.firstName = 'Jim';
+    this.lastName = 'Cooper';
+  }
+
+  let person4 = new Person4();
+
+  function Person5(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  let person5 = new Person5('andrzej', 'duda');
+
+
+  // requesting object property with bracket notation
+  display(person5['firstName']);
+
+  // property descriptor
+  display(Object.getOwnPropertyDescriptor(person5, 'firstName'));
+
 
 })();
