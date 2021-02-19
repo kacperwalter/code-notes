@@ -1,5 +1,5 @@
 console.log('test');
 
-const a = () => {};
+const a = () => {};  
 
-a();
+a(); 
