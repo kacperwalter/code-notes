@@ -1,11 +1,16 @@
 {
-  "name": "project-test",
+  "name": "npm1",
   "version": "1.0.0",
-  "description": "fuck you",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "kacper walter",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^7.20.0",
+    "font-awesome": "^4.7.0",
+    "nodemon": "^2.0.7"
+  }
 }
