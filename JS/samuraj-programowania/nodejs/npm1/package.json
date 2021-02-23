@@ -1,0 +1,11 @@
+{
+  "name": "project-test",
+  "version": "1.0.0",
+  "description": "fuck you",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "kacper walter",
+  "license": "ISC"
+}
