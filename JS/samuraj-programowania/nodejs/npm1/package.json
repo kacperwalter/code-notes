@@ -12,5 +12,8 @@
     "eslint": "^7.20.0",
     "font-awesome": "^4.7.0",
     "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
   }
 }
