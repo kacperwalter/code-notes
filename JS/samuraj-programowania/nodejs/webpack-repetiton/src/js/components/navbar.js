@@ -1,0 +1,1 @@
+export const navbar = (text) => { console.log(text); }
