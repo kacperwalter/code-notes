@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./message */ \"./src/message.js\");\n\n\nObject(_message__WEBPACK_IMPORTED_MODULE_0__[\"message\"])(\"wszymstko działa\");\n\n//# sourceURL=webpack:///./src/entry.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./message */ \"./src/message.js\");\n/* harmony import */ var _title_txt__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./title.txt */ \"./src/title.txt\");\n\n\n\nObject(_message__WEBPACK_IMPORTED_MODULE_0__[\"message\"])(\"wszymstko działa\");\nObject(_message__WEBPACK_IMPORTED_MODULE_0__[\"messageDOM\"])(_title_txt__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack:///./src/entry.js?");
 
 /***/ }),
 
@@ -102,11 +102,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mes
 /*!************************!*\
   !*** ./src/message.js ***!
   \************************/
-/*! exports provided: message */
+/*! exports provided: message, messageDOM */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"message\", function() { return message; });\nconst message = (info) => console.log(info);\n\n//# sourceURL=webpack:///./src/message.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"message\", function() { return message; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"messageDOM\", function() { return messageDOM; });\nconst message = (info) => console.log(info);\nconst messageDOM = (info) => document.body.textContent = info;\n\n//# sourceURL=webpack:///./src/message.js?");
+
+/***/ }),
+
+/***/ "./src/title.txt":
+/*!***********************!*\
+  !*** ./src/title.txt ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"Witaj, świecie!\\n\\n\\n\\n<br>\\n<br>\\n\\ntest\");\n\n//# sourceURL=webpack:///./src/title.txt?");
 
 /***/ })
 
