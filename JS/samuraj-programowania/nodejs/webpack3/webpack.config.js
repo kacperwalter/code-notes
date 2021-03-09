@@ -8,6 +8,6 @@ module.exports = {
     output: {
         filename: 'index.js',
         // path: __dirname + '/dist1', // classic way
-        path: path.resolve(__dirname, 'build'); // using path 
+        path: path.resolve(__dirname, 'build2'), // using path 
     }
 };

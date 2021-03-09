@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "webpack src/app.js --mode production",
+    "prod": "webpack src/entry.js --mode production",
     "dev": "webpack src/app.js --mode development",
-    "build": "webpack src/index.js -o build/main.js --mode development"
+    "build": "webpack src/entry.js -o build/main.js --mode development",
+    "conf-file": "webpack --config webpack.config.prod.js"
   },
   "keywords": [],
   "author": "",
