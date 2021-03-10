@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "start": "webpack-dev-server --config ./config/webpack.config.js",
+    "dev": "webpack --config ./config/webpack.config.js",
     "prod": "webpack --config ./config/webpack.config.prod.js",
-    "dev": "webpack --config ./config/webpack.config.js"
+    "dev-watch": "npm run dev -- --watch"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
-    "raw-loader": "^3.1.0"
+    "html-webpack-plugin": "^3.2.0",
+    "raw-loader": "^3.1.0",
+    "webpack-dev-server": "^3.8.0"
   }
 }
