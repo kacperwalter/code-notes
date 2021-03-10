@@ -1,13 +1,13 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 
-const webpackConfig = {
+module.export = {
     mode: 'development',
     entry: {
         main: './src/app.js',
     },
     output: {
-        filename: 'twojstary.js',
+        filename: 'main.js',
         path: path.resolve(__dirname, '../', 'build'),
     },
     module: {
@@ -21,6 +21,6 @@ const webpackConfig = {
     plugins: [
         new CleanWebpackPlugin(),
     ],
-};
+}
 
-module.exports = webpackConfig;
+// module.export = webpackConfig;

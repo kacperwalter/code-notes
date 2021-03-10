@@ -1,5 +1,5 @@
 import { message, messageDOM } from './message';
-import info from './title.txt';
+// import info from './title.txt';
 
 message("wszymstko działa");
-messageDOM(info);
+// messageDOM(info);
