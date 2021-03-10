@@ -1,0 +1,1 @@
+export const messageDOM = (info) => document.body.textContent = info;
