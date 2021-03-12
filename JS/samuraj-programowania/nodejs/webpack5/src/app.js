@@ -1,3 +1,7 @@
-import { messageDOM } from './js/message';
+import { messageDOM, swapElement } from './js/message';
+// import { svgCaptcha } from './js/captcha';
 
-messageDOM('Hello guys');
+// diplayCaptcha();
+swapElement();
+
+// messageDOM('Hello guys');

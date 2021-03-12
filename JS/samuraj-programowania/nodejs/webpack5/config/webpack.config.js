@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
 
@@ -13,7 +14,15 @@ const webpackConfig = {
     },
     plugins : [
         new CleanWebpackPlugin(),
-    ]
+        new HtmlWebpackPlugin({
+            template: 'src/template.html'
+        }),
+    ],
+    devServer: {
+        open: true,
+        contentBase: path.resolve(__dirname, '..', 'public'),
+        port: 8080,
+    },
 }
 
 module.exports = webpackConfig;
