@@ -1,7 +1,11 @@
-import { message, messageDOM } from './message';
-import { divEdit } from './test-div';
-import { listGenerator } from './list';
-import info from './title.txt';
+import { message, messageDOM } from './tools/message';
+import { divEdit } from './tools/test-div';
+import { listGenerator } from './tools/list';
+import './components/footer';
+
+import info from './data/title.txt';
+
+import './css/style.css';
 
 const div = document.querySelector(".test-div");
 const lst = document.querySelector("lst");
