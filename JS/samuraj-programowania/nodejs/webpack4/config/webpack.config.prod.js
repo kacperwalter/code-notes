@@ -34,13 +34,26 @@ const webpackConfig = {
             },
             {
                 test: /\.(jpg|png|svg|gif|jpeg)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name][contenthash:6].[ext]',
-                    outputPath: 'images',
-                    // publicPath - gdzie mają być szukane zdjęcia
-                    // publicPath: '../images',
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name][contenthash:6].[ext]',
+                        outputPath: 'images',
+                        // publicPath - gdzie mają być szukane zdjęcia
+                        // publicPath: '../images',
                 }
+                }, {
+                    // optymalizacja grafik
+                    // https://www.npmjs.com/package/image-webpack-loader
+                    loader: 'image-webpack-loader',
+                    options: {
+                        mozjpeg: { 
+                            quality: 70,
+                            progressive: true,
+                        }
+                    }
+                }],
+                
             }
         ],
     },
