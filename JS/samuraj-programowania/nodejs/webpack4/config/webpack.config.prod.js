@@ -31,6 +31,16 @@ const webpackConfig = {
                 // do tego musi być zainstalowany dodatkowo node-sass
                 test: /\.(sass|scss)$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(jpg|png|svg|gif|jpeg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name][contenthash:6].[ext]',
+                    outputPath: 'images',
+                    // publicPath - gdzie mają być szukane zdjęcia
+                    // publicPath: '../images',
+                }
             }
         ],
     },
@@ -40,7 +50,7 @@ const webpackConfig = {
             template: "src/templates/template.html"
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/[name]-[contenthash].css',
+            filename: '[name]-[contenthash].css',
         }),
     ],
 };

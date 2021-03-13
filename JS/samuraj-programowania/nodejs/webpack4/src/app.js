@@ -2,6 +2,7 @@ import { message, messageDOM } from './tools/message';
 import { divEdit } from './tools/test-div';
 import { listGenerator } from './tools/list';
 import './components/footer';
+import addImage from './tools/image';
 
 import info from './data/title.txt';
 
@@ -14,3 +15,4 @@ const lst = document.querySelector("lst");
 
 message("wszymstko działa");
 divEdit(div, 'No i wszymsto działa równiesz');
+addImage('h1');

@@ -30,6 +30,10 @@ const webpackConfig = {
                 // do tego musi być zainstalowany dodatkowo node-sass
                 test: /\.(sass|scss)$/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(jpg|png|svg|gif|jpeg)$/,
+                use: 'file-loader',
             }
         ],
     },
