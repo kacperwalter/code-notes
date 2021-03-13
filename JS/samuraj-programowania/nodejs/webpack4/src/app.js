@@ -23,3 +23,5 @@ e1.addBgColor('red');
 const e2 = new Creator();
 e2.addBgColor('blue');
 const e3 = new Creator();
+e3.addBgColor(); 
+e3.showColor(); 
