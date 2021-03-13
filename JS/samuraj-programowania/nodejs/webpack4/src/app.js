@@ -3,6 +3,7 @@ import { divEdit } from './tools/test-div';
 import { listGenerator } from './tools/list';
 import './components/footer';
 import addImage from './tools/image';
+import Creator from './tools/creator';
 
 import info from './data/title.txt';
 
@@ -16,3 +17,9 @@ const lst = document.querySelector("lst");
 message("wszymstko działa");
 divEdit(div, 'No i wszymsto działa równiesz');
 addImage('h1');
+
+const e1 = new Creator();
+e1.addBgColor('red');
+const e2 = new Creator();
+e2.addBgColor('blue');
+const e3 = new Creator();

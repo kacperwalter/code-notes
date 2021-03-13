@@ -52,9 +52,13 @@ const webpackConfig = {
                             progressive: true,
                         }
                     }
-                }],
-                
-            }
+                }],     
+            },
+            {
+                test: /\.js$/,
+                loader: ['babel-loader'],
+                exclude: /node_modules/, // nie transpilujemy node-modules
+            },         
         ],
     },
     plugins: [
