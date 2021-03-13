@@ -5,7 +5,7 @@ import './components/footer';
 
 import info from './data/title.txt';
 
-import './css/style.css';
+import './scss/index.scss';
 
 const div = document.querySelector(".test-div");
 const lst = document.querySelector("lst");

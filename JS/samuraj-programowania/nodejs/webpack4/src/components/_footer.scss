@@ -1,8 +1,10 @@
+$bgcolor: white;
+
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: black;
-    color: white;
+    color: $bgcolor;
     height: 80px;
 }

@@ -24,6 +24,15 @@ const webpackConfig = {
             //    use: ['style-loader', 'css-loader']
                use: [MiniCssExtractPlugin.loader, 'css-loader'], // uzywajac MiniCssExtractPlugin nie potrzebujemy style-loadera
            },
+           {
+                 test: /\.txt$/,
+                use: 'raw-loader'
+            },
+            {
+                // do tego musi być zainstalowany dodatkowo node-sass
+                test: /\.(sass|scss)$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            }
         ],
     },
     plugins: [
