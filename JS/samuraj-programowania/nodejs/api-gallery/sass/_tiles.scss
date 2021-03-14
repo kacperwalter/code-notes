@@ -1,0 +1,21 @@
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 $main-spacing * -1;
+    &__tile {
+        flex: 0 1 33.33%;
+         padding: 0 $main-spacing;
+         margin-bottom: $main-spacing / 2;
+    }
+    &__tile-content {
+        cursor: pointer;
+        background: $primary-color;
+        padding: $main-spacing;
+        color: $tile-text-color;
+        text-align: center;
+        transition: 0.1s;
+        &:hover {
+            background: darken($primary-color, 10%);
+        }
+    }
+}

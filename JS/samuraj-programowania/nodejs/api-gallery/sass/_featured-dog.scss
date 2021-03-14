@@ -1,0 +1,38 @@
+.featured-dog {
+    padding: $main-spacing;
+    border: 1px solid $border-color;
+    display: flex;
+    &__wrapper {
+        flex: 1;
+        height: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 110%;
+        height: 110%;
+        margin: -5%;
+        background-size: cover;
+        padding: $main-spacing;
+        filter: blur(10px);
+    }
+    &__image {
+        position: relative;
+        z-index: 2;
+
+        img {
+            width: 100%;
+            max-height: 100%;
+        }
+    }
+    &__description {
+        flex: 1;
+        padding: 0 $main-spacing;
+    }
+}
