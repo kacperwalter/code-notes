@@ -20,6 +20,7 @@ This repo contains log of my development skills and resources that I use when I 
 |**JavaScript**                    | ![done][done]     | ![done][done]          | ![done][done]    |
 |**ES6**                           | ![done][done]     | ![done][done]          |                  |
 |**NPM**                           | ![done][done]     |                        |                  |
+|**React**                         | ![done][done]     |                        |                  |
 |**Mobile First**                  | ![done][done]     | ![done][done]          |                  |
 |**Python**                        | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Django**                        | ![done][done]     | ![done][done]          |                  |
