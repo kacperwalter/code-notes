@@ -61,3 +61,31 @@ function Button() {
       </button>
       );
 }
+
+
+** Passing prop into componenent 
+To pass a prop to a component, you specify an attribute just like in HTML
+
+// sending props in a parent component
+
+function App() {
+  const [counter, setCounter] = useState(42);
+    return (
+      <div>
+        <Button  />
+        <Display message={counter}/>
+      </div>
+    )
+}
+
+// recieving and displaying component in a child component
+
+function Display(props) {
+  return (
+    <div>
+      {props.message}
+    </div>
+  )
+}
+
+What is done upper is called the one-way flow of data - parent components canf flow their data down to children components 

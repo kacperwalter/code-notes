@@ -1,32 +1,35 @@
 const { useState } = require("react")
 
-function Button() {
-    const [counter, setCounter ] = useState(1);
-    const handleClick = () => setCounter(counter + 1);
+// working code thats displays incrementing value when button is clicked
+
+function Button(props) {
     return (
-        <button onClick={handleClick}>
-            {counter}
-        </button>
+      <button onClick={props.click}>
+        +1
+      </button>
     );
-}
-
-function Display() {
+  }
+  
+  function Display(props) {
     return (
-        <div>Test</div>
+      <div>
+        {props.message}
+      </div>
     )
-}
-
-function App() {
-    return (
+  }
+  
+  function App() {
+    const [counter, setCounter] = useState(0);
+    const incrementCounter = () => setCounter(counter + 1);
+      return ( 
         <div>
-            <Button />
-            <Display />
+          <Button click={incrementCounter}/>
+          <Display message={counter}/>
         </div>
-    )
-}
-
-ReactDOM.render(
+      )
+  }
+  
+  ReactDOM.render(
     <App />,
     document.getElementById('mountNode'),
-)
-// Your first one-way data flow 6:12
+  )
