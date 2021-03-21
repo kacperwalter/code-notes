@@ -28,7 +28,7 @@ const fetchProfile = new FetchApi('https://api.github.com/users/kacperwalter');
 const CardList = (props) => {
     return(
     <div>
-        {testData.map(profile => <Card {...profile}/>)}
+        {props.profiles.map(profile => <Card {...profile}/>)}
     </div>
     )
 };
@@ -60,11 +60,15 @@ class Form extends React.Component {
 }
 
 class App extends React.Component {
+    constructor(props) {
+        super();
+    }
     render() {
         return (
             <div>
                 <div className="header">{this.props.title}</div>
-                <CardList />
+                <Form />
+                <CardList profiles={testData}/>
             </div>
         );
     }
