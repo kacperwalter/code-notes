@@ -30,12 +30,16 @@ const CardList = (props) => {
 
 // Event handler in React UI
 class Form extends React.Component {
-    state = { userName: '' };
+    state = { userName: '', empty: '' };
     handleSubmit = async (event) => {
         event.preventDefault(); // its important - without that form will refresh the page
         const resp = await axios.get(`https://api.github.com/users/${this.state.userName}`);
         this.props.onSubmit(resp.data);
+        this.setState({ userName: '' });
     };
+    resetInput = () => {
+        
+    }
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
