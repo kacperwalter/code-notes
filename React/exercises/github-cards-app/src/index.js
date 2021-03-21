@@ -48,11 +48,24 @@ class Card extends React.Component {
     }
 }
 
+// Event handler in React UI
 class Form extends React.Component {
+    userNameInput = React.createRef();
+    handleSubmit = (event) => {
+        event.preventDefault(); // its important - without that form will refresh the page
+        console.log(
+            this.userNameInput.current.value
+        )
+    };
     render() {
         return (
-            <form action="">
-                <input type="text" placeholder="GitHub username"/>
+            <form onSubmit={this.handleSubmit}>
+                <input
+                type="text"
+                ref={this.userNameInput}
+                placeholder="GitHub username" 
+                required
+                />
                 <button>AddCard</button>
             </form>
         );
@@ -60,15 +73,15 @@ class Form extends React.Component {
 }
 
 class App extends React.Component {
-    constructor(props) {
-        super();
-    }
+    state = {
+        profiles: testData,
+    };
     render() {
         return (
             <div>
                 <div className="header">{this.props.title}</div>
                 <Form />
-                <CardList profiles={testData}/>
+                <CardList profiles={this.state.profiles}/>
             </div>
         );
     }
