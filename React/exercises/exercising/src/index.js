@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from './App';
+
 import './main.css';
 
-const App = (props) => {
-    return <h1>{props.test}</h1>;
-}
 const someText = 'Working coool';
 
 ReactDOM.render(
