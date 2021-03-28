@@ -19,6 +19,6 @@ const UsersList = () => (
   </div>
 );
 
-UsersList.PropTypes = {};
+// UsersList.PropTypes = {};
 
 export default UsersList;

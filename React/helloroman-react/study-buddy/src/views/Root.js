@@ -8,6 +8,6 @@ const Root = () => (
   </>
 );
 
-Root.PropTypes = {};
+// Root.PropTypes = {};
 
 export default Root;
