@@ -21,10 +21,10 @@
     "src/**/*.{js,json}": [
       "prettier --write"
     ]
-  }, 
+  },
   "husky": {
     "hooks": {
-    "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "browserslist": {
