@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Button from 'components/atoms/Button/Button';
 
 const Wrapper = styled.li`
   display: flex;
@@ -16,15 +17,6 @@ const Wrapper = styled.li`
   }
 `;
 
-const StyledButton = styled.button`
-  width: 25px;
-  height: 25px;
-  background-color: ${({ isSecondary }) => (isSecondary ? '#e7e044' : '#c0c7d6')};
-  border-radius: ${({ isSquare }) => (isSquare ? '0px' : '50px')};
-  border: none;
-  color: white;
-`;
-
 const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
     <div>{average}</div>
@@ -32,10 +24,7 @@ const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
       <p>{name}</p>
       <p>attendance: {attendance}</p>
     </div>
-    <StyledButton>X</StyledButton>
-    <StyledButton isSecondary isSquare>
-      X
-    </StyledButton>
+    <Button />
   </Wrapper>
 );
 

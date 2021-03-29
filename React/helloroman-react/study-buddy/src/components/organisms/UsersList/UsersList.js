@@ -1,7 +1,7 @@
 import React from 'react';
 import { users } from 'data/users';
 import styled from 'styled-components';
-import UsersListItem from 'components/UsersListItem/UsersListItem';
+import UsersListItem from 'components/molecules/UsersListItem/UsersListItem';
 
 const Wrapper = styled.div`
   background-color: white;
