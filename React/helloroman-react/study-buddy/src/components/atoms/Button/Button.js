@@ -5,7 +5,7 @@ import { ReactComponent as DeleteIcon } from 'assets/icons/delete-icon.svg';
 const StyledButton = styled.button`
   width: 25px;
   height: 25px;
-  background-color: #c0c7d6;
+  background-color: ${({ theme }) => theme.colors.grey};
   border-radius: 50px;
   border: none;
   color: white;
