@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './UsersListItem.module.scss';
+import globalStyles from 'assets/GlobalStyles.module.scss';
 
 const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
-  <li>
+  <li className={styles.container}>
+    <div className={globalStyles.box} />
     <div>{average}</div>
     <div>
       <p>{name}</p>
