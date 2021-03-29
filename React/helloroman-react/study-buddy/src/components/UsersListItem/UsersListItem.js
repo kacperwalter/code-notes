@@ -19,8 +19,8 @@ const Wrapper = styled.li`
 const StyledButton = styled.button`
   width: 25px;
   height: 25px;
-  background-color: ${(props) => (props.secondary ? '#e7e044' : '#c0c7d6')};
-  border-radius: 50px;
+  background-color: ${({ isSecondary }) => (isSecondary ? '#e7e044' : '#c0c7d6')};
+  border-radius: ${({ isSquare }) => (isSquare ? '0px' : '50px')};
   border: none;
   color: white;
 `;
@@ -33,7 +33,9 @@ const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
       <p>attendance: {attendance}</p>
     </div>
     <StyledButton>X</StyledButton>
-    <StyledButton secondary>X</StyledButton>
+    <StyledButton isSecondary isSquare>
+      X
+    </StyledButton>
   </Wrapper>
 );
 
