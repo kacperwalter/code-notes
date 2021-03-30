@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'components/atoms/Button/Button';
+import Average from 'components/atoms/Average/Average';
 import { Wrapper } from './UserListItem.styles';
 
 const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
-    <div>{average}</div>
-    <div>
-      <p>{name}</p>
-      <p>attendance: {attendance}</p>
+    <Average avgData={average} />
+    <div className="textField">
+      <p className="nameField">{name}</p>
+      <p className="attendanceField">attendance: {attendance}</p>
     </div>
     <Button />
   </Wrapper>
