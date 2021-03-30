@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+// TODO
+// I can use ternary operator here somehow
 const colorSwitcher = (avgValue, theme) => {
   if (avgValue < 3) {
     return theme.colors.error;

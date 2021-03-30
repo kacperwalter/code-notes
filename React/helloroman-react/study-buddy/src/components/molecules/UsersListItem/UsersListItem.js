@@ -7,9 +7,9 @@ import { Wrapper } from './UserListItem.styles';
 const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
     <Average avgData={average} />
-    <div>
-      <p>{name}</p>
-      <p>attendance: {attendance}</p>
+    <div className="textField">
+      <p className="nameField">{name}</p>
+      <p className="attendanceField">attendance: {attendance}</p>
     </div>
     <Button />
   </Wrapper>
