@@ -16,10 +16,10 @@ This repo contains log of my development skills and resources that I use when I 
 |**Responsive Web**                | ![done][done]     | ![done][done]          | ![done][done]    |
 |**BEM**                           | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Bootstrap**                     | ![done][done]     | ![done][done]          |                  |
-|**Static Website Building**       | ![done][done]     | ![done][done]          |                  |
+|**Static Website Building**       | ![done][done]     | ![done][done]          | ![done][done]    |
 |**JavaScript**                    | ![done][done]     | ![done][done]          | ![done][done]    |
 |**ES6**                           | ![done][done]     | ![done][done]          |                  |
-|**NPM**                           | ![done][done]     |                        |                  |
+|**NPM**                           | ![done][done]     | ![done][done]          |                  |
 |**React**                         | ![done][done]     |                        |                  |
 |**Mobile First**                  | ![done][done]     | ![done][done]          |                  |
 |**Python**                        | ![done][done]     | ![done][done]          | ![done][done]    |
