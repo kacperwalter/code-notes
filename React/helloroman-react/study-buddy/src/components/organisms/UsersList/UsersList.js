@@ -5,25 +5,20 @@ import { Wrapper } from './UsersList.styles';
 
 class UsersList extends React.Component {
   state = {
-    isUsersList: true,
     users,
   };
 
-  toggleListTitle = () => {
-    this.setState((prevState) => ({ isUsersList: !prevState.isUsersList }));
+  deleteUser = (name) => {
+    const filteredUsers = this.state.users.filter((user) => user.name !== name);
+    this.setState({ users: filteredUsers });
   };
 
   render() {
-    const { title } = this.props;
-    const { isUsersList } = this.state;
-
     return (
       <Wrapper>
-        <h1>{this.state.isUsersList ? `User's List` : 'Students List'}</h1>
-        <button onClick={() => this.toggleListTitle()}>Change title</button>
         <ul>
           {this.state.users.map((userData, i) => (
-            <UsersListItem index={i} userData={userData} />
+            <UsersListItem deleteUser={this.deleteUser} index={i} userData={userData} />
           ))}
         </ul>
       </Wrapper>
