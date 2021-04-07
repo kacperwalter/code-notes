@@ -6,14 +6,14 @@ import { Wrapper } from './UserListItem.styles';
 
 const showIndex = (index) => alert(`This is student #${index + 1}`);
 
-const UsersListItem = ({ index, userData: { average, name, attendance = '0%' } }) => (
+const UsersListItem = ({ deleteUser, index, userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
     <Average avgData={average} />
     <div className="textField">
       <p className="nameField">{name}</p>
       <p className="attendanceField">attendance: {attendance}</p>
     </div>
-    <Button onClick={() => showIndex(index)} />
+    <Button onClick={() => deleteUser(name)} />
   </Wrapper>
 );
 
