@@ -1,10 +1,7 @@
 # Code Notes
 
-<<<<<<< HEAD
-This repo contains log of my development skills and resources that I use when learning new things in software development world. It's a way to store all resources in one place - avalible from any computer or even from every place where internet connection is. 
-=======
 This repo contains log of my development skills and resources that I use when I lear new things in software development world. It's a way to store all resources in one place - avalible from any computer or even from every place where internet connection is. 
->>>>>>> master
+
 
 ## Skills
 
