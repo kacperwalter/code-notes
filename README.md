@@ -1,6 +1,10 @@
 # Code Notes
 
+<<<<<<< HEAD
 This repo contains log of my development skills and resources that I use when learning new things in software development world. It's a way to store all resources in one place - avalible from any computer or even from every place where internet connection is. 
+=======
+This repo contains log of my development skills and resources that I use when I lear new things in software development world. It's a way to store all resources in one place - avalible from any computer or even from every place where internet connection is. 
+>>>>>>> master
 
 ## Skills
 
@@ -16,10 +20,10 @@ This repo contains log of my development skills and resources that I use when le
 |**Responsive Web**                | ![done][done]     | ![done][done]          | ![done][done]    |
 |**BEM**                           | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Bootstrap**                     | ![done][done]     | ![done][done]          |                  |
-|**Static Website Building**       | ![done][done]     | ![done][done]          |                  |
+|**Static Website Building**       | ![done][done]     | ![done][done]          | ![done][done]    |
 |**JavaScript**                    | ![done][done]     | ![done][done]          | ![done][done]    |
 |**ES6**                           | ![done][done]     | ![done][done]          |                  |
-|**NPM**                           | ![done][done]     |                        |                  |
+|**NPM**                           | ![done][done]     | ![done][done]          |                  |
 |**React**                         | ![done][done]     |                        |                  |
 |**Mobile First**                  | ![done][done]     | ![done][done]          |                  |
 |**Python**                        | ![done][done]     | ![done][done]          | ![done][done]    |
