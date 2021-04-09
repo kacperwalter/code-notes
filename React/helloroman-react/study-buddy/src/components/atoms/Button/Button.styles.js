@@ -12,6 +12,10 @@ export const StyledButton = styled.button`
   justify-content: center;
   margin-left: 14px;
 
+  :hover {
+    cursor: pointer;
+  }
+
   svg {
     width: 100%;
     height: 100%;
