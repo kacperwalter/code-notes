@@ -327,7 +327,7 @@ NOTE:  You may see the cursor position in the lower right corner of the screen
      number  G  moves to that line number.
             gg  moves to the first line.
 
-  2. Typing  /  followed by a phrase searches FORWARD for the phrase.
+  2. Typing Typing    /  followed by a phrase searches FORWARD for the phrase.
      Typing  ?  followed by a phrase searches BACKWARD for the phrase.
      After a search type  n  to find the next occurrence in the same direction
      or  N  to search in the opposite direction.
