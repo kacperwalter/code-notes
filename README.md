@@ -17,6 +17,7 @@ This repo contains log of my development skills and resources that I use when I 
 |**Responsive Web**                | ![done][done]     | ![done][done]          | ![done][done]    |
 |**BEM**                           | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Bootstrap**                     | ![done][done]     | ![done][done]          |                  |
+|**Tailwind CSS**                  | ![done][done]     |                        |                  |
 |**Static Website Building**       | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Hubspot CMS Development**       | ![done][done]     | ![done][done]          | ![done][done]    |
 |**JavaScript**                    | ![done][done]     | ![done][done]          | ![done][done]    |
