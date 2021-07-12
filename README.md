@@ -30,4 +30,3 @@ This repo contains log of my development skills and resources that I use when I 
 |**Git**                           | ![done][done]     | ![done][done]          | ![done][done]    |
 |**GitHub**                        | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Contributing To Open Source**   | ![done][done]     |                        |                  |
-|**Bash**                          | ![done][done]     | ![done][done]          | ![done][done]    |
