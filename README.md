@@ -3,7 +3,7 @@
 This repo contains log of my development skills and resources that I use when I learn new things in software development world. It's a way to store all resources in one place - avalible from any computer or even from every place where internet connection is. 
 
 
-## Skills
+## Current tech stack
 
 [done]: https://user-images.githubusercontent.com/29199184/32275438-8385f5c0-bf0b-11e7-9406-42265f71e2bd.png "Done"
 
