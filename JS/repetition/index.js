@@ -119,3 +119,35 @@ const getUser = () => {
 const user = getUser();
 const { firstName, age, adress: { country : theCountry, city : theCity } } = user;
 const { adress : { fullAdress : { doorNumber : number } } } = user;
+
+
+// function default parameters
+const calcutatePay = (yearSalary, bonus = 0) => yearSalary + bonus;
+
+
+// classes
+class Human {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  eat() {
+    log(`${this.name} is eating`);
+  }
+
+  sleep() {
+    log(`${this.name} is sleeping`);
+  }
+
+  addAge(n) {
+    this.age = this.age + n;
+  }
+}
+
+const andrzejos = new Human('Andrzej', 29);
+andrzejos.addAge(5);
+// log(andrzejos.age);
+
+// https://www.youtube.com/watch?v=dOnAC2Rr-6A&t=7207s&ab_channel=Amigoscode
+// finished at 2:52:08
