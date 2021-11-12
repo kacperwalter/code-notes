@@ -4,6 +4,6 @@ export default class Animal {
   }
 
   getClassType() {
-    return "Animal";
+    return this;
   }
 }

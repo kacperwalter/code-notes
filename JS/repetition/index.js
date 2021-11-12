@@ -30,4 +30,4 @@ log(add(2, 5));
 // default exports / imports - allows us to export single value 
 import Animal from './Animal.js';
 const animal = new Animal();
-// log(animal.getClassType());
+log(animal.getClassType());
