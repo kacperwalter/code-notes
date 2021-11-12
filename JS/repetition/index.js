@@ -87,5 +87,35 @@ const calculator = (name, surname, price) => {
 }
 
 const calc = calculator('casio', 'andrezj');
-log(calc.name);
-log(calc.surname);
+// log(calc.name);
+// log(calc.surname);
+
+
+// array destructuring - allows us to pull values from an array
+const names = ['Kacper', 'Kamil', 'Krzysztof', 'Pawel', 'Weronika', 'Kasia'];
+const [regular1, regular2, senior, ...restOfNames] = names; // destructured names
+// log(`${regular1}, ${regular2}, ${senior} to zajebisci devowie`);
+// log(restOfNames); // spreaded array which last
+
+
+// object destructuring
+const getUser = () => {
+  return {
+    firstName: 'John',
+    surname: 'Doe',
+    gender: 'male',
+    adress: {
+      country: 'US',
+      city: 'LA',
+      fullAdress: {
+        doorNumber: 22,
+        street: 'LA street'
+      }
+    },
+    age: 29
+  }
+}
+
+const user = getUser();
+const { firstName, age, adress: { country : theCountry, city : theCity } } = user;
+const { adress : { fullAdress : { doorNumber : number } } } = user;
