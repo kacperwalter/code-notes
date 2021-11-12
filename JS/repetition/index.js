@@ -38,7 +38,7 @@ const arrayOne = ['Marian', 'Anna', 'Alex'];
 const arrayTwo = ['Kacper', 'Krzysztof', 'Kamil'];
 
 const concatArray = [...arrayOne, ...arrayTwo];
-concatArray.forEach(name => log(name));
+// concatArray.forEach(name => log(name));
 
 const name = 'Marian';
 const nameToArray = [...name];
@@ -60,5 +60,32 @@ const fullName = {
 
 const adreessAndName = {...adress, ...fullName};
 // log(adreessAndName);
-log(JSON.stringify(adreessAndName, null, 2));
+// log(JSON.stringify(adreessAndName, null, 2));
 
+
+// lexical this
+const person = {
+  name: 'Alex',
+  car: ['Ferrari', 'Lambo'],
+  toString: () => log(`${this.name} has ${this.cars}`)
+}
+
+
+// enhanced object properties
+
+const pricePropName = "PRICE";
+
+const calculator = (name, surname, price) => {
+  return {
+    name,
+    surname,
+    add(n1, n2) {
+      return n1 + n2;
+    },
+    [pricePropName.toLowerCase()] : price
+  }
+}
+
+const calc = calculator('casio', 'andrezj');
+log(calc.name);
+log(calc.surname);
