@@ -61,3 +61,4 @@ const fullName = {
 const adreessAndName = {...adress, ...fullName};
 // log(adreessAndName);
 log(JSON.stringify(adreessAndName, null, 2));
+
