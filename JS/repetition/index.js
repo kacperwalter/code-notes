@@ -1,6 +1,6 @@
-const log = (data) => console.log(data);
+const log = data => console.log(data);
 
-const numbers = [1, 2, 3, 4, 5, 6];
+const numbers = [1, 2, 3, 4, 5, 6]; 
 
 // map is used to do the transformations on arrays
 const doubledNumbers = numbers.map(n => n * 2);
@@ -25,3 +25,6 @@ const callbackExample = (name, callback) => log(callback(name));
 
 import { add, divide } from './Math.js'; // import just things that are needed
 log(add(2, 5));
+
+
+// default exports
