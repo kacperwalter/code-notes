@@ -1,3 +1,42 @@
 body {
-  color: gray;
+  font-family: 'Fira Code', monospace;
+  color: white;
+  background-color: #181818;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 15vh;
+  background-color: darkkhaki;
+  color: #181818;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  background-color: darkgrey;
+  width: 15vw;
+}
+
+.button {
+  align-self: center;
+}
+
+.footer {
+  height: 15vh;
+  background-color: darkkhaki;
 }
