@@ -33,7 +33,7 @@ const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
       <p>{attendance}</p>
     </div>
     <StyledButton>X</StyledButton>
-    <StyledButton isSecondary>X</StyledButton>
+    <StyledButton>X</StyledButton>
   </Wrapper>
 );
 
