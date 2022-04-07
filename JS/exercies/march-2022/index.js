@@ -8,9 +8,7 @@ class BallMovement {
     this.addListeners();
     // console.log(this.ball.style.top);
     // this.ball.style.top = "50px";
-    console.log(this.ball.style)
     this.ball.style.top = `${this.ballTopPosition} px`;
-    console.log(typeof `${this.ballTopPosition}px`)
   }
 
   ballMovement(event) {
@@ -45,8 +43,8 @@ class BallMovement {
 
   addListeners() {
     this.ball.addEventListener('mouseover', this.ballGrab);
-    document.addEventListener('keydown', this.ballMovement);
+    window.addEventListener('keydown', this.ballMovement);
   }
 }
 
-new BallMovement(document.querySelector('[data-playground'));
+new BallMovement(document.querySelector('[data-playground]'));
