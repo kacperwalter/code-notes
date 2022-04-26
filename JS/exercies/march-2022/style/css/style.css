@@ -27,19 +27,4 @@ body {
   place-items: center;
   background-color: rgba(181, 178, 167, 0.9);
 }
-
-.playground {
-  height: 80vh;
-  width: 90vw;
-  margin-top: 5rem;
-  border: 2px solid darkgray;
-  position: relative;
-}
-
-.ball {
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-  background-color: tomato;
-}
 /*# sourceMappingURL=style.css.map */
