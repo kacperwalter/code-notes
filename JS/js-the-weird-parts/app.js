@@ -3,8 +3,19 @@
 // the base execution context is the global execution context
 // GLOBAL - thing that's accessible from every part of the code
 
-var a = 'hello world';
 
+// variable envoirements (scope)
 function b() {
-    
+  var myVar;
+  console.log(myVar);
 }
+
+function a() {
+  var myVar = 2;
+  console.log(myVar);
+  b();
+}
+
+var myVar = 1;
+console.log(myVar)
+a();
