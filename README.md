@@ -23,7 +23,6 @@ This repo contains log of my development skills and resources that I use when I 
 |**ES6**                           | ![done][done]     | ![done][done]          |                  |
 |**NPM**                           | ![done][done]     | ![done][done]          |                  |
 |**React**                         | ![done][done]     | ![done][done]          |                  |
-|**Mobile First**                  | ![done][done]     | ![done][done]          |                  |
 |**Python**                        | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Django**                        | ![done][done]     | ![done][done]          |                  |
 |**Git**                           | ![done][done]     | ![done][done]          | ![done][done]    |
