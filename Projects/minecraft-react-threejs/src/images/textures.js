@@ -22,5 +22,4 @@ export {
 	woodTexture,
 	logTexture,
 	groundTexture,
-
 }
