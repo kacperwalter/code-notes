@@ -18,7 +18,7 @@ const camera = new THREE.PerspectiveCamera(
 
 const orbit = new OrbitControls(camera, renderer.domElement);
 
-// 3D coordinates 
+// 3D coordinates - helpers are just helpers tool, not to use in prouction
 const axesHelper = new THREE.AxesHelper(3);
 
 scene.add(axesHelper);

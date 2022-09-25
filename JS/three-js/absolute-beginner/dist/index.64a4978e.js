@@ -540,7 +540,7 @@ document.body.appendChild(renderer.domElement);
 const scene = new _three.Scene();
 const camera = new _three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const orbit = new (0, _orbitControls.OrbitControls)(camera, renderer.domElement);
-// 3D coordinates 
+// 3D coordinates - helpers are just helpers tool, not to use in prouction
 const axesHelper = new _three.AxesHelper(3);
 scene.add(axesHelper);
 // camera.position.z = 5;
