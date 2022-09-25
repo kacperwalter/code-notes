@@ -27,15 +27,24 @@ scene.add(axesHelper);
 // camera.position.y = 2;
 
 // (x, y, z)
-camera.position.set(0, 2, 5);
+camera.position.set(-10, 30, 30);
 // call the method everytime we move the camera
 orbit.update();
 
-const boxGeometry = new THREE.BoxGeometry();
-const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00FF00});
-const box = new THREE.Mesh(boxGeometry, boxMaterial);
-
+// mesh
+const boxGeometry = new THREE.BoxGeometry(); // 1st stage - creating a geometry
+const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00FF00}); // 2nd stage - adding material / MeshBasicMaterial doesn't need light to appear on the scene
+const box = new THREE.Mesh(boxGeometry, boxMaterial); // 3rd stage - fusion of geometry and material (mesh is an 3D object in 3D world)
 scene.add(box);
+
+// mesh
+const planeGeometry = new THREE.PlaneGeometry(30, 30);
+const planeMaterial = new THREE.MeshBasicMaterial({color: 0xEBECF0});
+const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+scene.add(plane);
+
+const gridHelper = new THREE.GridHelper;
+scene.add(gridHelper);
 
 // geometric transofmation 
 function animate() {
