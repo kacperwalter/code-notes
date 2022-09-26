@@ -39,12 +39,26 @@ scene.add(box);
 
 // mesh
 const planeGeometry = new THREE.PlaneGeometry(30, 30);
-const planeMaterial = new THREE.MeshBasicMaterial({color: 0xEBECF0});
+const planeMaterial = new THREE.MeshBasicMaterial({
+  color: 0xEBECF0,
+  side: THREE.DoubleSide, // without that plane is one sided
+});
 const plane = new THREE.Mesh(planeGeometry, planeMaterial);
 scene.add(plane);
+plane.rotation.x = -0.5 * Math.PI; // matching plane with the grid
 
-const gridHelper = new THREE.GridHelper;
+// 1st argument - grid size, 2nd argument -> divide squares into smaller pieces
+const gridHelper = new THREE.GridHelper(30);
 scene.add(gridHelper);
+
+// mesh
+const sphereGeometry = new THREE.SphereGeometry(4, 20, 20); // 2nd and 3rd argument - how detai;ed the sphere should be
+const sphereMaterial = new THREE.MeshBasicMaterial({
+  color: 0x0000FF,
+  wireframe: false, // true displays only wirefire (octagons used to build geometry)
+})
+const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+scene.add(sphere);
 
 // geometric transofmation 
 function animate() {
