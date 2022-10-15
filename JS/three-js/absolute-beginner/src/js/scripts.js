@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import * as dat from 'dat.gui';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const renderer = new THREE.WebGLRenderer();
@@ -53,12 +54,24 @@ scene.add(gridHelper);
 
 // mesh
 const sphereGeometry = new THREE.SphereGeometry(4, 20, 20); // 2nd and 3rd argument - how detai;ed the sphere should be
-const sphereMaterial = new THREE.MeshBasicMaterial({
+const sphereMaterial = new THREE.MeshBasicMaterial({ // .MeshStandardMaterial needs light to appear into the scene
   color: 0x0000FF,
   wireframe: false, // true displays only wirefire (octagons used to build geometry)
 })
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(sphere);
+sphere.position.set(-10, 10, 0)
+
+// GUI is a helper to choose proper color etc
+const gui = new dat.GUI();
+
+const options = {
+  sphereColor: '#ffea00'
+};
+
+gui.addColor(options, 'sphereColor').onChange(function(e){
+  sphere.material.color.set(e);
+})
 
 // geometric transofmation 
 function animate() {
