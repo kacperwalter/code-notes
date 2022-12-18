@@ -8,7 +8,7 @@ const Pet = (props) => {
     React.createElement("h2", {}, props.breed),
   ]);
 };
- 
+
 const App = () => {
   return React.createElement("div", { className: "test-class" }, [
     React.createElement("h1", {}, "Adopt Me!"),
