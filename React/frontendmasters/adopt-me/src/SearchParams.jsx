@@ -14,7 +14,7 @@ const SearchParams = () => {
   // everytime animal changes, useEffect will run
   useEffect(() => {
     requestPets();
-  }, [animal])
+  }, [])
 
   async function requestPets() {
     const res = await fetch(
@@ -27,7 +27,12 @@ const SearchParams = () => {
 
   return (
     <div className="search-params">
-      <form>
+      <form
+        onSubmit={e => {
+          e.preventDefault(); // because we dont want to refresh the page 
+          requestPets();
+        }}
+      >
         <label htmlFor="location">
           Location
           <input
@@ -48,8 +53,8 @@ const SearchParams = () => {
             }}
           >
             <option />
-            {ANIMIALS.map((animal) => (
-              <option value={animal}>{animal}</option>
+            {ANIMIALS.map((animal, index) => (
+              <option value={animal} key={index}>{animal}</option>
             ))}
           </select>
         </label>
