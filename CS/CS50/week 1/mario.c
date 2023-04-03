@@ -3,10 +3,12 @@
 
 int get_size(void);
 void print_grid(int size);
+const char * return_string(void);
 
 int main(void) {
   int n = get_size();
   print_grid(n);
+  return_string();
 }
 
 int get_size(void) {
@@ -26,4 +28,9 @@ void print_grid(int size) {
     }
     printf("\n");
   }
+}
+
+const char * return_string(void) {
+  char some_string[] = "Hello, World!";
+  return some_string;
 }
