@@ -5,16 +5,17 @@ const ANIMIALS = ['bird', 'cat', 'dog', 'rabbit', 'reptile'];
 const breeds = [];
 
 const SearchParams = () => {
-  // useState means default value of some state
+  // in useState we store default value of some state
   const [location, setLocation] = useState('');
   const [animal, setAnimal] = useState('');
   const [breed, setBreed] = useState('');
   const [pets, setPets] = useState([]);
 
   // everytime animal changes, useEffect will run
+  // we use it to fetch data from API and display content when component is mounted
   useEffect(() => {
     requestPets();
-  }, [])
+  }, []); // empty array will run useEffect only once, when component is mounted
 
   async function requestPets() {
     const res = await fetch(
@@ -28,8 +29,8 @@ const SearchParams = () => {
   return (
     <div className="search-params">
       <form
-        onSubmit={e => {
-          e.preventDefault(); // because we dont want to refresh the page 
+        onSubmit={(e) => {
+          e.preventDefault(); // because we dont want to refresh the page
           requestPets();
         }}
       >
@@ -54,7 +55,9 @@ const SearchParams = () => {
           >
             <option />
             {ANIMIALS.map((animal, index) => (
-              <option value={animal} key={index}>{animal}</option>
+              <option value={animal} key={index}>
+                {animal}
+              </option>
             ))}
           </select>
         </label>
@@ -77,11 +80,14 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      {
-        pets.map(pet => (
-          <Pet name={pet.name} animal={pet.animal} breed={pet.breed} key={pet.id} />
-        ))
-      }
+      {pets.map((pet) => (
+        <Pet
+          name={pet.name}
+          animal={pet.animal}
+          breed={pet.breed}
+          key={pet.id}
+        />
+      ))}
     </div>
   );
 };
