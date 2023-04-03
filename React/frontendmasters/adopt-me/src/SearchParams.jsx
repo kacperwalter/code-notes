@@ -36,7 +36,7 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-    </div >
+    </div>
   );
 };
 
