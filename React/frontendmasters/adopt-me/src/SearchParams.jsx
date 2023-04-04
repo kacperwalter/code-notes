@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Pet from './Pet';
+import useBreedList from './useBreedList';
 
 const ANIMIALS = ['bird', 'cat', 'dog', 'rabbit', 'reptile'];
 const breeds = [];
@@ -10,6 +11,7 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState('');
   const [breed, setBreed] = useState('');
   const [pets, setPets] = useState([]);
+  const [breeds] = useBreedList(animal);
 
   // everytime animal changes, useEffect will run
   // we use it to fetch data from API and display content when component is mounted
