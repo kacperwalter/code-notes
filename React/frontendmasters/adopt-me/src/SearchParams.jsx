@@ -13,7 +13,6 @@ const SearchParams = () => {
   const [pets, setPets] = useState([]);
   const [breeds] = useBreedList(animal);
 
-  // everytime animal changes, useEffect will run
   // we use it to fetch data from API and display content when component is mounted
   useEffect(() => {
     requestPets();
