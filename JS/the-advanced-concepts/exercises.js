@@ -10,4 +10,5 @@ function removeItemsFromList() {
     setTimeout(removeItemsFromList, 0);
   }
 };
+
 removeItemsFromList();
