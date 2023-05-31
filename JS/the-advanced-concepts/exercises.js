@@ -96,8 +96,15 @@ const factorialize = (num) => num === 0 ? 1 : num * factorialize(num - 1);
 // console.log(factorialize(5))
 
 function findLongestWordLength(str) {
-  return Math.min();
+  return Math.max(...str.split(' ').map(e => e.length));
 }
 
 // findLongestWordLength("The quick brown fox jumped over the lazy dog")
 console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
+// findLongestWordLength("The quick brown fox jumped over the lazy dog")
+
+function largestOfFour(arr) {
+  return arr;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
