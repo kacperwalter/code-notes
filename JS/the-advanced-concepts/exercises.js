@@ -100,11 +100,27 @@ function findLongestWordLength(str) {
 }
 
 // findLongestWordLength("The quick brown fox jumped over the lazy dog")
-console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
+// console.log(findLongestWordLength("The quick brown fox jumped over the lazy dog"))
 // findLongestWordLength("The quick brown fox jumped over the lazy dog")
 
 function largestOfFour(arr) {
-  return arr;
+  let largest = []
+  arr.forEach(e => largest.push(Math.max(...e)))
+  return largest
 }
 
-largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+// largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+function confirmEnding(str, target) {
+  return str.slice(str.length - target.length) === target;
+}
+
+// console.log(confirmEnding("Bastian", "n"));
+
+function repeatStringNumTimes([...str], num) {
+  console.log(str)
+  return str;
+}
+
+repeatStringNumTimes("abc", 3)
+// console.log(repeatStringNumTimes("abc", 3));
