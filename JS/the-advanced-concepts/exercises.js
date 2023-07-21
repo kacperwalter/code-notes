@@ -122,5 +122,28 @@ function repeatStringNumTimes([...str], num) {
   return str;
 }
 
-repeatStringNumTimes("abc", 3)
+// repeatStringNumTimes("abc", 3)
 // console.log(repeatStringNumTimes("abc", 3));
+
+// function descendingOrder(n){
+//   return n.toString().split('').sort().reverse().join('')
+// }
+
+const descendingOrder = (number) => parseInt(number.toString().split('').sort().reverse().join(''));
+
+// console.log(descendingOrder(0))
+
+
+const filter_list = (list) => list.filter(element => Number.isInteger(element));
+
+// console.log(filter_list([1,2,'a','b']));
+
+// function validatePIN(pin) {
+//   // const regex = 
+//   const matches = (/^[0-9]{4}$/.exec(pin) || /^[0-9]{6}$/.exec(pin)) && true
+//   console.log(matches);
+// }
+
+const validatePIN = pin => /^[0-9]{4}$/.exec(pin) || /^[0-9]{6}$/.exec(pin) && true
+
+console.log(validatePIN('123456'))
