@@ -146,4 +146,25 @@ const filter_list = (list) => list.filter(element => Number.isInteger(element));
 
 const validatePIN = pin => /^[0-9]{4}$/.exec(pin) || /^[0-9]{6}$/.exec(pin) && true
 
-console.log(validatePIN('123456'))
+// console.log(validatePIN('123456'))
+
+// function arrayDiff(arr1, arr2) {
+//   const newArray = arr1.filter(element => !arr2.includes(element))
+//   console.log(newArray)
+// }
+
+const arrayDiff = (arr1, arr2) => arr1.filter(element => !arr2.includes(element))
+
+// console.log(arrayDiff([1,2],[1]))
+// console.log(arrayDiff([1,2,2,2,3],[2]))
+
+function digitalRoot(n) {
+  let sum = 0;
+  const numberToArray = n.toString().split('');
+  console.log(numberToArray);
+  numberToArray.forEach(element => sum + parseInt(element));
+  numberToArray.forEach(element => console.log(element));
+  console.log(sum);
+}
+
+digitalRoot(16)
