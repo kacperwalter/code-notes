@@ -167,4 +167,88 @@ function digitalRoot(n) {
   console.log(sum);
 }
 
-digitalRoot(16)
+// digitalRoot(16)
+
+const likes = names => {
+  names = names || [];
+  switch(names.length) {
+    case 0:
+      return 'no one likes this'
+    case 1:
+      return `${names[0]} likes this`
+    case 2:
+      return `${names[0]} and ${names[1]} like this`
+    case 3:
+      return `${names[0]}, ${names[1]} and ${names[2]} like this`
+    default:
+      return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+  }
+}
+// console.log(likes(['Peter']));
+// likes(['Jacob', 'Alex'])
+// likes(['Max', 'John', 'Mark'])
+// likes(['Alex', 'Jacob', 'Mark', 'Max'])
+// likes(['Alex', 'Jacob', 'Mark', 'Max', 'Max', 'Max', 'Max'])
+
+
+function high(string){
+  const alphabet = Array.from(Array(26)).map((e, i) => i + 65).map((letter) => String.fromCharCode(letter));
+  let highestWord = '';
+  let currentBiggestScore = 0;
+
+  string.split(' ').forEach(word => {
+    let currentWordScore = 0;
+
+    [...word].forEach(letter => {
+      currentWordScore = currentWordScore + alphabet.indexOf(letter.toUpperCase()) + 1
+      if (currentWordScore > currentBiggestScore) {
+        currentBiggestScore = currentWordScore
+        highestWord = word
+      };
+    })
+  })
+
+  return highestWord
+}
+
+// const alphabet = Array.from(Array(26)).map((e, i) => i + 65).map((letter) => String.fromCharCode(letter));
+
+// console.log(alphabet);
+// console.log(alphabet.find(element => element === "C"));
+// console.log(alphabet.indexOf('A') + 1 );
+
+// high('man i need a taxi up to ubud');
+// high('man');
+// console.log(high('take me to semynak'))
+
+// function dec2bin(dec) {
+//   return (dec >>> 0).toString(2);
+// }
+
+// console.log(dec2bin(1234))
+
+
+
+// const countBits = number => {
+//   // console.log((number >>> 0).toString(2).split(''));
+//   // const test = (number >>> 0).toString(2).split('').reduce((sum, currentValue) => sum + parseInt(currentValue), 0);
+//   return (number >>> 0).toString(2).split('').reduce((sum, currentValue) => sum + parseInt(currentValue), 0)
+// }
+
+
+// Bit Counting
+// https://www.codewars.com/kata/526571aae218b8ee490006f4/train/javascript
+// nie przechodzi w testach bo w assertach za duze liczby których JS nie ogarnia 
+// const countBits = number => (number >>> 0).toString(2).split('').reduce((sum, currentValue) => sum + parseInt(currentValue), 0);
+
+
+// const countBits = number => {
+//   // console.log(number.toString(2));
+//   return number.toString(2).split('').reduce((sum, currentValue) => sum + parseInt(currentValue), 0)
+// }
+  
+const countBits = number => number.toString(2).split('').reduce((sum, currentValue) => sum + parseInt(currentValue), 0);
+
+
+console.log(countBits(6275708300))
+// countBits(6275708300);
