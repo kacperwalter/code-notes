@@ -250,5 +250,37 @@ function high(string){
 const countBits = number => number.toString(2).split('').reduce((sum, currentValue) => sum + parseInt(currentValue), 0);
 
 
-console.log(countBits(6275708300))
+// console.log(countBits(6275708300))
 // countBits(6275708300);
+
+
+
+const rot13 = message => {
+  const alphabet = Array.from(Array(26)).map((e, i) => i + 65).map((letter) => String.fromCharCode(letter));
+  console.log(message.split(''));
+}
+
+// rot13('test');
+
+
+// function alphabetPosition([...text]) {
+//   const alphabet = Array.from(Array(26)).map((e, i) => i + 65).map((letter) => String.fromCharCode(letter));
+//   // console.log(text);
+//   // console.log(text.filter(letter => letter !== ' '))
+//   console.log(text.filter(letter => letter !== ' ').map(letter => alphabet.indexOf(letter.toUpperCase()) + 1))
+//   // console.log(text.map(letter => alphabet.indexOf(letter.toUpperCase() + 1)))
+//   return text; 
+// }
+
+const alphabetPosition = ([...text]) => {
+  const ALPHABET = Array.from(Array(26)).map((e, i) => i + 65).map((letter) => String.fromCharCode(letter));
+
+  return text
+    .filter(letter => letter !== ' ')
+    .map(letter => ALPHABET.indexOf(letter.toUpperCase()) + 1)
+    .filter(letter => letter !== 0)
+    .join(' ');
+}
+
+
+// console.log(alphabetPosition('09o+?g&'));
