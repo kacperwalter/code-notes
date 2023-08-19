@@ -284,3 +284,54 @@ const alphabetPosition = ([...text]) => {
 
 
 // console.log(alphabetPosition('09o+?g&'));
+
+// function isValidIP(str) {
+//   IP = str.split('.')
+  
+//   if (IP.length === 4) { // TODO oneline if
+//     IP.forEach(element => {
+//       if (element.match(/[a-z]/i) === null) { // TODO oneline if
+//         if ((element.length === 2 || element.length === 3) && element.substring(0, 1) === '0') console.log('false'); // numbers like '01.02.03.04'
+//         if (element > 255) return;
+//       }
+//     })
+//   }
+//   return false;
+// }
+
+// function isValidIP(str) {
+//   IP = str.split('.')
+  
+//   if (IP.length === 4) {
+//     IP.forEach(element => {
+//       if (element.match(/[a-z]/i) != null) return;
+//       if ((element.length === 2 || element.length === 3) && element.substring(0, 1) === '0') return;
+//       if (element > 255) return;
+//     })
+//     return true;
+//   }
+
+//   return false;
+// }
+
+const isValidIP = str => {
+  IP = str.split('.')
+  
+  if (IP.length === 4) {
+    for (const element of IP) {
+      if (element.match(/[a-z]/i) != null) return false;
+      if ((element.length === 2 || element.length === 3) && element[0] === '0') return false;
+      if (element < 0 || element > 255) return false;
+    }
+    return true;
+  }
+
+  return false;
+}
+
+console.log(isValidIP(" 1.2.3.4"))
+// console.log(isValidIP("0.0.0.253"))
+// isValidIP("0.0.0.0")
+// isValidIP('01.02.03.04')
+// isValidIP('abc.def.ghi.jkl')
+// isValidIP('12.34.56')
