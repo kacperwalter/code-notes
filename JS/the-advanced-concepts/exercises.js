@@ -250,5 +250,88 @@ function high(string){
 const countBits = number => number.toString(2).split('').reduce((sum, currentValue) => sum + parseInt(currentValue), 0);
 
 
-console.log(countBits(6275708300))
+// console.log(countBits(6275708300))
 // countBits(6275708300);
+
+
+
+const rot13 = message => {
+  const alphabet = Array.from(Array(26)).map((e, i) => i + 65).map((letter) => String.fromCharCode(letter));
+  console.log(message.split(''));
+}
+
+// rot13('test');
+
+
+// function alphabetPosition([...text]) {
+//   const alphabet = Array.from(Array(26)).map((e, i) => i + 65).map((letter) => String.fromCharCode(letter));
+//   // console.log(text);
+//   // console.log(text.filter(letter => letter !== ' '))
+//   console.log(text.filter(letter => letter !== ' ').map(letter => alphabet.indexOf(letter.toUpperCase()) + 1))
+//   // console.log(text.map(letter => alphabet.indexOf(letter.toUpperCase() + 1)))
+//   return text; 
+// }
+
+const alphabetPosition = ([...text]) => {
+  const ALPHABET = Array.from(Array(26)).map((e, i) => i + 65).map((letter) => String.fromCharCode(letter));
+
+  return text
+    .filter(letter => letter !== ' ')
+    .map(letter => ALPHABET.indexOf(letter.toUpperCase()) + 1)
+    .filter(letter => letter !== 0)
+    .join(' ');
+}
+
+
+// console.log(alphabetPosition('09o+?g&'));
+
+// function isValidIP(str) {
+//   IP = str.split('.')
+  
+//   if (IP.length === 4) { // TODO oneline if
+//     IP.forEach(element => {
+//       if (element.match(/[a-z]/i) === null) { // TODO oneline if
+//         if ((element.length === 2 || element.length === 3) && element.substring(0, 1) === '0') console.log('false'); // numbers like '01.02.03.04'
+//         if (element > 255) return;
+//       }
+//     })
+//   }
+//   return false;
+// }
+
+// function isValidIP(str) {
+//   IP = str.split('.')
+  
+//   if (IP.length === 4) {
+//     IP.forEach(element => {
+//       if (element.match(/[a-z]/i) != null) return;
+//       if ((element.length === 2 || element.length === 3) && element.substring(0, 1) === '0') return;
+//       if (element > 255) return;
+//     })
+//     return true;
+//   }
+
+//   return false;
+// }
+
+const isValidIP = str => {
+  IP = str.split('.')
+  
+  if (IP.length === 4) {
+    for (const element of IP) {
+      if (element.match(/[a-z]/i) != null) return false;
+      if ((element.length === 2 || element.length === 3) && element[0] === '0') return false;
+      if (element < 0 || element > 255) return false;
+    }
+    return true;
+  }
+
+  return false;
+}
+
+console.log(isValidIP(" 1.2.3.4"))
+// console.log(isValidIP("0.0.0.253"))
+// isValidIP("0.0.0.0")
+// isValidIP('01.02.03.04')
+// isValidIP('abc.def.ghi.jkl')
+// isValidIP('12.34.56')
