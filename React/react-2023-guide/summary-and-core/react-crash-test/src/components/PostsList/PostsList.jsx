@@ -6,8 +6,13 @@ import Modal from '../Modal/Modal';
 import styles from './PostsList.module.css';
 
 const PostsList = () => {
-  const [enteredBody, setEnteredBody] = useState('');
-  const [enteredAuthor, setEnteredAuthor] = useState('');
+  const [modalIsVisible, setModalIsVisible] = useState(true)
+  const [enteredBody, setEnteredBody] = useState('')
+  const [enteredAuthor, setEnteredAuthor] = useState('')
+
+  const hideModalHandler = () => {
+    setModalIsVisible(false)
+  }
 
   const bodyChangeHandler = (event) => {
     setEnteredBody(event.target.value)
@@ -19,12 +24,12 @@ const PostsList = () => {
 
   return (
     <>
-      <Modal>
-        <NewPost
-          onBodyChange={bodyChangeHandler}
-          onAuthorChange={authorChangeHandler}
-        />
-      </Modal>
+      {modalIsVisible && (
+        <Modal onBackdropClick={hideModalHandler} isVisible={modalIsVisible}>
+          <NewPost onBodyChange={bodyChangeHandler} onAuthorChange={authorChangeHandler} />
+        </Modal>
+      )}
+
       <ul className={styles.posts}>
         <Post author={enteredAuthor} body={enteredBody} />
         <Post author="Krzysztof" body='' />
