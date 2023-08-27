@@ -21,7 +21,11 @@ const PostsList = ({ isPosting, onStopPosting }) => {
     <>
       {isPosting && (
         <Modal onBackdropClick={onStopPosting} isVisible={isPosting}>
-          <NewPost onBodyChange={bodyChangeHandler} onAuthorChange={authorChangeHandler} />
+          <NewPost
+            onBodyChange={bodyChangeHandler}
+            onAuthorChange={authorChangeHandler} 
+            onCancel={onStopPosting}  
+          />
         </Modal>
       )}
 
