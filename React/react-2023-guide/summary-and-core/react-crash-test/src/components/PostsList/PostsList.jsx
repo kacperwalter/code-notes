@@ -6,15 +6,11 @@ import Modal from '../Modal/Modal';
 import styles from './PostsList.module.css';
 
 const PostsList = ({ isPosting, onStopPosting }) => {
-  const [enteredBody, setEnteredBody] = useState('')
-  const [enteredAuthor, setEnteredAuthor] = useState('')
+  const [posts, setPosts] = useState([])
 
-  const bodyChangeHandler = (event) => {
-    setEnteredBody(event.target.value)
-  }
-
-  const authorChangeHandler = (event) => {
-    setEnteredAuthor(event.target.value)
+  const addPostHandler = (postData) => {
+    // setPosts([postData, ...posts]) // will work but its not the greatest way to do it
+    setPosts((existingPosts) => [postData, ...existingPosts]) // better way to add data to existing data
   }
 
   return (
@@ -22,17 +18,24 @@ const PostsList = ({ isPosting, onStopPosting }) => {
       {isPosting && (
         <Modal onBackdropClick={onStopPosting} isVisible={isPosting}>
           <NewPost
-            onBodyChange={bodyChangeHandler}
-            onAuthorChange={authorChangeHandler} 
-            onCancel={onStopPosting}  
+            onCancel={onStopPosting}
+            onAddPost={addPostHandler}
           />
         </Modal>
       )}
 
-      <ul className={styles.posts}>
-        <Post author={enteredAuthor} body={enteredBody} />
-        <Post author="Krzysztof" body='' />
-      </ul>
+      {posts.length > 0 && (
+        <ul className={styles.posts}>
+          {posts.map(post => <Post key={post.author} author={post.author} body={post.body} />)}
+        </ul>
+      )}
+
+      {posts.length === 0 && (
+        <div style={{ textAlign:'center', color: 'white' }}>
+          <h2>There are no posts yet.</h2>
+          <p>Add some!</p>
+        </div>
+      )}
     </>
   )
 }
