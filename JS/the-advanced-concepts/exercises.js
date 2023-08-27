@@ -329,9 +329,13 @@ const isValidIP = str => {
   return false;
 }
 
-console.log(isValidIP(" 1.2.3.4"))
+// console.log(isValidIP(" 1.2.3.4"))
 // console.log(isValidIP("0.0.0.253"))
 // isValidIP("0.0.0.0")
 // isValidIP('01.02.03.04')
 // isValidIP('abc.def.ghi.jkl')
 // isValidIP('12.34.56')
+
+const sumTwoSmallestNumbers = (numbers) => numbers.sort((a, b) => a - b)[0] + numbers.sort((a, b) => a - b)[1]
+
+// console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]))
