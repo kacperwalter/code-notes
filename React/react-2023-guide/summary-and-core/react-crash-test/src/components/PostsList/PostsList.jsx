@@ -14,6 +14,7 @@ const PostsList = ({ isPosting, onStopPosting }) => {
       setIsFetching(true);
       const response = await fetch('http://localhost:8080/posts');
       const resData = await response.json();
+      !response.ok ? 'test' : 'test'; // TODO handle not ok response
       setPosts(resData.posts);
       setIsFetching(false);
     }
