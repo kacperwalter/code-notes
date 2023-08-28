@@ -464,5 +464,14 @@ const getRating = (watchList) => watchList
   .map(element => Number(element["imdbRating"])).reduce((sum, current) => sum + current, 0)
   / watchList.filter(film => film.Director === "Christopher Nolan").length
 
-console.log(getRating(watchList));
+// console.log(getRating(watchList));
 // getRating(watchList)
+
+
+
+const squareList = arr => arr
+  .filter(element => Number.isInteger(element) && element >= 0)
+  .map(element => element * element)
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
