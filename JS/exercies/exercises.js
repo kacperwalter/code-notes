@@ -474,4 +474,30 @@ const squareList = arr => arr
   .map(element => element * element)
 
 const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
-console.log(squaredIntegers);
+// console.log(squaredIntegers);
+
+
+function repeatStringNumTimes(str, num) {
+  let someString = ''
+  for (let i = 0; i < num; i++) {
+    someString = someString + str;
+  }
+  return someString;
+}
+
+// console.log(repeatStringNumTimes("abc", 2))
+
+
+const truncateString = (str, num) => str.length > num ? `${[...str].slice(0, num).join('')}...` : str;
+
+// console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8))
+
+
+// function findElement(arr, func) {
+//   return arr.filter(element => func(element))[0]
+// }
+
+const findElement = (arr, func) => arr.filter(element => func(element))[0];
+
+console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }))
+// console.log(findElement([1, 2, 3, 4, 8], num => console.log(num  % 2 === 0)))
