@@ -21,7 +21,7 @@ const ExpenseForm = () => {
           <input type='number' min="0.01" step="0.01" />
         </div>
         <div className='new-expense__control'>
-          <label>Date</label>
+          <label>Datee</label>
           <input type='date' min='2019-01-01' max='2022-12-13' />
         </div>
       </div>
