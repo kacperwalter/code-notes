@@ -24,7 +24,7 @@ const App = () => {
     },
   ];
 
-  const addExpenseHandler = expense => console.log('data arrived', expense)
+  const addExpenseHandler = expense => console.log('data arrive', expense)
 
   return (
     <div>
