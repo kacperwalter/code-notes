@@ -11,9 +11,9 @@ const Expenses = ({ data }) => {
   const filterChangeHandler = selectedYear => setFilteredYear(selectedYear)
 
   return (
-    <div className='expenses'>
-      <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
-      <Card>
+    <div>
+      <Card className='expenses'> 
+        <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
         {data.map(item => (
           <ExpenseItem
             title={item.title}
