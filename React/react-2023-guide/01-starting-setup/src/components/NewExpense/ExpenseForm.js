@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './ExpenseForm.css'
 
 const ExpenseForm = () => {
+  // multiple states using object instead of slicing it up https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25596010#content
   const [enteredTitle, setEnteredTitle] = useState('')
   const [enteredAmout, setEnteredAmount] = useState('')
   const [enteredDate, setEnteredDate] = useState('')
@@ -24,7 +25,7 @@ const ExpenseForm = () => {
           <input type='number' min="0.01" step="0.01" onChange={amountChangeHandler} />
         </div>
         <div className='new-expense__control'>
-          <label>Datee</label>
+          <label>Date</label>
           <input type='date' min='2019-01-01' max='2022-12-13' onChange={dateChangeHandler} />
         </div>
       </div>
