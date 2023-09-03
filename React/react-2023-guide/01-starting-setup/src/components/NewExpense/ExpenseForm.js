@@ -25,7 +25,7 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
     setEnteredTitle('')
     setEnteredAmount('')
     setEnteredDate('')
-  };
+  }
 
   return (
     <form onSubmit={submitHandler}>
