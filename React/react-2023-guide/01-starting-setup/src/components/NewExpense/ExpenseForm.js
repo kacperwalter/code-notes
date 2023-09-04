@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './ExpenseForm.css'
 
-const ExpenseForm = ({ onSaveExpenseData }) => {
+const ExpenseForm = ({ onSaveExpenseData, onHideForm }) => {
   // multiple states using object instead of slicing it up https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25596010#content
   const [enteredTitle, setEnteredTitle] = useState('')
   const [enteredAmount, setEnteredAmount] = useState('')
@@ -25,6 +25,7 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
     setEnteredTitle('')
     setEnteredAmount('')
     setEnteredDate('')
+    onHideForm()
   }
 
   return (
@@ -44,6 +45,7 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button type='button' onClick={onHideForm}>Cancel</button>
         <button type='submit'>Add expense</button>
       </div>
     </form>
