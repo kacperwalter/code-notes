@@ -5,7 +5,6 @@ import styles from './Result.module.css'
 const Result = ({ userData }) => {
   return (
     <table className={styles.result}>
-      {console.log(userData)}
       {userData.length === 0 ? (
         <p>Please provide some data</p>
       ) : (
