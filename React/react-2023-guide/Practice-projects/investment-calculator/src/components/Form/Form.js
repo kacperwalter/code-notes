@@ -1,3 +1,5 @@
+import styles from './Form.module.css'
+
 const Form = () => {
   const calculateHandler = (userInput) => {
     // Should be triggered when form is submitted
@@ -27,7 +29,7 @@ const Form = () => {
   };
   
   return (
-    <form className="form">
+    <form className={styles.form}>
       <div className="input-group">
         <p>
           <label htmlFor="current-savings">Current Savings ($)</label>

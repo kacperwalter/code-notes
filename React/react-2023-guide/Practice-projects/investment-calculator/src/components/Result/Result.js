@@ -1,6 +1,8 @@
+import styles from './Result.module.css'
+
 const Result = () => {
   return (
-    <table className="result">
+    <table className={styles.result}>
       <thead>
         <tr>
           <th>Year</th>
