@@ -14,7 +14,6 @@ function App() {
 
   return (
     <Wrapper>
-      <h1>A fucking HTML website</h1>
       <AddUserForm onSaveForm={setUserDataHandler}/>
       <UsersList users={userData}/>
     </Wrapper>

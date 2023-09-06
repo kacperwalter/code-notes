@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import ErrorModal from './ErrorModal'
+
 const Form = styled.form`
   padding: 5rem;
 
@@ -9,17 +11,6 @@ const Form = styled.form`
     flex-direction: column;
     padding: 1rem;
     gap: 0.7rem;
-
-    input {
-      max-width: 30rem;
-      height: 3rem;
-    }
-
-    &:nth-child(3) {
-      input {
-        max-width: 15rem;
-      }    
-    }
   }
 
   div {
@@ -38,12 +29,30 @@ const Form = styled.form`
   }
 `
 
+const Input = styled.input`
+  max-width: ${[props => props.shorter ? '15rem' : '30rem']};
+  height: 3rem;
+`
+
 const AddUserForm = ({ onSaveForm }) => {
   const [username, setUsername] = useState('')
   const [age, setAge] = useState('')
+  const [isErrorVisible, setIsErrorVisible] = useState(false)
+  const [isUsernameValid, setIsUsernameValid] = useState(true)
+  const [isAgeValid, setIsAgeValid] = useState(true)
 
   const setUsernameHandler = event => setUsername(event.target.value)
   const setAgeHandler = event => setAge(event.target.value)
+
+  const toggleErrorVisibility = () => isErrorVisible ? setIsErrorVisible(false) : setIsErrorVisible(true);
+
+  const validateData = data => {
+    if (age < 18) {
+      toggleErrorVisibility();
+    } else {
+      onSaveForm(data)
+    }
+  }
 
   const submitFormHandler = event => {
     event.preventDefault();
@@ -54,26 +63,29 @@ const AddUserForm = ({ onSaveForm }) => {
       age: age,
     }
 
-    onSaveForm(userData)
+    validateData(userData)
   }
 
   return (
-    <Form onSubmit={submitFormHandler}>
-      <fieldset>
-        <legend>Add user to list</legend>
-        <p>
-          <label htmlFor='username'>Username</label>
-          <input type='text' id='username' onChange={setUsernameHandler}/>
-        </p>
-        <p>
-          <label htmlFor='age'>Age</label>
-          <input type='number' id='age' onChange={setAgeHandler}/>
-        </p>
-        <div>
-          <button type='submit'>Add user</button>
-        </div>
-      </fieldset>
-    </Form>
+    <>
+      <Form onSubmit={submitFormHandler}>
+        <fieldset>
+          <legend>Add user to list</legend>
+          <p>
+            <label htmlFor='username'>Username</label>
+            <Input type='text' id='username' onChange={setUsernameHandler} />
+          </p>
+          <p>
+            <label htmlFor='age'>Age</label>
+            <Input shorter='true' type='number' id='age' onChange={setAgeHandler} />
+          </p>
+          <div>
+            <button type='submit'>Add user</button>
+          </div>
+        </fieldset>
+      </Form>
+      {isErrorVisible && <ErrorModal />}
+    </>
   )
 }
 
