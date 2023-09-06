@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
 const Form = styled.form`
@@ -37,18 +38,35 @@ const Form = styled.form`
   }
 `
 
-const AddUserForm = () => {
+const AddUserForm = ({ onSaveForm }) => {
+  const [username, setUsername] = useState('')
+  const [age, setAge] = useState('')
+
+  const setUsernameHandler = event => setUsername(event.target.value)
+  const setAgeHandler = event => setAge(event.target.value)
+
+  const submitFormHandler = event => {
+    event.preventDefault();
+
+    const userData = {
+      'username': username,
+      'age': age,
+    }
+
+    onSaveForm(userData)
+  }
+
   return (
-    <Form>
+    <Form onSubmit={submitFormHandler}>
       <fieldset>
         <legend>Add user to list</legend>
         <p>
           <label htmlFor='username'>Username</label>
-          <input type='text' id='username' />
+          <input type='text' id='username' onChange={setUsernameHandler}/>
         </p>
         <p>
           <label htmlFor='age'>Age</label>
-          <input type='number' id='age' />
+          <input type='number' id='age' onChange={setAgeHandler}/>
         </p>
         <div>
           <button type='submit'>Add user</button>

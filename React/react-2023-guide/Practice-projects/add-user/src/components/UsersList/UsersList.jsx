@@ -10,7 +10,7 @@ const List = styled.ul`
 
 const UsersList = () => {
   return (
-    <Section>
+    <Section> 
       <List>
         <li>Kacper Walter, age 21</li>
       </List>
