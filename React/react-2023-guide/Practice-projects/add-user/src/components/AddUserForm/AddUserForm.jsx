@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import ErrorModal from './ErrorModal'
 
+import Button from '../UI/Button'
+
 const Form = styled.form`
   padding: 5rem;
 
@@ -15,22 +17,12 @@ const Form = styled.form`
 
   div {
     padding: 1rem;
-
-    button {
-      background: white;
-      padding: 0.8rem;
-      border: 1px solid black;
-
-      &:hover {
-        cursor: pointer;
-        background: lightgray;
-      }
-    }
   }
 `
 
 const Input = styled.input`
   max-width: ${[props => props.shorter ? '15rem' : '30rem']};
+  border: 1px solid ${[props => props.isValid ? 'black' : 'red']};
   height: 3rem;
 `
 
@@ -42,17 +34,17 @@ const AddUserForm = ({ onSaveForm }) => {
   const [isAgeValid, setIsAgeValid] = useState(true)
 
   const setUsernameHandler = event => setUsername(event.target.value)
-  const setAgeHandler = event => setAge(event.target.value)
+
+  const setAgeHandler = event => {
+    event.target.value < 18 ?
+      setIsAgeValid(false) :
+      (setAge(event.target.value), setIsAgeValid(true))
+  }
+
 
   const toggleErrorVisibility = () => isErrorVisible ? setIsErrorVisible(false) : setIsErrorVisible(true);
 
-  const validateData = data => {
-    if (age < 18) {
-      toggleErrorVisibility();
-    } else {
-      onSaveForm(data)
-    }
-  }
+  const validateData = data => age < 18 ? toggleErrorVisibility() : onSaveForm(data)
 
   const submitFormHandler = event => {
     event.preventDefault();
@@ -73,18 +65,18 @@ const AddUserForm = ({ onSaveForm }) => {
           <legend>Add user to list</legend>
           <p>
             <label htmlFor='username'>Username</label>
-            <Input type='text' id='username' onChange={setUsernameHandler} />
+            <Input isValid={isUsernameValid} type='text' id='username' onChange={setUsernameHandler} />
           </p>
           <p>
             <label htmlFor='age'>Age</label>
-            <Input shorter='true' type='number' id='age' onChange={setAgeHandler} />
+            <Input isValid={isAgeValid} shorter='true' type='number' id='age' onChange={setAgeHandler} />
           </p>
           <div>
-            <button type='submit'>Add user</button>
+            <Button type='submit'>Add user</Button>
           </div>
         </fieldset>
       </Form>
-      {isErrorVisible && <ErrorModal />}
+      {isErrorVisible && <ErrorModal onToggleError={toggleErrorVisibility}/>}
     </>
   )
 }
