@@ -41,8 +41,7 @@ const AddUserForm = ({ onSaveForm }) => {
       (setAge(event.target.value), setIsAgeValid(true))
   }
 
-
-  const toggleErrorVisibility = () => isErrorVisible ? setIsErrorVisible(false) : setIsErrorVisible(true);
+  const toggleErrorVisibility = () => isErrorVisible ? setIsErrorVisible(false) : setIsErrorVisible(true)
 
   const validateData = data => age < 18 ? toggleErrorVisibility() : onSaveForm(data)
 
@@ -76,7 +75,7 @@ const AddUserForm = ({ onSaveForm }) => {
           </div>
         </fieldset>
       </Form>
-      {isErrorVisible && <ErrorModal onToggleError={toggleErrorVisibility}/>}
+      {isErrorVisible && <ErrorModal onToggleError={toggleErrorVisibility} />}
     </>
   )
 }
