@@ -28,6 +28,11 @@ const Form = styled.form`
       background: white;
       padding: 0.8rem;
       border: 1px solid black;
+
+      &:hover {
+        cursor: pointer;
+        background: lightgray;
+      }
     }
   }
 `
