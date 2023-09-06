@@ -49,8 +49,9 @@ const AddUserForm = ({ onSaveForm }) => {
     event.preventDefault();
 
     const userData = {
-      'username': username,
-      'age': age,
+      id: Math.random().toString(),
+      username: username,
+      age: age,
     }
 
     onSaveForm(userData)

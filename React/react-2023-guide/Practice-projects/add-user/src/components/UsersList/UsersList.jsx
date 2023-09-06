@@ -8,11 +8,15 @@ const List = styled.ul`
   }
 `
 
-const UsersList = () => {
+const UsersList = ({ users }) => {
   return (
-    <Section> 
+    <Section>
       <List>
-        <li>Kacper Walter, age 21</li>
+        {users.length === 0 ? (
+          <p>No users added</p>
+        ) : users.map(user => (
+          <li key={user.id}>{user.username}, age {user.age}</li>
+        ))}
       </List>
     </Section>
   )
