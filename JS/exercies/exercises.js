@@ -499,5 +499,62 @@ const truncateString = (str, num) => str.length > num ? `${[...str].slice(0, num
 
 const findElement = (arr, func) => arr.filter(element => func(element))[0];
 
-console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }))
+// console.log(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }))
 // console.log(findElement([1, 2, 3, 4, 8], num => console.log(num  % 2 === 0)))
+
+function binaryGap(N) {
+  const binaryRepresntation = [...(N >>> 0).toString(2)];
+  let currentGap = 0;
+  let longestGap = 0;
+
+  binaryRepresntation.forEach(element => {
+      if (element == 0) {
+          currentGap++;
+      } else {
+          if (currentGap > longestGap) {
+              longestGap = currentGap;
+          }
+          currentGap = 0;
+      }
+  })
+
+  return longestGap
+}
+
+
+// console.log(binaryGap(1041))
+
+function rotate(A, K) {
+  // Implement your solution here
+  let array = A;
+  for (let i = 0; i < K; i++) {
+      array = [array.pop(), ...array]
+  }
+  return array
+}
+
+
+console.log(rotate([3, 8, 9, 7, 6], 3))
+
+function unpaired(A) {
+    // Implement your solution here
+    let unpaired = 0;
+    let currentOccurances = 0;
+
+    // DOesnt work
+    for (let i = 0; i < arr.length; i++) {
+        for (let z = 0; z < arr.length; z++) {
+            if (arr[i] == arr[z]) {
+                currentOccurances++;
+                console.log(currentOccurances)
+                if (currentOccurances > 1) {
+                    currentOccurances = 0;
+                } else {
+                    unpaired = arr[i]
+                }
+            }
+        }
+    }
+
+    return unpaired
+}
