@@ -1,0 +1,36 @@
+.footer {
+  min-height: 32rem;
+  background-color: var(--brand-gray);
+  border-top: 1.2rem solid var(--brand-yellow);
+  padding-top: 5rem;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__element {
+    &:first-child {
+      .footer__links {
+        li {
+          &:last-child {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 1.3rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+  }
+}
