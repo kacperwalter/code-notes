@@ -1,3 +1,5 @@
+import ReactDOM from 'react-dom';
+
 import styled from 'styled-components'
 
 import Button from '../UI/Button'
@@ -27,15 +29,28 @@ const Background = styled.div`
   background-color: rgba(108, 122, 137, 0.7);
 `
 
+const ModalOverlay = ({ onToggleError }) => {
+  return (
+    <Modal>
+      <h2>Error message</h2>
+      <p>You wanted to do something illegal</p>
+      <Button onClick={onToggleError}>Close</Button>
+    </Modal>
+  )
+}
+
+
 const ErrorModal = ({ onToggleError }) => {
   return (
     <>
-      <Modal>
-        <h2>Error message</h2>
-        <p>You wanted to do something illegal</p>
-        <Button onClick={onToggleError}>Close</Button>
-      </Modal>
-      <Background />
+      {ReactDOM.createPortal(
+        <Background />,
+        document.getElementById('backdrop-root')
+      )}
+      {ReactDOM.createPortal(
+        <ModalOverlay onToggleError={onToggleError} />,
+        document.getElementById('overlay-root')
+      )}
     </>
   )
 }
