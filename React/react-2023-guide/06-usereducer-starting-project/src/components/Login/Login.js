@@ -5,25 +5,46 @@ import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
 
 const emailReducer = (state, action) => {
-  if (action.type === 'USER_INPUT') {
-    return { value: action.val, isValid: action.val.includes('@') }
+  switch (action.type) {
+    case 'USER_INPUT':
+      return {
+        value: action.val,
+        isValid: action.val.includes('@'),
+      };
+    case 'INPUT_BLUR':
+      return {
+        value: state.value,
+        isValid: state.value.includes('@'),
+      };
+    default:
+      return {
+        value: '',
+        isValid: false,
+      };
   }
-  if (action.type === 'INPUT_BLUR') {
-    return { value: state.value, isValid: state.value.includes('@') }
-  }
-  return { value: '', isValid: false }
 };
 
 const passwordReducer = (state, action) => {
-  if (action.type === 'USER_INPUT') {
-    return { value: action.val, isValid: action.val.trim().length > 6 }
+  switch (action.type) {
+    case 'USER_INPUT':
+      return {
+        value: action.val,
+        isValid: action.val.trim().length > 6,
+      };
+    case 'INPUT_BLUR':
+      return {
+        value: state.value,
+        isValid: state.value.trim().length > 6,
+      };
+    default:
+      return {
+        value: '',
+        isValid: false,
+      };
   }
-  if (action.type === 'INPUT_BLUR') {
-    return { value: state.value, isValid: state.value.trim().length > 6 }
-  }
-  return { value: '', isValid: false }
-}
+};
 
+// how to work with useReducer
 const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
   const [emailState, dispatchEmail] = useReducer(emailReducer, { value: '', isValid: undefined });
