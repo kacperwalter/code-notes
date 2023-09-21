@@ -7,6 +7,7 @@ This repo contains log of my development skills and resources that I use when I 
  
 [done]: https://user-images.githubusercontent.com/29199184/32275438-8385f5c0-bf0b-11e7-9406-42265f71e2bd.png "Done"
 
+<!--
 |               Skill              | 1<br>Introduction | 2<br>Occasional Use    | 3<br>Regular use |
 |:-------------------------------- |:-----------------:|:----------------------:|:----------------:|
 |**HTML5**                         | ![done][done]     | ![done][done]          | ![done][done]    |
@@ -28,4 +29,6 @@ This repo contains log of my development skills and resources that I use when I 
 |**Git**                           | ![done][done]     | ![done][done]          | ![done][done]    |
 |**GitHub**                        | ![done][done]     | ![done][done]          | ![done][done]    |
 |**Contributing To Open Source**   | ![done][done]     |                        |                  |
+-->
+
 
