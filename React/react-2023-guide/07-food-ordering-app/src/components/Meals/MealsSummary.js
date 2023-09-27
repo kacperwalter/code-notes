@@ -1,8 +1,8 @@
-import styles from './MealsSummary.module.css'
+import React from 'react'
 
 const MealsSummary = () => {
   return (
-    <section className={styles.summary}>
+    <section>
       <h2>Delicius food, Delivered To You</h2>
       <p>
         Choose your favorite meal from our broad selection of available meals
