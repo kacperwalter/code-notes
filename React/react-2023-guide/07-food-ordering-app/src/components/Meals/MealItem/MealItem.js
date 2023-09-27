@@ -1,4 +1,5 @@
 import styles from './MealItem.module.css'
+import MealItemForm from './MealItemForm'
 
 const MealItem = ({ name, description, price }) => {
 
@@ -10,7 +11,7 @@ const MealItem = ({ name, description, price }) => {
         <div className={styles.price}>${price.toFixed(2)}</div>
       </div>
       <div>
-        <button>Add to Cart</button>
+        <MealItemForm />
       </div>
     </li>
   )
