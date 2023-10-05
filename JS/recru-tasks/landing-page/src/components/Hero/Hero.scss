@@ -1,0 +1,16 @@
+.hero {
+  position: relative;
+  background: url('../.././/assets/img_hero.jpg');
+  background-size: cover;
+  min-height: 30rem;
+
+  &__heading {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+
+    @media (max-width: 1000px) {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    } 
+  }
+}
