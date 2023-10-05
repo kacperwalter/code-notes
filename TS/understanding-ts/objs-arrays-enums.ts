@@ -11,7 +11,8 @@
 //   role: [2, 'author']
 // }
 
-// enum Role { ADMIN, READ_ONLY, AUTHOR }
+// enum is a custom type 0, 1, 2
+enum Role { ADMIN, READ_ONLY, AUTHOR = 4 }
 
 const person = {
   name: 'Maximilian',
@@ -19,6 +20,8 @@ const person = {
   hobbies: ['Sports', 'Cooking'],
   role: [2, 'author']
 }
+
+console.log(Role.AUTHOR)
 
 let favoriteActivities: string[]
 
