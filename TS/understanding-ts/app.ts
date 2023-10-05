@@ -1,3 +1,28 @@
+// const person: {
+//   name: string
+//   age: number
+//   hobbies: string[]
+//   role: [number, string] // tuple (immutable)
+// } = {
+// // const person = {
+//   name: 'Maximilian',
+//   age: 30,
+//   hobbies: ['Sports', 'Cooking'],
+//   role: [2, 'author']
+// }
+
+// enum Role { ADMIN, READ_ONLY, AUTHOR }
+
+const person = {
+  name: 'Maximilian',
+  age: 30,
+  hobbies: ['Sports', 'Cooking'],
+  role: [2, 'author']
+}
+
+let favoriteActivities: string[]
+
+console.log(person.name)
 const add = (n1: number, n2: number) => {
   return n1 + n2
 }
