@@ -1,9 +1,23 @@
-const add = (n1: number, n2: number) => {
-  return n1 + n2
+// const person: {
+//   name: string
+//   age: number
+//   hobbies: string[]
+//   role: [number, string] // tuple (immutable)
+// } = {
+// // const person = {
+//   name: 'Maximilian',
+//   age: 30,
+//   hobbies: ['Sports', 'Cooking'],
+//   role: [2, 'author']
+// }
+
+const person = {
+  name: 'Maximilian',
+  age: 30,
+  hobbies: ['Sports', 'Cooking'],
+  role: [2, 'author']
 }
 
-const number1 = 5
-const number2 = 2.8
+let favoriteActivities: string[]
 
-const result = add(number1, number2)
-console.log(result)
+console.log(person.name)
