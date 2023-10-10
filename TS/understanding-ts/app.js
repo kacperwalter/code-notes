@@ -1,28 +1,13 @@
-// const person: {
-//   name: string
-//   age: number
-//   hobbies: string[]
-//   role: [number, string] // tuple (immutable)
-// } = {
-// // const person = {
-//   name: 'Maximilian',
-//   age: 30,
-//   hobbies: ['Sports', 'Cooking'],
-//   role: [2, 'author']
-// }
-// enum Role { ADMIN, READ_ONLY, AUTHOR }
-var person = {
-    name: 'Maximilian',
-    age: 30,
-    hobbies: ['Sports', 'Cooking'],
-    role: [2, 'author']
+// union type - for combining types
+var combine = function (input1, input2) {
+    var result;
+    if (typeof input1 === 'number' && typeof input2 === 'number') { // we have to work with the strict type of input
+        result = input1 + input2;
+    }
+    else {
+        result = input1.toString() + input2.toString();
+    }
+    return result;
 };
-var favoriteActivities;
-console.log(person.name);
-var add = function (n1, n2) {
-    return n1 + n2;
-};
-var number1 = 5;
-var number2 = 2.8;
-var result = add(number1, number2);
-console.log(result);
+var combinedAges = combine(30, 26);
+console.log(combinedAges);
