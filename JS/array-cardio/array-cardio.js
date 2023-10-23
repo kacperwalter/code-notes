@@ -61,5 +61,34 @@ const transportation = data.reduce((obj, item) => {
   return obj
 }, {})
 
-console.log(transportation)
+// console.log(transportation)
 // { car: 5, truck: 3, bike: 2, walk: 2, van: 2 }
+
+const people2 = [
+  { name: 'Wes', year: 1988 },
+  { name: 'Kait', year: 1986 },
+  { name: 'Irv', year: 1970 },
+  { name: 'Lux', year: 2015 }
+]
+
+const comments = [
+  { text: 'Love this!', id: 523423 },
+  { text: 'Super good', id: 823423 },
+  { text: 'You are the best', id: 2039842 },
+  { text: 'Ramen is my fav food ever', id: 123523 },
+  { text: 'Nice Nice Nice!', id: 542328 }
+]
+
+// check if at least someone is 19
+const isAdult = people2.some(person => ((new Date()).getFullYear()) - person.year >= 19)
+console.log(isAdult)
+
+// check if everyone is adult
+const isEveryoneAdult = people2.every(person => ((new Date()).getFullYear()) - person.year >= 19)
+// console.log(isEveryoneAdult)
+
+const comment = comments.find(comment => comment.id === 823423)
+// console.log(comment)
+
+const commentIndex = comments.findIndex(comment => comment.id === 542328)
+console.log(commentIndex)
