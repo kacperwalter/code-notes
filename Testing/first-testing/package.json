@@ -1,0 +1,19 @@
+{
+  "name": "first-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cloneArray.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "jest": {
+    "transform": {}
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
