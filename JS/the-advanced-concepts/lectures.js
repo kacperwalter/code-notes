@@ -50,7 +50,7 @@ function marry(person1, person2) {
   console.log("arguments", arguments); // but we shouldnt use arguments keyword like this in ES6
   console.log(...arguments); // this is the way to use arguments keyword in ES6
 }
-
+ 
 function marry2(...args) {
   console.log("arguments", args);
   console.log(...args);
