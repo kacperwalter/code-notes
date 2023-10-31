@@ -1,15 +1,15 @@
-import './App.css'
+import React from 'react'
 
-import Playground from './Playground'
-import UseEffectPlayground from './UseEffectPlayground'
-import UseMemoPlayground from './UseMemoPlayground'
+import UseRefPlayground from './UseRefPlayground'
+
+export const ThemeContext = React.createContext()
 
 function App() {
-
   return (
     <>
-      {/* <UseEffectPlayground /> */}
-      <UseMemoPlayground />
+    <ThemeContext.Provider value={{ color: 'red' }}>
+      <UseRefPlayground />
+    </ThemeContext.Provider>
     </>
   )
 }
