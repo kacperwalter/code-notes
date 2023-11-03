@@ -1,5 +1,5 @@
 const add = (n1: number, n2: number, showResult: boolean) => {
-  return n1 + n2
+  return showResult
 }
 
 const number1 = 5

@@ -1,14 +1,28 @@
-// union type - for combining types
+// const person: {
+//   name: string
+//   age: number
+//   hobbies: string[]
+//   role: [number, string] // tuple (immutable)
+// } = {
+// // const person = {
+//   name: 'Maximilian',
+//   age: 30,
+//   hobbies: ['Sports', 'Cooking'],
+//   role: [2, 'author']
+// }
 
-const combine = (input1: number | string, input2: number | string) => {
-  let result
-  if (typeof input1 === 'number' && typeof input2 === 'number') { // we have to work with the strict type of input
-    result = input1 + input2
-  } else {
-    result = input1.toString() + input2.toString()
-  }
-  return result
+// enum is a custom type 0, 1, 2
+enum Role { ADMIN, READ_ONLY, AUTHOR = 4 }
+
+const person = {
+  name: 'Maximilian',
+  age: 30,
+  hobbies: ['Sports', 'Cooking'],
+  role: [2, 'author']
 }
 
-const combinedAges = combine(30, 26)
-console.log(combinedAges)
+console.log(Role.AUTHOR)
+
+let favoriteActivities: string[]
+
+console.log(person.name)
