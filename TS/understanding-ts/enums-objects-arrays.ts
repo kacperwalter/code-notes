@@ -1,10 +1,21 @@
 // enum is a custom type 0, 1, 2
-enum Role { ADMIN, READ_ONLY, AUTHOR }
+enum Role {
+  ADMIN,
+  READ_ONLY,
+  AUTHOR,
+}
 
 // enum with custom values (when we start with 5, the next value will be 6, 7, etc.)
-enum UserLevel { BASIC = 5, PREMIUM, ULTIMATE }
+enum UserLevel {
+  BASIC = 5,
+  PREMIUM,
+  ULTIMATE,
+}
 
-enum ApiKeys { GOOGLE = 'GOOGLE_API_KEY', FACEBOOK = 'FACEBOOK_API_KEY' }
+enum ApiKeys {
+  GOOGLE = 'GOOGLE_API_KEY',
+  FACEBOOK = 'FACEBOOK_API_KEY',
+}
 
 const person: {
   name: string
@@ -17,7 +28,7 @@ const person: {
   age: 30,
   hobbies: ['Sports', 'Cooking'],
   isLogged: [true, 'current time'],
-  role: Role.AUTHOR
+  role: Role.AUTHOR,
 }
 
 // array with strings
