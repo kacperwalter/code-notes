@@ -1,16 +1,16 @@
-// thats the way to handle union types (I am not acctualy a big fam of it) and also how to handle literal types
-function combine(input1, input2, resultConversion) {
-    var result;
-    if ((typeof input1 === 'number' && typeof input2 === 'number') ||
-        resultConversion === 'as-number') {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
+function add3(n1, n2) {
+    return n1 + n2;
 }
-var combinedAges = combine(30, 26, 'as-number');
-console.log(combinedAges);
-var combinedStringAges = combine('30', '26', 'as-text');
-console.log(combinedStringAges);
+// type void if function doesn't return anything
+function printResult(num) {
+    console.log('Result: ' + num);
+}
+// function type (declaring what function gets and what it returns)
+var combineValues;
+combineValues = add3;
+console.log(combineValues(8, 8));
+// callback functions type
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+}
