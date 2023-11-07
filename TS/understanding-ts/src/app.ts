@@ -1,26 +1,27 @@
-class Department {
+abstract class Department {
   // private name: string
   // private readonly id: string
   static fiscalYear = 2023
 
-  // private instead of protected - we can refer to these variables in inherited classes (while private can not)
+  // protected instead of private - we can refer to these variables in inherited classes (while private can not)
   protected employees: string[] = []
 
   // public and private variables - we can write it like this (we dont have to declare the variables two times)
-  constructor(public name: string, private readonly id: number) {
+  constructor(public name: string, protected readonly id: number) {
     // this.id = id
     // this.name = name
     console.log(Department.fiscalYear)
   }
 
-  static createEmployee(name: string) {
+  static createEmployee(name: string): {
+    name: string
+  } {
     return { name: name }
   }
 
   // this in this method is making sure that we always refer to the Department object
-  describe(this: Department): void {
-    console.log(`Department (${this.id}): ${this.name}`)
-  }
+  // abstract method to overwrite in inherited classes
+  abstract describe(this: Department): void
 
   addEmployee(employee: string): void {
     this.employees.push(employee)
@@ -40,6 +41,10 @@ class ITDepartment extends Department {
     this.admins = admins
   }
 
+  describe(): void {
+    console.log(`IT Department - ID ${this.id}`)
+  }
+
   showAdmins(): void {
     console.log(this.admins)
   }
@@ -47,6 +52,7 @@ class ITDepartment extends Department {
 
 class AccountingDepartment extends Department {
   private lastReport: string
+  private static instance: AccountingDepartment
 
   get mostRecentReport() {
     if (this.lastReport) return this.lastReport
@@ -57,9 +63,21 @@ class AccountingDepartment extends Department {
     this.addReport(value)
   }
 
-  constructor(id: number, private reports: string[]) {
+  // singleton - that means that we wan't only one instantion of the class
+  // we can achive that by using private constructor
+  private constructor(id: number, private reports: string[]) {
     super('Accounting', id)
     this.lastReport = reports[0]
+  }
+
+  static getInstance() {
+    if (AccountingDepartment.instance) return this.instance
+    this.instance = new AccountingDepartment(1, [])
+    return this.instance
+  }
+
+  describe(): void {
+    console.log(`Department ID: ${this.id}`)
   }
 
   addReport(text: string): void {
@@ -78,7 +96,9 @@ class AccountingDepartment extends Department {
   }
 }
 
-const accounting = new AccountingDepartment(1, [])
+// const accounting = new AccountingDepartment(1, [])
+// instead of this, when we use a singleton (private constructor), we have to write a method to get the initalized object
+const accounting = AccountingDepartment.getInstance()
 
 accounting.describe()
 
