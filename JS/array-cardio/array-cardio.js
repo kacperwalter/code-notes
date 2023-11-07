@@ -92,3 +92,5 @@ const comment = comments.find(comment => comment.id === 823423)
 
 const commentIndex = comments.findIndex(comment => comment.id === 542328)
 console.log(commentIndex)
+
+const test = (a) => a;
