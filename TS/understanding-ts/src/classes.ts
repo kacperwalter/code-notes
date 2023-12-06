@@ -1,4 +1,12 @@
-abstract class Department {
+interface IDepartment {
+  name: string;
+  id: number;
+  employees: string[];
+  describe(this: IDepartment): void;
+  addEmployee(employee: string): void;
+  printEmployeeInformation(): void;
+}
+abstract class Department implements IDepartment{
   // private name: string
   // private readonly id: string
   static fiscalYear = 2023
