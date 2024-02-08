@@ -11,7 +11,7 @@ import type { DsEditorProps } from './ds-editor.types'
 import { Editable, withReact, Slate } from 'slate-react'
 import { withHistory } from 'slate-history'
 // import { DsEditorToolbar } from "./components/ds-editor-toolbar/ds-editor-toolbar.tsx"
-import { initialValue } from './config.ts'
+import { initialValue } from './config.ts' // TODO probably not from config, from email-composer
 
 // TODO: figure out types customization and implement it properly https://arc.net/l/quote/ffzewvsj
 type CustomElement = { type: 'paragraph'; children: CustomText[] }
@@ -52,7 +52,9 @@ export function DsEditor({
         <div>
           Toolbar
           <MarkButton format="bold" icon="B" />
-
+          <MarkButton format="italic" icon="I" />
+          <MarkButton format="underline" icon="U" />
+          <MarkButton format="code" icon="C" />
         </div>
         <Editable
           className={classNames('ds-outline-none ds-w-full ds-h-full ds-border ds-border-grey-600 ds-p-sm')}
