@@ -80,4 +80,17 @@ const orders = [
 // }, {})
 // console.log(productQuantity)
 
+const peopleToCount = [
+  { name: 'John', gender: 'male' },
+  { name: 'Sara', gender: 'female' },
+  { name: 'Tom', gender: 'male' },
+  { name: 'Anna', gender: 'female' },
+  { name: 'James', gender: 'male' },
+];
 
+const genderCount = peopleToCount.reduce((acc, curr) => {
+  acc[curr.gender] = (acc[curr.gender] || 0) + 1; 
+  return acc
+}, {})
+
+console.log(genderCount);
