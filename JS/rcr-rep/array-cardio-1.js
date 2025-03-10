@@ -93,4 +93,107 @@ const genderCount = peopleToCount.reduce((acc, curr) => {
   return acc
 }, {})
 
-console.log(genderCount);
+// console.log(genderCount);
+
+// Masz tablicę produktów z ich kategoriami. Policz, ile produktów należy do każdej kategorii.
+const products = [
+  { name: 'Laptop', category: 'Electronics' },
+  { name: 'Shirt', category: 'Clothing' },
+  { name: 'Phone', category: 'Electronics' },
+  { name: 'Jeans', category: 'Clothing' },
+  { name: 'Tablet', category: 'Electronics' },
+  { name: 'Socks', category: 'Clothing' },
+];
+
+const productCategories = products.reduce((acc, curr) => {
+  acc[curr.category] = (acc[curr.category] || 0) + 1;  
+  return acc
+}, {})
+
+// console.log(productCategories)
+
+// Masz tablicę wydatków i chcesz policzyć, ile wydałeś na każdą kategorię.
+
+const expenses = [
+  { category: 'Food', amount: 30 },
+  { category: 'Transport', amount: 15 },
+  { category: 'Food', amount: 25 },
+  { category: 'Entertainment', amount: 50 },
+  { category: 'Transport', amount: 10 },
+  { category: 'Food', amount: 20 },
+];
+
+const categoryCount = expenses.reduce((acc, curr) => {
+  acc[curr.category] = (acc[curr.category] || 0) + curr.amount; 
+  return acc;
+}, {})
+
+// console.log(categoryCount);
+
+const someSentence = "hello world";
+
+const letterCount = [...someSentence.replaceAll(" ", "")].reduce((acc, curr) => {
+  acc[curr] = (acc[curr] || 0) + 1;
+  return acc
+}, {})
+
+// console.log(letterCount);
+
+
+
+// Masz tablicę ocen studentów i chcesz obliczyć średnią ocenę dla każdej osoby.
+const grades = [
+  { student: 'Alice', grade: 85 },
+  { student: 'Bob', grade: 92 },
+  { student: 'Alice', grade: 78 },
+  { student: 'Bob', grade: 88 },
+  { student: 'Alice', grade: 91 },
+];
+
+const studentStats = grades.reduce((acc, curr) => {
+  if (!acc[curr.student]) {
+    acc[curr.student] = { total: 0, count: 0 }
+  }
+
+  acc[curr.student].total += curr.grade
+  acc[curr.student].count += 1;
+
+  return acc
+}, {})
+
+// console.log(studentGrades)
+
+
+
+// Masz tablicę koszyka z zakupami. Każdy produkt może się powtarzać, a my chcemy uzyskać łączną liczbę sztuk i wartość dla każdego produktu.
+
+const cart = [
+  { product: 'Laptop', price: 3000, quantity: 1 },
+  { product: 'Mouse', price: 100, quantity: 2 },
+  { product: 'Keyboard', price: 200, quantity: 1 },
+  { product: 'Laptop', price: 3000, quantity: 1 },
+  { product: 'Mouse', price: 100, quantity: 1 },
+  { product: 'Monitor', price: 1200, quantity: 2 },
+]
+
+// Oczekiwany wynik
+
+// {
+//   Laptop: { quantity: 2, total: 6000 },
+//   Mouse: { quantity: 3, total: 300 },
+//   Keyboard: { quantity: 1, total: 200 },
+//   Monitor: { quantity: 2, total: 2400 }
+// }
+
+const cartProducts = cart.reduce((acc, curr) => {
+  if (!acc[curr.product]) {
+    acc[curr.product] = { quantity: 0, total: 0 }
+  }
+
+  acc[curr.product].quantity += curr.quantity
+  acc[curr.product].total += curr.price * curr.quantity;
+
+  return acc
+}, {})
+
+// console.log(cartProducts)
