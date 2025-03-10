@@ -59,5 +59,25 @@ const sortedAlphabetically = inventors.sort((a, b) => a.first < b.first ? -1 : 1
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
 // const dataSorted = data.reduce((acc, curr) => , {...(new Set(data).map(key => ...{key : 0}))})
-const dataSorted = data.reduce((acc, curr) => {return { ...acc, [curr] :  acc[curr] ? acc[curr] + 1 : 1}}, { } )
-console.log(dataSorted)
+const dataSorted = data.reduce((acc, curr) => { return { ...acc, [curr] :  acc[curr] ? acc[curr] + 1 : 1}}, { } )
+// console.log(dataSorted)
+
+// Masz tablicę zamówień z e-commerce, gdzie każda pozycja reprezentuje pojedyncze zamówienie klienta. Twoim zadaniem jest obliczenie łącznej wartości sprzedaży dla każdego produktu.
+const orders = [
+  { product: 'Laptop', price: 3000, quantity: 2 },
+  { product: 'Mouse', price: 100, quantity: 5 },
+  { product: 'Keyboard', price: 200, quantity: 3 },
+  { product: 'Monitor', price: 1200, quantity: 2 },
+  { product: 'Mouse', price: 100, quantity: 2 },
+  { product: 'Laptop', price: 3000, quantity: 1 },
+  { product: 'Monitor', price: 1200, quantity: 1 },
+];
+
+// const productQuantity = orders.reduce((acc, curr) => { return { ...acc, [curr.product] : [curr.price * curr.quantity]} }, {})
+// const productQuantity = orders.reduce((acc, curr) => {
+//   acc[curr.product] =  (acc[curr.product] || 0) + (curr.price * curr.quantity);
+//   return acc;
+// }, {})
+// console.log(productQuantity)
+
+
