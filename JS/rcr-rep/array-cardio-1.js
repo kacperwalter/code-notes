@@ -197,3 +197,4 @@ const cartProducts = cart.reduce((acc, curr) => {
 }, {})
 
 // console.log(cartProducts)
+
